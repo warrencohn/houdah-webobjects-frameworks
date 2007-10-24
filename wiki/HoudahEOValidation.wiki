@@ -23,15 +23,25 @@ From that context we first derive a set of ruleName values. When queried for rul
 Example:
 
 `((not (attribute = null)) and (attribute.allowsNull = 0))`
+
 `	=> ruleName = notNull [0]`
+
 `((not (relationship = null)) and (relationship.isToMany = 0) and (relationship.isMandatory = 1))`
+
 `	=> ruleName = mandatoryToOne [0]`
+
 `((not (attribute = null)) and (attribute.width > 0))`
+
 `	=> ruleName = width [10]`
+
 `(key = “name”) `
+
 `	 => ruleName = someRule [50]`
+
 `(entity.name = “User”) and (key = “name”) `
+
 `	 => ruleName = minLength [50]`
+
  
 The rules to apply for the User.name attribute are in order: notNull, width, minLength.
 
@@ -43,11 +53,17 @@ For each rule the engine needs to know the method to call in order to perform th
 The validation methods must follow the following signature:
 
 `public static Object notNull(`
+
 `	 ValidatingRecord record,`
+
 `	 String key,`
+
 `	 Object value,`
+
 `	 ValidationContext validationContext)`
+
 `throws BEVValidationException`
+
 
 The method is passed the object being validated, the key being worked on, where possible the suggested value for the key as well as the current validation rule context. While performing simple property checks, the method is passed a current value and may return an alternative value. When performing crosschecks, the key is abstract and no value can be passed nor returned.
 
