@@ -1,0 +1,17 @@
+#summary Starting points for understanding and using the Houdah WebObjects Frameworks
+
+= Introduction =
+
+You can have various approaches to the Houdah WebObjects Frameworks. Our favorite one being that you would wholeheartedly adopt the frameworks for your next project. Yet we do understand that some may just want to borrow some juicy bits of code.
+
+The below chapters should give some pointers on where to start. This varies depending on your planned use of the frameworks.
+
+
+== Adopting the frameworks and their architecture ==
+
+=== Quick-start: shortest way to a running application ===
+
+=== Understanding the architecture ===
+
+
+== Borrowing code ==
