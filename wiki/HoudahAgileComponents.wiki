@@ -1,0 +1,11 @@
+#summary HoudahAgileComponents: framework overview.
+
+= HoudahAgileComponents =
+
+This is where HoudahControlComponents and the HoudahRuleEngine meet. The HoudahAgileComponents framework extends the controller classes by concrete subclasses. The role of these subclasses is to provide descriptor objects by calling into the rule engine.
+
+The core of the framework is the DescriptorFactory. Here descriptor objects are instantiated as specified by the rules found in *.agile.d2wmodel files applied to a current context.
+
+The HoudahAgileComponents framework holds a default.agile.d2wmodel file. This provides sensible defaults. Indeed it derives the way entities, attributes and relationships are handled from the way they are modeled. E.g. it knows to show dates in a textfield using a NSTimestampFormatter. It also knows that if a to-many relationship owns its destination objects, new objects need to be created to add to the relationship. If the relationship were not the owner of the target objects, additional entries would need to be selected among existing objects.
+
+Client applications or frameworks should declare their own default.agile.d2wmodel file. It is recommended that rules specific to a given entity should be factored into a separate file named after the entity. An application project would thus have one model file for each entity plus the default.agile.d2wmodel to hold cross-entity rules. Application-level rules should have a priority in the 100-110 range.
