@@ -1,4 +1,0 @@
-table: HVCFieldTable {
-	fieldTableDescriptor = fieldTableDescriptor;
-	valueRows = valueRows;
-}

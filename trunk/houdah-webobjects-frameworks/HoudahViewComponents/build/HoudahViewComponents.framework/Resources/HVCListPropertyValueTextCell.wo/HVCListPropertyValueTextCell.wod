@@ -1,4 +1,0 @@
-displayString: WOString
-{
-	value = displayString;
-}

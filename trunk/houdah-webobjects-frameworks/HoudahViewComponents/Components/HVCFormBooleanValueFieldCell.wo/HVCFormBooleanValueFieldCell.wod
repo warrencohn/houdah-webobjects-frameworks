@@ -1,3 +1,0 @@
-checkBox: WOCheckBox {
-	checked = value.rawValue;
-}

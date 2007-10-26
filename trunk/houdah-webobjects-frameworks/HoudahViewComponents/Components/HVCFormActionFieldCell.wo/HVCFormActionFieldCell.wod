@@ -1,7 +1,0 @@
-actionButton: WOSubmitButton
-{
-	action = performAction;
-	value = cellDescriptor.action.label;
-	otherTagString = otherTagString;
-	class = cellDescriptor.action.cssClass;
-}
