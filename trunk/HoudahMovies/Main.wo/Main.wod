@@ -1,0 +1,7 @@
+createMovie: WOHyperlink {
+	action = createMovie;
+}
+
+searchMovies: WOHyperlink {
+	action = searchMovies;
+}

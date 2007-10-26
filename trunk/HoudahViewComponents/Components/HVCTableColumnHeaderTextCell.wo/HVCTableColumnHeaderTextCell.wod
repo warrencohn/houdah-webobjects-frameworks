@@ -1,0 +1,17 @@
+label: WOString {
+	value = cellDescriptor.label;
+}
+
+link: WOHyperlink {
+	action = sort;
+	title = "Sort";
+}
+
+notSupportsSorting: WOConditional {
+	condition = cellDescriptor.supportsSorting;
+	negate = true;
+}
+
+supportsSorting: WOConditional {
+	condition = cellDescriptor.supportsSorting;
+}

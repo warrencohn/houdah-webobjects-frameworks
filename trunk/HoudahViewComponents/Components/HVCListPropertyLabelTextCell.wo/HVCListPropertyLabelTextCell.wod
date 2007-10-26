@@ -1,0 +1,4 @@
+label: WOString
+{
+	value = label;
+}

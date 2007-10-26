@@ -1,0 +1,26 @@
+actionLink: WOHyperlink {
+	action = performAction;
+	title = action.title;
+}
+
+actionRepetition: WORepetition {
+	item = action;
+	list = cellDescriptor.actions;
+}
+
+displayString: WOString {
+	value = action.label;
+}
+
+isEnabled: WOConditional {
+	condition = isEnabled;
+}
+
+isNotEnabled: WOConditional {
+	condition = isEnabled;
+}
+
+span: WOGenericContainer {
+	elementName = "span";
+	class = actionClass;
+}

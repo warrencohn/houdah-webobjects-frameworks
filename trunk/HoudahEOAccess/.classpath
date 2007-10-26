@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/HoudahEOControl"/>
+	<classpathentry kind="con" path="org.objectstyle.wolips.WO_CLASSPATH/HoudahEOControl/JavaWOExtensions/JavaEOAccess/JavaEOControl/JavaFoundation/JavaJDBCAdaptor/JavaWebObjects/JavaXML"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/HoudahFoundation"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

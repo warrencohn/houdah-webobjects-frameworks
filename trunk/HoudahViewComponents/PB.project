@@ -1,0 +1,210 @@
+
+{
+    CURRENTLY_ACTIVE_VERSION = YES;
+    DEPLOY_WITH_VERSION_NAME = A;
+    DYNAMIC_CODE_GEN = YES;
+    FILESTABLE = 
+    {
+        CLASSES = 
+        (
+           src/com/houdah/web/view/HVCApplication.java, 
+           src/com/houdah/web/view/HVCDirectAction.java, 
+           src/com/houdah/web/view/HVCSession.java, 
+           src/com/houdah/web/view/actions/Action.java, 
+           src/com/houdah/web/view/actions/BasicConditionalAction.java, 
+           src/com/houdah/web/view/components/Cell.java, 
+           src/com/houdah/web/view/components/View.java, 
+           src/com/houdah/web/view/constants/Alignment.java, 
+           src/com/houdah/web/view/descriptors/CellDescriptor.java, 
+           src/com/houdah/web/view/descriptors/Descriptor.java, 
+           src/com/houdah/web/view/descriptors/ViewDescriptor.java, 
+           src/com/houdah/web/view/form/HVCDisplayGroupFieldTable.java, 
+           src/com/houdah/web/view/form/HVCEmptyFieldTable.java, 
+           src/com/houdah/web/view/form/HVCFieldTable.java, 
+           src/com/houdah/web/view/form/HVCFieldset.java, 
+           src/com/houdah/web/view/form/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/web/view/form/cells/FormFieldCell.java, 
+           src/com/houdah/web/view/form/cells/FormLabelCell.java, 
+           src/com/houdah/web/view/form/cells/FormMultipleValueFieldCell.java, 
+           src/com/houdah/web/view/form/cells/FormValueFieldCell.java, 
+           src/com/houdah/web/view/form/cells/HVCFormActionFieldCell.java, 
+           src/com/houdah/web/view/form/cells/HVCFormBooleanValueFieldCell.java, 
+           src/com/houdah/web/view/form/cells/HVCFormCheckBoxValueFieldCell.java, 
+           src/com/houdah/web/view/form/cells/HVCFormDatefieldValueFieldCell.java, 
+           src/com/houdah/web/view/form/cells/HVCFormEmptyFieldCell.java, 
+           src/com/houdah/web/view/form/cells/HVCFormLabelCell.java, 
+           src/com/houdah/web/view/form/cells/HVCFormPopUpValueFieldCell.java, 
+           src/com/houdah/web/view/form/cells/HVCFormRadioButtonValueFieldCell.java, 
+           src/com/houdah/web/view/form/cells/HVCFormTextValueFieldCell.java, 
+           src/com/houdah/web/view/form/cells/HVCFormTextfieldActionFieldCell.java, 
+           src/com/houdah/web/view/form/cells/HVCFormTextfieldValueFieldCell.java, 
+           src/com/houdah/web/view/form/cells/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/web/view/form/descriptors/FieldTableDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FieldsetDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FieldsetEmptyRowDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FieldsetRowDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormActionFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormBooleanValueDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormCheckBoxValueFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormDatefieldValueFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormEmptyFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormKeyPathValueFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormLabelDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormMultipleValueFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormPopUpValueFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormRadioButtonValueFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormSimpleValueFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormTextValueFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormTextfieldActionFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormTextfieldValueFieldDescriptor.java, 
+           src/com/houdah/web/view/form/descriptors/FormValueFieldDescriptor.java, 
+           src/com/houdah/web/view/form/values/BooleanValue.java, 
+           src/com/houdah/web/view/form/values/ChoiceValue.java, 
+           src/com/houdah/web/view/form/values/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/web/view/form/values/SimpleExceptionHandler.java, 
+           src/com/houdah/web/view/form/values/TextValue.java, 
+           src/com/houdah/web/view/form/values/Value.java, 
+           src/com/houdah/web/view/form/values/ValueContainer.java, 
+           src/com/houdah/web/view/form/values/ValueDelegate.java, 
+           src/com/houdah/web/view/form/values/ValueExceptionHandler.java, 
+           src/com/houdah/web/view/list/HVCDisplayGroupList.java, 
+           src/com/houdah/web/view/list/HVCList.java, 
+           src/com/houdah/web/view/list/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/web/view/list/cells/HVCListPropertyLabelTextCell.java, 
+           src/com/houdah/web/view/list/cells/HVCListPropertyValueActionCell.java, 
+           src/com/houdah/web/view/list/cells/HVCListPropertyValueTextCell.java, 
+           src/com/houdah/web/view/list/cells/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/web/view/list/cells/ListPropertyLabelCell.java, 
+           src/com/houdah/web/view/list/cells/ListPropertyValueCell.java, 
+           src/com/houdah/web/view/list/descriptors/ListDescriptor.java, 
+           src/com/houdah/web/view/list/descriptors/ListPropertyDescriptor.java, 
+           src/com/houdah/web/view/list/descriptors/ListPropertyLabelDescriptor.java, 
+           src/com/houdah/web/view/list/descriptors/ListPropertyLabelTextDescriptor.java, 
+           src/com/houdah/web/view/list/descriptors/ListPropertyValueActionDescriptor.java, 
+           src/com/houdah/web/view/list/descriptors/ListPropertyValueDescriptor.java, 
+           src/com/houdah/web/view/list/descriptors/ListPropertyValueTextDescriptor.java, 
+           src/com/houdah/web/view/simplelist/HVCSimpleList.java, 
+           src/com/houdah/web/view/simplelist/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/web/view/simplelist/cells/HVCSimpleListItemActionCell.java, 
+           src/com/houdah/web/view/simplelist/cells/HVCSimpleListItemTextCell.java, 
+           src/com/houdah/web/view/simplelist/cells/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/web/view/simplelist/cells/SimpleListItemCell.java, 
+           src/com/houdah/web/view/simplelist/descriptors/SimpleListDescriptor.java, 
+           src/com/houdah/web/view/simplelist/descriptors/SimpleListItemActionDescriptor.java, 
+           src/com/houdah/web/view/simplelist/descriptors/SimpleListItemDescriptor.java, 
+           src/com/houdah/web/view/simplelist/descriptors/SimpleListItemTextDescriptor.java, 
+           src/com/houdah/web/view/table/HVCDisplayGroupTable.java, 
+           src/com/houdah/web/view/table/HVCTable.java, 
+           src/com/houdah/web/view/table/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/web/view/table/cells/HVCTableColumnHeaderTextCell.java, 
+           src/com/houdah/web/view/table/cells/HVCTableColumnRowActionCell.java, 
+           src/com/houdah/web/view/table/cells/HVCTableColumnRowMultipleActionCell.java, 
+           src/com/houdah/web/view/table/cells/HVCTableColumnRowTextCell.java, 
+           src/com/houdah/web/view/table/cells/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/web/view/table/cells/TableColumnHeaderCell.java, 
+           src/com/houdah/web/view/table/cells/TableColumnRowCell.java, 
+           src/com/houdah/web/view/table/descriptors/TableColumnDescriptor.java, 
+           src/com/houdah/web/view/table/descriptors/TableColumnHeaderDescriptor.java, 
+           src/com/houdah/web/view/table/descriptors/TableColumnHeaderTextDescriptor.java, 
+           src/com/houdah/web/view/table/descriptors/TableColumnRowActionDescriptor.java, 
+           src/com/houdah/web/view/table/descriptors/TableColumnRowDescriptor.java, 
+           src/com/houdah/web/view/table/descriptors/TableColumnRowMultipleActionDescriptor.java, 
+           src/com/houdah/web/view/table/descriptors/TableColumnRowTextDescriptor.java, 
+           src/com/houdah/web/view/table/descriptors/TableDescriptor.java
+        );
+        FRAMEWORKS = 
+        (
+           HoudahAppServer.framework, 
+           HoudahFoundation.framework, 
+           JavaEOControl.framework, 
+           JavaFoundation.framework, 
+           JavaWOExtensions.framework, 
+           JavaWebObjects.framework
+        );
+        OTHER_SOURCES = 
+        ();
+        SUBPROJECTS = 
+        ();
+        WEBSERVER_RESOURCES = 
+        (
+           WebServerResources/style.css
+        );
+        WOAPP_RESOURCES = 
+        (
+           Components/HVCDisplayGroupFieldTable.api, 
+           Components/HVCDisplayGroupList.api, 
+           Components/HVCDisplayGroupTable.api, 
+           Components/HVCEmptyFieldTable.api, 
+           Components/HVCFieldTable.api, 
+           Components/HVCFieldset.api, 
+           Components/HVCFormActionFieldCell.api, 
+           Components/HVCFormBooleanValueFieldCell.api, 
+           Components/HVCFormCheckBoxValueFieldCell.api, 
+           Components/HVCFormLabelCell.api, 
+           Components/HVCFormPopUpValueFieldCell.api, 
+           Components/HVCFormRadioButtonValueFieldCell.api, 
+           Components/HVCFormTextValueFieldCell.api, 
+           Components/HVCFormTextfieldActionFieldCell.api, 
+           Components/HVCFormTextfieldValueFieldCell.api, 
+           Components/HVCList.api, 
+           Components/HVCSimpleList.api, 
+           Components/HVCTable.api, 
+           CustomInfo.plist, 
+           Resources/Properties
+        );
+        WO_COMPONENTS = 
+        (
+           Components/HVCDisplayGroupFieldTable.wo, 
+           Components/HVCDisplayGroupList.wo, 
+           Components/HVCDisplayGroupTable.wo, 
+           Components/HVCEmptyFieldTable.wo, 
+           Components/HVCFieldTable.wo, 
+           Components/HVCFieldset.wo, 
+           Components/HVCFormActionFieldCell.wo, 
+           Components/HVCFormBooleanValueFieldCell.wo, 
+           Components/HVCFormCheckBoxValueFieldCell.wo, 
+           Components/HVCFormEmptyFieldCell.wo, 
+           Components/HVCFormLabelCell.wo, 
+           Components/HVCFormPopUpValueFieldCell.wo, 
+           Components/HVCFormRadioButtonValueFieldCell.wo, 
+           Components/HVCFormTextValueFieldCell.wo, 
+           Components/HVCFormTextfieldActionFieldCell.wo, 
+           Components/HVCFormTextfieldValueFieldCell.wo, 
+           Components/HVCList.wo, 
+           Components/HVCListPropertyLabelTextCell.wo, 
+           Components/HVCListPropertyValueActionCell.wo, 
+           Components/HVCListPropertyValueTextCell.wo, 
+           Components/HVCSimpleList.wo, 
+           Components/HVCSimpleListItemActionCell.wo, 
+           Components/HVCSimpleListItemTextCell.wo, 
+           Components/HVCTable.wo, 
+           Components/HVCTableColumnHeaderTextCell.wo, 
+           Components/HVCTableColumnRowActionCell.wo, 
+           Components/HVCTableColumnRowMultipleActionCell.wo, 
+           Components/HVCTableColumnRowTextCell.wo
+        );
+    };
+    FRAMEWORKSEARCH = 
+    (
+       "$(NEXT_ROOT)$(LOCAL_LIBRARY_DIR)/Frameworks"
+    );
+    LANGUAGE = English;
+    MAKEFILEDIR = "$(MAKEFILEPATH)/java_makefiles";
+    NEXTSTEP_BUILDTOOL = /bin/gnumake;
+    NEXTSTEP_INSTALLDIR = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+    NEXTSTEP_JAVA_COMPILER = /usr/bin/javac;
+    NEXTSTEP_OBJCPLUS_COMPILER = /usr/bin/cc;
+    PBPROJECTTYPEVERSION = 4.0;
+    PDO_UNIX_BUILDTOOL = $NEXT_ROOT/Developer/bin/make;
+    PDO_UNIX_INSTALLDIR = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+    PDO_UNIX_JAVA_COMPILER = "$(JDKBINDIR)/javac";
+    PDO_UNIX_OBJCPLUS_COMPILER = "$(NEXTDEV_BIN)/gcc";
+    PROJECTNAME = HoudahViewComponents;
+    PROJECTTYPE = JavaWebObjectsFramework;
+    PROJECTVERSION = 2.8;
+    WINDOWS_BUILDTOOL = $NEXT_ROOT/Developer/Executables/make;
+    WINDOWS_INSTALLDIR = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+    WINDOWS_JAVA_COMPILER = "$(JDKBINDIR)/javac.exe";
+    WINDOWS_OBJCPLUS_COMPILER = "$(DEVDIR)/gcc";
+}

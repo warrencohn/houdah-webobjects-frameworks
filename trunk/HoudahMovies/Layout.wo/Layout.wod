@@ -1,0 +1,22 @@
+backAction: WOHyperlink
+{
+	action = previousPage;
+}
+
+javaScriptLinker: JavaScriptLinker
+{
+}
+
+mainPage: WOComponentContent
+{
+}
+
+
+styleSheetLinker: StyleSheetLinker
+{
+}
+
+showNavigationControls: WOConditional
+{
+	condition = ^showNavigationControls;
+}
