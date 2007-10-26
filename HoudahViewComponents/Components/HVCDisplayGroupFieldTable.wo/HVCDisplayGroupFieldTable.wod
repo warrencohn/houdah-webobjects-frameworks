@@ -1,0 +1,53 @@
+batchCount: WOString {
+	value = displayGroup.batchCount;
+}
+
+batchCount2: WOString {
+	value = displayGroup.batchCount;
+}
+
+currentBatch: WOString {
+	value = displayGroup.currentBatchIndex;
+}
+
+currentBatch2: WOString {
+	value = displayGroup.currentBatchIndex;
+}
+
+displayNextBatch1: WOSubmitButton {
+	action = displayNextBatch;
+	value = nextActionLabel;
+	class = "nextBatch";
+}
+
+displayNextBatch2: WOSubmitButton {
+	action = displayNextBatch;
+	value = nextActionLabel;
+	class = "nextBatch";
+}
+
+displayPreviousBatch1: WOSubmitButton {
+	action = displayPreviousBatch;
+	value = previousActionLabel;
+	class = "previousBatch";
+}
+
+displayPreviousBatch2: WOSubmitButton {
+	action = displayPreviousBatch;
+	value = previousActionLabel;
+	class = "previousBatch";
+}
+
+needsBatchingControls1: WOConditional {
+	condition = needsBatchingControls;
+}
+
+needsBatchingControls2: WOConditional {
+	condition = needsBatchingControls;
+}
+
+table: HVCFieldTable {
+	fieldTableDescriptor = fieldTableDescriptor;
+	valueRows = valueRows;
+	selectionIndex = selectionIndex;
+}

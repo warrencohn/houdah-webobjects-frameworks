@@ -1,0 +1,578 @@
+{
+    rules = (
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = className; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La valeur fournie pour la propri\335t\335 `$label` n'est pas du bon type"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = mandatoryToMany; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La relation `$label` doit avoir au moins une valeur"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = mandatoryToOne; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La relation `$label` doit \336tre aliment\335e"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = maxCount; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La collection `$label` tol\334re un maximum de $maxCount \335l\335ments"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = maxLength; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La propri\335t\335 `$label` a une longueur maximum de $maxLength"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = minCount; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La collection `$label` requiert un minimum de $minCount \335l\335ments"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = minLength; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La propri\335t\335 `$label` a une longueur minimum de $minLength"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = notNull; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La propri\335t\335 `$label` est obligatoire"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = width; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La propri\335t\335 `$label` a une largeur maximum de $width"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = maxValue; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La valeur pour la propri\335t\335 `$label` doit \336tre \335gale ou inf\335rieure \325 $maxValue"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = maxYear; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La valeur pour la propri\335t\335 `$label` doit \336tre une date de l'ann\335e $maxYear ou avant"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = minValue; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La valeur pour la propri\335t\335 `$label` doit \336re \335gale ou sup\335rieure \325 $minValue"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = minYear; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La valeur pour la propri\335t\335 `$label` doit  \336tre une date de l'ann\335e $minYear ou apr\334s"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = nonZero; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La propri\335t\335 `$label` doit avoir une valeur diff\335rente de z\335ro"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = className; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The value for property `$label` is not of the appropriate type"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = mandatoryToMany; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The relationship `$label` must have at least one value"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = mandatoryToOne; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The relationship `$label` must be set"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = maxCount; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The property `$label` has a maximum count of $maxCount"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = maxLength; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The property `$label` has a maximum length of $maxLength"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = maxValue; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The property `$label` must have a value  equal to or less than $maxValue"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = maxYear; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The property `$label` must be a date in $maxYear or earlier"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = minCount; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The property `$label` has a minimum count of $minCount"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = minLength; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The property `$label` has a minimum length of $minLength"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = minValue; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The property `$label` must have a value equal to or greater than $minValue"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = minYear; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The property `$label` must be a date in $minYear or later"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = nonZero; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The property `$label` must have a value other than zero"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = notNull; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The property `$label` may not be null"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = width; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The property `$label` has a maximum width of $width"; 
+            }; 
+        }
+    ); 
+}

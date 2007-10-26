@@ -1,0 +1,620 @@
+
+{
+    archiveVersion = 1;
+    classes = 
+    {};
+    objectVersion = 42;
+    objects = 
+    {
+        000000000000000000000001 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.java;
+            name = TraceableRecord.java;
+            path = src/com/houdah/auditTrail/TraceableRecord.java;
+            sourceTree = "<group>";
+        };
+        000000000000000000000002 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.java;
+            name = PrincipalClass.java;
+            path = src/com/houdah/auditTrail/PrincipalClass.java;
+            sourceTree = "<group>";
+        };
+        000000000000000000000003 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.java;
+            name = ChangeableRecord.java;
+            path = src/com/houdah/auditTrail/ChangeableRecord.java;
+            sourceTree = "<group>";
+        };
+        000000000000000000000004 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.java;
+            name = AuditingEditor.java;
+            path = src/com/houdah/auditTrail/AuditingEditor.java;
+            sourceTree = "<group>";
+        };
+        000000000000000000000005 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.java;
+            name = AuditingEditingContextFactory.java;
+            path = src/com/houdah/auditTrail/AuditingEditingContextFactory.java;
+            sourceTree = "<group>";
+        };
+        000000000000000000000006 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.java;
+            name = AuditingEditingContext.java;
+            path = src/com/houdah/auditTrail/AuditingEditingContext.java;
+            sourceTree = "<group>";
+        };
+        000000000000000000000007 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.java;
+            name = AuditUser.java;
+            path = src/com/houdah/auditTrail/AuditUser.java;
+            sourceTree = "<group>";
+        };
+        000000000000000000000008 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.java;
+            name = default.agile.d2wmodel;
+            path = Resources/default.agile.d2wmodel;
+            sourceTree = "<group>";
+        };
+        000000000000000000000009 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.java;
+            name = CustomInfo.plist;
+            path = Resources/CustomInfo.plist;
+            sourceTree = "<group>";
+        };
+        00000000000000000000000a = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.java;
+            name = Properties;
+            path = Properties;
+            sourceTree = "<group>";
+        };
+        00000000000000000000000b = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = HoudahEOAccess.framework;
+            path = "/Volumes/Macintosh HD/Users/pierre/Desktop/Houdah Frameworks 1.0 beta 2/HoudahEOAccess/build/HoudahEOAccess.framework";
+            sourceTree = "<absolute>";
+        };
+        00000000000000000000000c = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = HoudahEOControl.framework;
+            path = "/Volumes/Macintosh HD/Users/pierre/Desktop/Houdah Frameworks 1.0 beta 2/HoudahEOControl/build/HoudahEOControl.framework";
+            sourceTree = "<absolute>";
+        };
+        00000000000000000000000d = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = HoudahEOValidation.framework;
+            path = "/Volumes/Macintosh HD/Users/pierre/Desktop/Houdah Frameworks 1.0 beta 2/HoudahEOValidation/build/HoudahEOValidation.framework";
+            sourceTree = "<absolute>";
+        };
+        00000000000000000000000e = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = HoudahExtensions.framework;
+            path = "/Volumes/Macintosh HD/Users/pierre/Desktop/Houdah Frameworks 1.0 beta 2/HoudahExtensions/build/HoudahExtensions.framework";
+            sourceTree = "<absolute>";
+        };
+        00000000000000000000000f = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = HoudahFoundation.framework;
+            path = "/Volumes/Macintosh HD/Users/pierre/Desktop/Houdah Frameworks 1.0 beta 2/HoudahFoundation/build/HoudahFoundation.framework";
+            sourceTree = "<absolute>";
+        };
+        000000000000000000000010 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = JavaEOAccess.framework;
+            path = /System/Library/Frameworks/JavaEOAccess.framework;
+            sourceTree = "<absolute>";
+        };
+        000000000000000000000011 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = JavaEOControl.framework;
+            path = /System/Library/Frameworks/JavaEOControl.framework;
+            sourceTree = "<absolute>";
+        };
+        000000000000000000000012 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = JavaFoundation.framework;
+            path = /System/Library/Frameworks/JavaFoundation.framework;
+            sourceTree = "<absolute>";
+        };
+        000000000000000000000013 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = JavaJDBCAdaptor.framework;
+            path = /System/Library/Frameworks/JavaJDBCAdaptor.framework;
+            sourceTree = "<absolute>";
+        };
+        000000000000000000000014 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = JavaWebObjects.framework;
+            path = /System/Library/Frameworks/JavaWebObjects.framework;
+            sourceTree = "<absolute>";
+        };
+        000000000000000000000015 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = JavaWOExtensions.framework;
+            path = /System/Library/Frameworks/JavaWOExtensions.framework;
+            sourceTree = "<absolute>";
+        };
+        000000000000000000000016 = 
+        {
+            isa = PBXFileReference;
+            lastKnownFileType = wrapper.framework;
+            name = JavaXML.framework;
+            path = /System/Library/Frameworks/JavaXML.framework;
+            sourceTree = "<absolute>";
+        };
+        000000000000000000000017 = 
+        {
+            children = 
+            (
+               000000000000000000000001, 
+               000000000000000000000002, 
+               000000000000000000000003, 
+               000000000000000000000004, 
+               000000000000000000000005, 
+               000000000000000000000006, 
+               000000000000000000000007
+            );
+            isa = PBXGroup;
+            name = Sources;
+            sourceTree = "<group>";
+        };
+        000000000000000000000018 = 
+        {
+            children = 
+            (
+               000000000000000000000008, 
+               000000000000000000000009, 
+               00000000000000000000000a
+            );
+            isa = PBXGroup;
+            name = Resources;
+            sourceTree = "<group>";
+        };
+        000000000000000000000019 = 
+        {
+            children = 
+            ();
+            isa = PBXGroup;
+            name = "Web Server";
+            sourceTree = "<group>";
+        };
+        00000000000000000000001a = 
+        {
+            children = 
+            (
+               00000000000000000000000b, 
+               00000000000000000000000c, 
+               00000000000000000000000d, 
+               00000000000000000000000e, 
+               00000000000000000000000f, 
+               000000000000000000000010, 
+               000000000000000000000011, 
+               000000000000000000000012, 
+               000000000000000000000013, 
+               000000000000000000000014, 
+               000000000000000000000015, 
+               000000000000000000000016
+            );
+            isa = PBXGroup;
+            name = Frameworks;
+            sourceTree = "<group>";
+        };
+        00000000000000000000001b = 
+        {
+            children = 
+            (
+               000000000000000000000017, 
+               000000000000000000000018, 
+               000000000000000000000019, 
+               00000000000000000000001a
+            );
+            isa = PBXGroup;
+            name = Root;
+            sourceTree = "<group>";
+        };
+        00000000000000000000001c = 
+        {
+            fileRef = 000000000000000000000001;
+            isa = PBXBuildFile;
+        };
+        00000000000000000000001d = 
+        {
+            fileRef = 000000000000000000000002;
+            isa = PBXBuildFile;
+        };
+        00000000000000000000001e = 
+        {
+            fileRef = 000000000000000000000003;
+            isa = PBXBuildFile;
+        };
+        00000000000000000000001f = 
+        {
+            fileRef = 000000000000000000000004;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000020 = 
+        {
+            fileRef = 000000000000000000000005;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000021 = 
+        {
+            fileRef = 000000000000000000000006;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000022 = 
+        {
+            fileRef = 000000000000000000000007;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000023 = 
+        {
+            files = 
+            (
+               00000000000000000000001c, 
+               00000000000000000000001d, 
+               00000000000000000000001e, 
+               00000000000000000000001f, 
+               000000000000000000000020, 
+               000000000000000000000021, 
+               000000000000000000000022
+            );
+            isa = PBXSourcesBuildPhase;
+        };
+        000000000000000000000024 = 
+        {
+            fileRef = 000000000000000000000008;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000025 = 
+        {
+            fileRef = 000000000000000000000009;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000026 = 
+        {
+            fileRef = 00000000000000000000000a;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000027 = 
+        {
+            files = 
+            (
+               000000000000000000000024, 
+               000000000000000000000025, 
+               000000000000000000000026
+            );
+            isa = PBXResourcesBuildPhase;
+        };
+        000000000000000000000028 = 
+        {
+            files = 
+            ();
+            isa = PBXResourcesBuildPhase;
+        };
+        000000000000000000000029 = 
+        {
+            fileRef = 00000000000000000000000b;
+            isa = PBXBuildFile;
+        };
+        00000000000000000000002a = 
+        {
+            fileRef = 00000000000000000000000c;
+            isa = PBXBuildFile;
+        };
+        00000000000000000000002b = 
+        {
+            fileRef = 00000000000000000000000d;
+            isa = PBXBuildFile;
+        };
+        00000000000000000000002c = 
+        {
+            fileRef = 00000000000000000000000e;
+            isa = PBXBuildFile;
+        };
+        00000000000000000000002d = 
+        {
+            fileRef = 00000000000000000000000f;
+            isa = PBXBuildFile;
+        };
+        00000000000000000000002e = 
+        {
+            fileRef = 000000000000000000000010;
+            isa = PBXBuildFile;
+        };
+        00000000000000000000002f = 
+        {
+            fileRef = 000000000000000000000011;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000030 = 
+        {
+            fileRef = 000000000000000000000012;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000031 = 
+        {
+            fileRef = 000000000000000000000013;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000032 = 
+        {
+            fileRef = 000000000000000000000014;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000033 = 
+        {
+            fileRef = 000000000000000000000015;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000034 = 
+        {
+            fileRef = 000000000000000000000016;
+            isa = PBXBuildFile;
+        };
+        000000000000000000000035 = 
+        {
+            files = 
+            (
+               000000000000000000000029, 
+               00000000000000000000002a, 
+               00000000000000000000002b, 
+               00000000000000000000002c, 
+               00000000000000000000002d, 
+               00000000000000000000002e, 
+               00000000000000000000002f, 
+               000000000000000000000030, 
+               000000000000000000000031, 
+               000000000000000000000032, 
+               000000000000000000000033, 
+               000000000000000000000034
+            );
+            isa = PBXFrameworksBuildPhase;
+        };
+        000000000000000000000036 = 
+        {
+            files = 
+            ();
+            isa = PBXSourcesBuildPhase;
+        };
+        000000000000000000000037 = 
+        {
+            files = 
+            ();
+            isa = PBXResourcesBuildPhase;
+        };
+        000000000000000000000038 = 
+        {
+            files = 
+            ();
+            isa = PBXResourcesBuildPhase;
+        };
+        000000000000000000000039 = 
+        {
+            files = 
+            ();
+            isa = PBXFrameworksBuildPhase;
+        };
+        00000000000000000000003a = 
+        {
+            buildSettings = 
+            {
+                COPY_PHASE_STRIP = NO;
+            };
+            isa = XCBuildConfiguration;
+            name = Debug;
+        };
+        00000000000000000000003b = 
+        {
+            buildSettings = 
+            {
+                COPY_PHASE_STRIP = YES;
+            };
+            isa = XCBuildConfiguration;
+            name = Release;
+        };
+        00000000000000000000003c = 
+        {
+            buildSettings = 
+            {};
+            isa = XCBuildConfiguration;
+            name = Default;
+        };
+        00000000000000000000003d = 
+        {
+            buildConfigurations = 
+            (
+               00000000000000000000003a, 
+               00000000000000000000003b, 
+               00000000000000000000003c
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Default;
+            isa = XCConfigurationList;
+        };
+        00000000000000000000003e = 
+        {
+            files = 
+            ();
+            isa = PBXSourcesBuildPhase;
+        };
+        00000000000000000000003f = 
+        {
+            files = 
+            ();
+            isa = PBXResourcesBuildPhase;
+        };
+        000000000000000000000040 = 
+        {
+            files = 
+            ();
+            isa = PBXResourcesBuildPhase;
+        };
+        000000000000000000000041 = 
+        {
+            files = 
+            ();
+            isa = PBXFrameworksBuildPhase;
+        };
+        000000000000000000000042 = 
+        {
+            buildPhases = 
+            (
+               000000000000000000000023, 
+               000000000000000000000027, 
+               000000000000000000000028, 
+               000000000000000000000035
+            );
+            buildSettings = 
+            {};
+            isa = PBXToolTarget;
+            name = "Application Server";
+        };
+        000000000000000000000043 = 
+        {
+            buildArgumentsString = "-emacs $(ACTION)";
+            buildConfigurationList = 00000000000000000000003d;
+            buildPhases = 
+            (
+               000000000000000000000036, 
+               000000000000000000000037, 
+               000000000000000000000038, 
+               000000000000000000000039
+            );
+            buildSettings = 
+            {};
+            buildToolPath = /Developer/Java/Ant/bin/ant;
+            isa = PBXLegacyTarget;
+            name = Ant;
+            passBuildSettingsInEnvironment = 1;
+            productName = Ant;
+        };
+        000000000000000000000044 = 
+        {
+            buildPhases = 
+            (
+               00000000000000000000003e, 
+               00000000000000000000003f, 
+               000000000000000000000040, 
+               000000000000000000000041
+            );
+            buildSettings = 
+            {};
+            isa = PBXToolTarget;
+            name = "Web Server";
+        };
+        000000000000000000000045 = 
+        {
+            buildSettings = 
+            {};
+            isa = XCBuildConfiguration;
+            name = Debug;
+        };
+        000000000000000000000046 = 
+        {
+            buildSettings = 
+            {};
+            isa = XCBuildConfiguration;
+            name = Release;
+        };
+        000000000000000000000047 = 
+        {
+            buildSettings = 
+            {};
+            isa = XCBuildConfiguration;
+            name = Default;
+        };
+        000000000000000000000048 = 
+        {
+            buildConfigurations = 
+            (
+               000000000000000000000045, 
+               000000000000000000000046, 
+               000000000000000000000047
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Default;
+            isa = XCConfigurationList;
+        };
+        000000000000000000000049 = 
+        {
+            buildSettings = 
+            {
+                COPY_PHASE_STRIP = NO;
+            };
+            isa = PBXBuildStyle;
+            name = Debug;
+        };
+        00000000000000000000004a = 
+        {
+            buildSettings = 
+            {
+                COPY_PHASE_STRIP = YES;
+            };
+            isa = PBXBuildStyle;
+            name = Release;
+        };
+        00000000000000000000004b = 
+        {
+            buildConfigurationList = 000000000000000000000048;
+            buildSettings = 
+            {};
+            buildStyles = 
+            (
+               000000000000000000000049, 
+               00000000000000000000004a
+            );
+            hasScannedForEncodings = 1;
+            isa = PBXProject;
+            mainGroup = 00000000000000000000001b;
+            projectDirPath = .;
+            targets = 
+            (
+               000000000000000000000042, 
+               000000000000000000000043, 
+               000000000000000000000044
+            );
+        };
+    };
+    rootObject = 00000000000000000000004b;
+}

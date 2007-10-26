@@ -1,0 +1,86 @@
+
+{
+    CURRENTLY_ACTIVE_VERSION = YES;
+    DEPLOY_WITH_VERSION_NAME = A;
+    DYNAMIC_CODE_GEN = YES;
+    FILESTABLE = 
+    {
+        CLASSES = 
+        (
+           src/com/houdah/foundation/AbstractKeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/foundation/Delegate.java, 
+           src/com/houdah/foundation/FormatterFactory.java, 
+           src/com/houdah/foundation/ForwardException.java, 
+           src/com/houdah/foundation/KVCObject.java, 
+           src/com/houdah/foundation/KVCUtility.java, 
+           src/com/houdah/foundation/KeyFormatter.java, 
+           src/com/houdah/foundation/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/foundation/PrincipalClass.java, 
+           src/com/houdah/foundation/formatters/BooleanFormatter.java, 
+           src/com/houdah/foundation/formatters/ClassConstantFormatter.java, 
+           src/com/houdah/foundation/formatters/ClassFormatter.java, 
+           src/com/houdah/foundation/formatters/DummyFormatter.java, 
+           src/com/houdah/foundation/formatters/FormatFormatter.java, 
+           src/com/houdah/foundation/formatters/IntegerFormat.java, 
+           src/com/houdah/foundation/formatters/KeyFormatterFormatter.java, 
+           src/com/houdah/foundation/formatters/KeyValueFormatter.java, 
+           src/com/houdah/foundation/formatters/NumberFormatter.java, 
+           src/com/houdah/foundation/formatters/SetFormatter.java, 
+           src/com/houdah/foundation/formatters/StaticFormatter.java, 
+           src/com/houdah/foundation/formatters/TimestampFormatter.java, 
+           src/com/houdah/foundation/utilities/ArrayUtilities.java, 
+           src/com/houdah/foundation/utilities/DefaultsProperties.java, 
+           src/com/houdah/foundation/utilities/DictionaryUtilities.java, 
+           src/com/houdah/foundation/utilities/IntegerFactory.java, 
+           src/com/houdah/foundation/utilities/NumberUtilities.java, 
+           src/com/houdah/foundation/utilities/ObjectUtilities.java, 
+           src/com/houdah/foundation/utilities/PropertyListUtilities.java, 
+           src/com/houdah/foundation/utilities/StackTraceUtilities.java, 
+           src/com/houdah/foundation/utilities/StringUtilities.java, 
+           src/com/houdah/foundation/utilities/TimestampUtilities.java
+        );
+        FRAMEWORKS = 
+        (
+           JavaEOAccess.framework, 
+           JavaEOControl.framework, 
+           JavaFoundation.framework, 
+           JavaJDBCAdaptor.framework, 
+           JavaWOExtensions.framework, 
+           JavaWebObjects.framework, 
+           JavaXML.framework
+        );
+        OTHER_SOURCES = 
+        ();
+        SUBPROJECTS = 
+        ();
+        WOAPP_RESOURCES = 
+        (
+           CustomInfo.plist, 
+           Resources/Properties
+        );
+        WO_COMPONENTS = 
+        ();
+    };
+    FRAMEWORKSEARCH = 
+    (
+       "$(NEXT_ROOT)$(LOCAL_LIBRARY_DIR)/Frameworks"
+    );
+    LANGUAGE = English;
+    MAKEFILEDIR = "$(MAKEFILEPATH)/java_makefiles";
+    NEXTSTEP_BUILDTOOL = /bin/gnumake;
+    NEXTSTEP_INSTALLDIR = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+    NEXTSTEP_JAVA_COMPILER = /usr/bin/javac;
+    NEXTSTEP_OBJCPLUS_COMPILER = /usr/bin/cc;
+    PBPROJECTTYPEVERSION = 4.0;
+    PDO_UNIX_BUILDTOOL = $NEXT_ROOT/Developer/bin/make;
+    PDO_UNIX_INSTALLDIR = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+    PDO_UNIX_JAVA_COMPILER = "$(JDKBINDIR)/javac";
+    PDO_UNIX_OBJCPLUS_COMPILER = "$(NEXTDEV_BIN)/gcc";
+    PROJECTNAME = HoudahFoundation;
+    PROJECTTYPE = JavaWebObjectsFramework;
+    PROJECTVERSION = 2.8;
+    WINDOWS_BUILDTOOL = $NEXT_ROOT/Developer/Executables/make;
+    WINDOWS_INSTALLDIR = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+    WINDOWS_JAVA_COMPILER = "$(JDKBINDIR)/javac.exe";
+    WINDOWS_OBJCPLUS_COMPILER = "$(DEVDIR)/gcc";
+}

@@ -1,0 +1,127 @@
+{
+    rules = (
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = BLESS_DENIED; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La validation de la requ\336te a \335chou\335 pour des raisons inconnues"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = BLESS_NO_QUALIFIER; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Veuillez saisir au moins un crit\334re"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = BLESS_NO_SUPPORT; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La validation de la requ\336te n'a pas trouv\335 de classe de support. Veuillez rapporter l'erreur"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = BLESS_DENIED; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Query blessing was denied for unknown reasons"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = BLESS_NO_QUALIFIER; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Please enter at least one criteria"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = BLESS_NO_SUPPORT; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Query blessing could not locate support class. Please report"; 
+            }; 
+        }
+    ); 
+}

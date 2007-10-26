@@ -1,0 +1,13 @@
+{
+    rules = (
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Unknown message with code: $messageCode"; 
+            }; 
+        }
+    ); 
+}

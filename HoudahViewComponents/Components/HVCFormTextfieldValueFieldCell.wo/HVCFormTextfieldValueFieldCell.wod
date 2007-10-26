@@ -1,0 +1,18 @@
+hasHint: WOConditional 
+{
+	condition = cellDescriptor.hint;
+}
+
+hint: WOString
+{
+	value = cellDescriptor.hint;
+	escapeHTML = false;
+}
+
+textField: WOTextField
+{
+	maxLength = cellDescriptor.maxLength;
+	size = cellDescriptor.size;
+	value = textValue;
+	otherTagString = otherTagString;
+}

@@ -1,0 +1,19 @@
+quickSearchFieldset: HVCFieldset
+{
+	values = controller.values;
+	fieldsetDescriptor = controller.fieldsetDescriptor;
+	field = controller.currentField;
+}
+
+resultsList: HVCSimpleList
+{
+	displayedObjects = controller.results;
+	simpleListDescriptor = controller.simpleListDescriptor;
+	object = controller.currentObject;
+}
+
+
+quickSearchForm: WOForm
+{
+	multipleSubmit = true;
+}
