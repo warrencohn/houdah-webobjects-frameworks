@@ -1,0 +1,80 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = BUDGET;
+           externalType = money;
+           name = budget;
+           precision = 15;
+           scale = 2;
+           valueClassName = NSDecimalNumber;
+           valueType = B;
+       }, 
+       
+       {
+           columnName = NAME;
+           externalType = char;
+           name = name;
+           valueClassName = NSString;
+           width = 40;
+       }, 
+       
+       {
+           columnName = STUDIO_ID;
+           externalType = long;
+           name = studioID;
+           precision = 9;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       budget, 
+       name, 
+       studioID
+    );
+    className = com.houdah.movies.business.Studio;
+    classProperties = 
+    (
+       budget, 
+       movies, 
+       name
+    );
+    externalName = STUDIO;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           budget, 
+           movies, 
+           name
+        );
+        _javaClientClassName = webobjectsexamples.businesslogic.movies.client.Studio;
+    };
+    name = Studio;
+    primaryKeyAttributes = 
+    (
+       studioID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Movie;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = studioID;
+                  sourceAttribute = studioID;
+              }
+           );
+           name = movies;
+       }
+    );
+}

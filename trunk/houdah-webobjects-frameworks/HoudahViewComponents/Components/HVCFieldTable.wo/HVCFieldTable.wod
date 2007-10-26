@@ -1,0 +1,51 @@
+columnRepetition: WORepetition {
+	list = fieldTableDescriptor.rowDescriptor.fields;
+	item = currentField;
+}
+
+columnRow: WOGenericContainer {
+	class = fieldClass;
+	elementName = "td";
+}
+
+columnRowCell: WOSwitchComponent {
+	cellDescriptor = currentField;
+	WOComponentName = currentField.elementName;
+	values = values;
+}
+
+hasLabel: WOConditional
+{
+	condition = hasLabel;
+}
+
+headerRepetition: WORepetition {
+	list = fieldTableDescriptor.rowDescriptor.fields;
+	item = currentField;
+}
+
+isEmpty: WOConditional {
+	condition = isEmptyRow;
+}
+
+isNotEmpty: WOConditional {
+	negate = true;
+	condition = isEmptyRow;
+}
+
+labelCell: WOSwitchComponent
+{
+	cellDescriptor = currentField.labelDescriptor;
+	WOComponentName = currentField.labelDescriptor.elementName;
+	fieldDescriptor = currentField;
+}
+
+rowRepetition: WORepetition {
+	index = currentRowIndex;
+	count = rowCount;
+}
+
+tableRow: WOGenericContainer {
+	class = rowClass;
+	elementName = "tr";
+}

@@ -1,0 +1,37 @@
+itemLabel: WOGenericContainer
+{
+	elementName = "label";
+	for = currentItemId;
+}
+
+itemLabelString: WOString
+{
+	value = itemDisplayString;
+	escapeHTML = false;
+}
+
+radioButton: WOGenericElement
+{
+    elementName = "input";
+    type = "radio";
+    // ** this is elementID of the wrapper so all
+    // ** RadioButtons in this list will have the same name.
+    name = wrapperElementID;
+    value = currentIndex;
+	otherTagString = otherTagString;
+	id = currentItemId;
+}
+
+radioButtonRepetition: WORepetition
+{
+	count = value.valueList.count;
+	index = currentIndex;
+}
+
+radioButtonWrapper: WOGenericContainer 
+{
+    elementName="span";
+    elementID = wrapperElementID;
+    name = context.elementID;
+    formValue = value.rawValue;
+}

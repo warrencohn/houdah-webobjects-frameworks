@@ -1,0 +1,11 @@
+label: WOGenericContainer
+{
+	elementName = "label";
+	otherTagString = otherTagString;
+}
+
+labelString: WOString
+{
+	value = displayLabel;
+	escapeHTML = false;
+}

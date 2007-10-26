@@ -1,0 +1,322 @@
+{
+    rules = (
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = additionalKeys; 
+                value = (); 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.KeyValueAssignment; 
+                keyPath = keys; 
+                value = key; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = maxCount; 
+                value = 1000; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = maxLength; 
+                value = 2048; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = maxValue; 
+                value = 0.0; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = maxYear; 
+                value = 2999; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.KeyValueAssignment; 
+                keyPath = messageCode; 
+                value = ruleName; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.DefaultValidation#qualifier"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = className; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.ModelValidation#className"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = mandatoryToMany; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.ModelValidation#mandatoryToMany"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = mandatoryToOne; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.ModelValidation#mandatoryToOne"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = maxCount; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.ArrayValidation#maxCount"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = maxLength; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.StringValidation#maxLength"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = maxValue; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.NumberValidation#maxValue"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = maxYear; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.DateValidation#minYear"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = minCount; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.ArrayValidation#minCount"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = minLength; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.StringValidation#minLength"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = minValue; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.NumberValidation#minValue"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = minYear; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.DateValidation#minYear"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = nonZero; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.NumberValidation#nonZero"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = notNull; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.ModelValidation#notNull"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = ruleName; 
+                selectorName = "isEqualTo"; 
+                value = width; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = method; 
+                value = "com.houdah.eovalidation.validation.ModelValidation#width"; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = minCount; 
+                value = 1000; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = minLength; 
+                value = 0; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = minValue; 
+                value = 0.0; 
+            }; 
+        }, 
+        {
+            author = 0; 
+            class = com.webobjects.directtoweb.Rule; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = minYear; 
+                value = 1850; 
+            }; 
+        }
+    ); 
+}

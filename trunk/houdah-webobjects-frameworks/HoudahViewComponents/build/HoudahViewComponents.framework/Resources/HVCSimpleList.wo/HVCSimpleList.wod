@@ -1,0 +1,18 @@
+item: WOGenericContainer
+{
+	class = itemClass;
+	elementName = "li";
+}
+
+itemRepetition: WORepetition
+{
+	count = itemCount;
+	index = currentItemIndex;
+}
+
+valueCell: WOSwitchComponent
+{
+	cellDescriptor = simpleListDescriptor.itemDescriptor;
+	WOComponentName = simpleListDescriptor.itemDescriptor.elementName;
+	displayedObject = currentObject;
+}

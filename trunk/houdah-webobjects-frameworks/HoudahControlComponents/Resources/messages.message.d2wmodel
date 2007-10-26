@@ -1,0 +1,250 @@
+{
+    rules = (
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = EDIT_CONCURRENT; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Modification concurrente. Veuillez r\335essayer"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = EDIT_UNIQUE; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Contrainte d'unicit\335 non respect\335e"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = EDIT_VALIDATION; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Sauvegarde impossible. Erreurs de validation"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = IDENTIFY_AMBIGUOUS_MATCH; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "L'identification de `$entityName` par le champ `$label` est ambigue"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = IDENTIFY_NO_MATCH; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Le champ `$label` n'identifie pas de `$entityLabel`"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOAndQualifier; 
+                qualifiers = (
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = messageCode; 
+                        selectorName = "isEqualTo"; 
+                        value = SEARCH_PRE_FLIGHT; 
+                    }, 
+                    {
+                        class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                        key = language; 
+                        selectorName = "isEqualTo"; 
+                        value = French; 
+                    }
+                ); 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "La recherche ne peut \336tre ex\335cut\335e telle quelle"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = EDIT_CONCURRENT; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Concurrent modification. Please try again"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = EDIT_UNIQUE; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Unique constraint violated"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = EDIT_VALIDATION; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "Could not save. There were validation errors"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = IDENTIFY_AMBIGUOUS_MATCH; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The `$entityLabel` identification by the `$label` field is ambiguous"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = IDENTIFY_NO_MATCH; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "The `$label` field doesn't identify any `$entityLabel`"; 
+            }; 
+        }, 
+        {
+            author = 50; 
+            class = com.webobjects.directtoweb.Rule; 
+            lhs = {
+                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
+                key = messageCode; 
+                selectorName = "isEqualTo"; 
+                value = SEARCH_PRE_FLIGHT; 
+            }; 
+            rhs = {
+                class = com.webobjects.directtoweb.Assignment; 
+                keyPath = message; 
+                value = "This query may not be run as is"; 
+            }; 
+        }
+    ); 
+}

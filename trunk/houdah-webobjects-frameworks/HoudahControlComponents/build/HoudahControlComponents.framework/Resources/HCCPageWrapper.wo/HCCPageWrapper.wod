@@ -1,0 +1,11 @@
+componentContent: WOComponentContent
+{
+}
+
+wrapperSwitch: WOSwitchComponent
+{
+	WOComponentName = wrapperName;
+	showNavigationControls = ^showNavigationControls;
+}
+
+

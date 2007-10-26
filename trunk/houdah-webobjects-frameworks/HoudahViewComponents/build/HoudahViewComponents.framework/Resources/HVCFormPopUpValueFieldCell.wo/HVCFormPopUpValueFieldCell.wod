@@ -1,0 +1,29 @@
+popUpMenuRequiresNoSelection: WOPopUpButton
+{
+	list = value.valueList;
+	selection = selection;
+	displayString = currentItemDisplayString;
+	item = currentItem;
+	noSelectionString = cellDescriptor.noSelectionString;
+	otherTagString = otherTagString;
+}
+
+popUpMenuRequiresSelection: WOPopUpButton
+{
+	list = value.valueList;
+	selection = selection;
+	displayString = currentItemDisplayString;
+	item = currentItem;
+	otherTagString = otherTagString;
+}
+
+requiresNoSelection: WOConditional
+{
+	condition = cellDescriptor.requiresSelection;
+	negate = true;
+}
+
+requiresSelection: WOConditional
+{
+	condition = cellDescriptor.requiresSelection;
+}

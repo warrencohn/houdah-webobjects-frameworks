@@ -1,0 +1,51 @@
+span: WOGenericContainer {
+	class = fieldClass;
+	elementName = "span";
+}
+
+cell: WOSwitchComponent
+{
+	cellDescriptor = currentField;
+	WOComponentName = currentField.elementName;
+	values = values;
+}
+
+fieldRepetition: WORepetition
+{
+	list = currentRow.fields;
+	item = currentField;
+}
+
+fieldset: WOGenericContainer
+{
+	elementName = "fieldset";
+	class = cssClass;
+}
+
+hasLabel: WOConditional
+{
+	condition = hasLabel;
+}
+
+hasLegend: WOConditional 
+{
+	condition = hasLegend;
+}
+
+labelCell: WOSwitchComponent
+{
+	cellDescriptor = currentField.labelDescriptor;
+	WOComponentName = currentField.labelDescriptor.elementName;
+	fieldDescriptor = currentField;
+}
+
+legend: WOString
+{
+	value = fieldsetDescriptor.legend;
+}
+
+rowRepetition: WORepetition
+{
+	count = rowCount;
+	index = currentRowIndex;
+}

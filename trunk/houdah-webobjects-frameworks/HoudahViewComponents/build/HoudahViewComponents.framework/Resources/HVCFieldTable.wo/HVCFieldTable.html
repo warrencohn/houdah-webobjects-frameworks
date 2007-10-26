@@ -1,0 +1,26 @@
+<!-- Generic editor table -->
+<table class="bvcFieldTable">
+	<tr class="header">
+		<webobject name="headerRepetition">
+			<th align="left">
+				<webobject name="hasLabel"><webobject name="labelCell"></webobject></webobject>
+			</th>
+		</webobject>
+	</tr>
+	<tbody>
+		<webobject name="rowRepetition">
+		<webobject name="tableRow">
+			<webobject name="columnRepetition">
+				<!-- Column -->	
+				<webobject name=isNotEmpty>
+					<webobject name="columnRow">
+					<webobject name=columnRowCell></webobject></webobject>
+				</webobject>
+				<webobject name=isEmpty>
+					<TD>&nbsp;</TD>
+				</webobject>
+			</webobject>
+		</webobject>
+		</webobject>
+	</tbody>
+</table>

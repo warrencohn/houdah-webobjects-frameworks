@@ -1,0 +1,10 @@
+Content: WOSwitchComponent
+{
+	WOComponentName = controller.controllerComponentName;
+	controller = controller;
+}
+
+PageWrapper: HCCPageWrapper
+{
+	showNavigationControls = showNavigationControls;
+}

@@ -1,0 +1,35 @@
+isEmpty: WOConditional {
+	negate = false;
+	condition = isEmptyRow;
+}
+
+isNotEmpty: WOConditional 
+{
+	negate = true;
+	condition = isEmptyRow;
+}
+
+labelCell: WOSwitchComponent
+{
+	cellDescriptor = currentProperty.labelDescriptor;
+	WOComponentName = currentProperty.labelDescriptor.elementName;
+}
+
+row: WOGenericContainer
+{
+	class = rowClass;
+	elementName = "li";
+}
+
+rowRepetition: WORepetition
+{
+	count = rowCount;
+	index = currentRowIndex;
+}
+
+valueCell: WOSwitchComponent
+{
+	cellDescriptor = currentProperty.valueDescriptor;
+	WOComponentName = currentProperty.valueDescriptor.elementName;
+	displayedObject = displayedObject;
+}

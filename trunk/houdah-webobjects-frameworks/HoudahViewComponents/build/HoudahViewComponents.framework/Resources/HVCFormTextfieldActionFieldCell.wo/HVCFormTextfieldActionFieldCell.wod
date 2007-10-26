@@ -1,0 +1,19 @@
+actionButton: WOSubmitButton {
+	action = performAction;
+	value = cellDescriptor.action.label;
+	class = cellDescriptor.action.cssClass;
+	otherTagString = otherTagString;
+}
+
+hasAction: WOConditional 
+{
+	condition = cellDescriptor.action;
+}
+
+textField: WOTextField
+{
+	maxLength = cellDescriptor.maxLength;
+	size = cellDescriptor.size;
+	value = textValue;
+	otherTagString = otherTagString;
+}

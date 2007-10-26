@@ -1,0 +1,74 @@
+actions: WORepetition {
+	list = tableDescriptor.tableActions;
+	item = currentTableAction;
+}
+
+columnHeader: WOGenericContainer {
+	class = headerClass;
+	elementName = "th";
+}
+
+columnHeaderCell: WOSwitchComponent {
+	cellDescriptor = currentColumnDescriptor.headerDescriptor;
+	WOComponentName = headerElementName;
+}
+
+columnRepetition: WORepetition {
+	item = currentColumnDescriptor;
+	list = tableDescriptor.columnDescriptors;
+}
+
+columnRow: WOGenericContainer {
+	class = dataClass;
+	elementName = "td";
+	align = currentColumnDescriptor.rowDescriptor.alignment.value;
+}
+
+columnRowCell: WOSwitchComponent {
+	displayedObject = currentObject;
+	cellDescriptor = currentColumnDescriptor.rowDescriptor;
+	WOComponentName = rowElementName;
+}
+
+headerRepetition: WORepetition {
+	item = currentColumnDescriptor;
+	list = tableDescriptor.columnDescriptors;
+}
+
+isEmpty: WOConditional {
+	condition = isEmptyRow;
+}
+
+isNotEmpty: WOConditional {
+	negate = true;
+	condition = isEmptyRow;
+}
+
+mayNotSelectRows: WOConditional {
+	condition = hasActions;
+	negate = true;
+}
+
+maySelectRows: WOConditional {
+	condition = hasActions;
+}
+
+rowRepetition: WORepetition {
+	index = currentRowIndex;
+	count = rowCount;
+}
+
+selectBox: WOCheckBox {
+	checked = isRowSelected;
+}
+
+tableActionButton: WOSubmitButton
+{
+	action = performTableAction;
+	value = currentTableAction.label;
+}
+
+tableRow: WOGenericContainer {
+	class = rowClass;
+	elementName = "tr";
+}

@@ -1,0 +1,81 @@
+
+{
+    CURRENTLY_ACTIVE_VERSION = YES;
+    DEPLOY_WITH_VERSION_NAME = A;
+    DYNAMIC_CODE_GEN = YES;
+    FILESTABLE = 
+    {
+        CLASSES = 
+        (
+           src/com/houdah/appserver/application/Application.java, 
+           src/com/houdah/appserver/application/DirectAction.java, 
+           src/com/houdah/appserver/application/ErrorPageInterface.java, 
+           src/com/houdah/appserver/application/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/appserver/application/Session.java, 
+           src/com/houdah/appserver/backtrack/BackButtonComponent.java, 
+           src/com/houdah/appserver/backtrack/BackButtonPage.java, 
+           src/com/houdah/appserver/backtrack/BackTrackComponent.java, 
+           src/com/houdah/appserver/backtrack/BackTrackException.java, 
+           src/com/houdah/appserver/backtrack/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/appserver/components/Component.java, 
+           src/com/houdah/appserver/components/Element.java, 
+           src/com/houdah/appserver/components/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/appserver/components/Page.java, 
+           src/com/houdah/appserver/javascript/JavaScriptLinker.java, 
+           src/com/houdah/appserver/javascript/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/appserver/stylesheets/KeyValueCodingProtectedAccessor.java, 
+           src/com/houdah/appserver/stylesheets/StyleSheetAction.java, 
+           src/com/houdah/appserver/stylesheets/StyleSheetLinker.java, 
+           src/com/houdah/appserver/support/AccessKey.java, 
+           src/com/houdah/appserver/support/ApplicationException.java
+        );
+        FRAMEWORKS = 
+        (
+           HoudahFoundation.framework, 
+           JavaEOAccess.framework, 
+           JavaEOControl.framework, 
+           JavaFoundation.framework, 
+           JavaJDBCAdaptor.framework, 
+           JavaWOExtensions.framework, 
+           JavaWebObjects.framework, 
+           JavaXML.framework
+        );
+        OTHER_SOURCES = 
+        ();
+        SUBPROJECTS = 
+        ();
+        WEBSERVER_RESOURCES = 
+        (
+           WebServerResources/style.css
+        );
+        WOAPP_RESOURCES = 
+        (
+           CustomInfo.plist, 
+           Resources/Properties
+        );
+        WO_COMPONENTS = 
+        ();
+    };
+    FRAMEWORKSEARCH = 
+    (
+       "$(NEXT_ROOT)$(LOCAL_LIBRARY_DIR)/Frameworks"
+    );
+    LANGUAGE = English;
+    MAKEFILEDIR = "$(MAKEFILEPATH)/java_makefiles";
+    NEXTSTEP_BUILDTOOL = /bin/gnumake;
+    NEXTSTEP_INSTALLDIR = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+    NEXTSTEP_JAVA_COMPILER = /usr/bin/javac;
+    NEXTSTEP_OBJCPLUS_COMPILER = /usr/bin/cc;
+    PBPROJECTTYPEVERSION = 4.0;
+    PDO_UNIX_BUILDTOOL = $NEXT_ROOT/Developer/bin/make;
+    PDO_UNIX_INSTALLDIR = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+    PDO_UNIX_JAVA_COMPILER = "$(JDKBINDIR)/javac";
+    PDO_UNIX_OBJCPLUS_COMPILER = "$(NEXTDEV_BIN)/gcc";
+    PROJECTNAME = HoudahAppServer;
+    PROJECTTYPE = JavaWebObjectsFramework;
+    PROJECTVERSION = 2.8;
+    WINDOWS_BUILDTOOL = $NEXT_ROOT/Developer/Executables/make;
+    WINDOWS_INSTALLDIR = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+    WINDOWS_JAVA_COMPILER = "$(JDKBINDIR)/javac.exe";
+    WINDOWS_OBJCPLUS_COMPILER = "$(DEVDIR)/gcc";
+}

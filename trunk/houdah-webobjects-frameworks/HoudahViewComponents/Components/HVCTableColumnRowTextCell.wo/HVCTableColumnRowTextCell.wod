@@ -1,0 +1,3 @@
+displayString: WOString {
+	value = displayString;
+}

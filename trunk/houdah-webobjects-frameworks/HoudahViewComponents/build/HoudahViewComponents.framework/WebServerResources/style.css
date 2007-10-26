@@ -1,0 +1,54 @@
+.accessKey 
+{
+	text-decoration: underline;
+}
+
+.multipleActionCellLink 
+{
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.bvcDisplayGroupList,
+.bvcDisplayGroupTable,
+.bvcDisplayGroupFieldTable,
+.bvcList
+{
+	position: relative;
+	padding: 2em;
+}
+
+.bvcTable,
+.bvcFieldTable
+{
+	width: 100%;
+}
+
+.bvcFieldTable th
+{
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.bvcFieldTable tr
+{
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.bvcFieldTable td
+{
+	padding-top: 0.5em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.bvcFieldsetRow
+{
+	display: block;
+}
+	
+div > fieldset
+{
+	border: none;
+}
