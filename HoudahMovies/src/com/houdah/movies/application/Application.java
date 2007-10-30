@@ -24,28 +24,37 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.movies.application;
 
 import com.webobjects.appserver.WOApplication;
+import com.webobjects.appserver.WORequest;
+import com.webobjects.appserver.WOResponse;
 import com.webobjects.foundation.NSLog;
 
-public class Application extends com.houdah.agile.application.Application
-{
+public class Application extends com.houdah.agile.application.Application {
 	// Constructor
-	
-	public Application()
-	{
+
+	public Application() {
 		NSLog.out.appendln("Welcome to " + this.name() + " !");
 	}
+
+	// Instance methods
 	
-	
-	
+	public WOResponse dispatchRequest(WORequest aRequest) {
+		// In Direct Connect mode, each favicon request will generate a new session.
+		// This should workaround this problem.
+		if (isDirectConnectEnabled() && (aRequest != null) && "/favicon.ico".equals(aRequest.uri())) {
+			return new WOResponse();
+		} else {
+			return super.dispatchRequest(aRequest);
+		}
+	}
+
 	// Public class methods
-	
-	public static void main(String argv[])
-	{
+
+	public static void main(String argv[]) {
 		WOApplication.main(argv, Application.class);
 	}
 }
