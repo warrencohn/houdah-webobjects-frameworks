@@ -1,4 +1,4 @@
-#summary HoudahRuleEngine: Framework overview.
+#summary HoudahRuleEngine: framework overview.
 
 = HoudahRuleEngine =
 
