@@ -198,7 +198,7 @@ public abstract class AbstractPageController extends AbstractComponentController
 		return (Session) context().session();
 	}
 	
-	protected void checkAccessRights
+	protected void checkAccessRights()
 	{
 		if (!sessionController().securityManager().mayAccess(entityName(), task())) {
 			throw new ApplicationException("Security exception",

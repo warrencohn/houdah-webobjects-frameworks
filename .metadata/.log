@@ -1,0 +1,112 @@
+!SESSION 2007-10-30 12:12:20.093 -----------------------------------------------
+eclipse.buildId=M20070921-1145
+java.version=1.5.0_13
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/pierre/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch x86 -keyring /Users/pierre/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2007-10-30 12:13:25.004
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2007-10-30 12:18:29.770 -----------------------------------------------
+eclipse.buildId=M20070921-1145
+java.version=1.5.0_13
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/pierre/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch x86 -keyring /Users/pierre/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2007-10-30 12:18:43.365
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.resources 2 1 2007-10-30 12:19:40.156
+!MESSAGE Skipping builder 'com.atlassw.tools.eclipse.checkstyle.CheckstyleBuilder' for project 'HoudahFoundation'. Either the builder is missing from the install, or it belongs to a project nature that is missing or disabled.
+
+!ENTRY org.eclipse.core.resources 2 1 2007-10-30 12:19:40.895
+!MESSAGE Skipping builder 'com.atlassw.tools.eclipse.checkstyle.CheckstyleBuilder' for project 'HoudahEOControl'. Either the builder is missing from the install, or it belongs to a project nature that is missing or disabled.
+
+!ENTRY org.eclipse.core.resources 2 1 2007-10-30 12:19:41.985
+!MESSAGE Skipping builder 'com.atlassw.tools.eclipse.checkstyle.CheckstyleBuilder' for project 'HoudahEOAccess'. Either the builder is missing from the install, or it belongs to a project nature that is missing or disabled.
+
+!ENTRY org.eclipse.core.resources 2 1 2007-10-30 12:19:43.081
+!MESSAGE Skipping builder 'com.atlassw.tools.eclipse.checkstyle.CheckstyleBuilder' for project 'HoudahAppServer'. Either the builder is missing from the install, or it belongs to a project nature that is missing or disabled.
+
+!ENTRY org.eclipse.core.resources 2 1 2007-10-30 12:19:43.493
+!MESSAGE Skipping builder 'com.atlassw.tools.eclipse.checkstyle.CheckstyleBuilder' for project 'HoudahRuleEngine'. Either the builder is missing from the install, or it belongs to a project nature that is missing or disabled.
+
+!ENTRY org.eclipse.core.resources 2 1 2007-10-30 12:19:47.310
+!MESSAGE Skipping builder 'com.atlassw.tools.eclipse.checkstyle.CheckstyleBuilder' for project 'HoudahViewComponents'. Either the builder is missing from the install, or it belongs to a project nature that is missing or disabled.
+
+!ENTRY org.eclipse.core.resources 2 1 2007-10-30 12:20:02.797
+!MESSAGE Skipping builder 'com.atlassw.tools.eclipse.checkstyle.CheckstyleBuilder' for project 'HoudahControlComponents'. Either the builder is missing from the install, or it belongs to a project nature that is missing or disabled.
+
+!ENTRY org.eclipse.jface 2 0 2007-10-30 12:34:31.352
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2007-10-30 12:34:31.353
+!MESSAGE A conflict occurred for COMMAND+SHIFT+C:
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		LegacyHandlerWrapper(ActionHandler(action=org.eclipse.jdt.internal.ui.javaeditor.ToggleCommentAction@7d6e6)),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.objectstyle.wolips.componenteditor.openComponent,Open Component,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		ActionDelegateHandlerProxy(null,org.objectstyle.wolips.componenteditor.actions.OpenComponentAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.objectstyle.wolips.componenteditor.openComponent,Open Component,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		ActionDelegateHandlerProxy(null,org.objectstyle.wolips.componenteditor.actions.OpenComponentAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2007-10-30 12:36:02.757
+!MESSAGE Invalid preference page path: Cache
+!SESSION 2007-10-30 12:45:13.044 -----------------------------------------------
+eclipse.buildId=M20070921-1145
+java.version=1.5.0_13
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/pierre/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch x86 -keyring /Users/pierre/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2007-10-30 12:45:38.641
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2007-10-30 12:47:06.920
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2007-10-30 12:47:06.921
+!MESSAGE A conflict occurred for COMMAND+SHIFT+C:
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		LegacyHandlerWrapper(ActionHandler(action=org.eclipse.jdt.internal.ui.javaeditor.ToggleCommentAction@8eea9a)),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.objectstyle.wolips.componenteditor.openComponent,Open Component,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		ActionDelegateHandlerProxy(null,org.objectstyle.wolips.componenteditor.actions.OpenComponentAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.objectstyle.wolips.componenteditor.openComponent,Open Component,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		ActionDelegateHandlerProxy(null,org.objectstyle.wolips.componenteditor.actions.OpenComponentAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)

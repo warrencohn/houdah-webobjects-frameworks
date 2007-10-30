@@ -123,7 +123,7 @@
             isa = PBXFileReference;
             lastKnownFileType = wrapper.framework;
             name = HoudahEOControl.framework;
-            path = "/Volumes/Macintosh HD/Users/pierre/Desktop/Houdah Frameworks 1.0 beta 2/HoudahEOControl/build/HoudahEOControl.framework";
+            path = "/Users/pierre/Desktop/houdah-webobjects-frameworks/HoudahEOControl/build/HoudahEOControl.framework";
             sourceTree = "<absolute>";
         };
         000000000000000000000010 = 
@@ -131,7 +131,7 @@
             isa = PBXFileReference;
             lastKnownFileType = wrapper.framework;
             name = HoudahFoundation.framework;
-            path = "/Volumes/Macintosh HD/Users/pierre/Desktop/Houdah Frameworks 1.0 beta 2/HoudahFoundation/build/HoudahFoundation.framework";
+            path = "/Users/pierre/Desktop/houdah-webobjects-frameworks/HoudahFoundation/build/HoudahFoundation.framework";
             sourceTree = "<absolute>";
         };
         000000000000000000000011 = 
