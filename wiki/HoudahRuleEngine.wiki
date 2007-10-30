@@ -1,0 +1,19 @@
+#summary HoudahRuleEngine: Framework overview.
+
+= HoudahRuleEngine =
+
+The rule engine basically is a re-implementation of the rule engine Apple uses for DirectToWeb. As such it retains compatibility with the rule files created using Apple’s RuleEditor.
+
+A major difference between the two implementations is that Apple’s rule engine is nested deep within the presentation layer. It has dependences on both the WebObjects AppServer and DirectToWeb frameworks. The implementation at hand only depends on HoudahFoundation and HoudahEOControl. This provides the HoudahRuleEngine with tremendous versatility. It is used at the EOControl level to implement rule based validation, at presentation level to dynamically generate the UI, across levels to provide rich localizable error messages, … .
+
+At the heart of the rule engine is the RuleModel. A model is made up of a set of rules loaded from a set of *.d2wmodel files. The RuleModelUtilities class is able to load models by name or extensions from all frameworks and application bundles in the classpath. E.g. all files named *.valid.d2wmodel combined make up the rule model used for validation.
+
+A Rule is made of a left hand side (LHS), a right hand side (RSH) key, a RSH assignment and a priority value. The LHS is a qualifier that will be evaluated against a given context. The RHS key is the “name” of a value that may be computed. The RHS assignment is either a value or a key to evaluate in order to get to the desired value. Typically a rule is written as: “LHS => key = value [priority]”.
+
+Runtime interaction with the rule engine happens by applying key-value coding to a RuleContext instance. A RuleContext represents current knowledge. E.g.{ entity=”User”, task=”edit”, key=”name” }. The context must be “fed” by the caller prior to being queried. A context may then be queried for both known and derived facts. The context above is able to provide a value for the key “task” by merely querying its knowledge base. Using the rule model, it may also be able to answer other requests. When asked to provide a value for the key “formatter”, it will look at all the rules with RHS key “formatter”. It will sort those rules by descending priority. Then it will evaluate LHS qualifiers against the current context until it finds a match. The matching rule’s RHS assignment determines the resulting value. There are 2 ways rule evaluation may become recursive. We have already seen that assignments may call for the evaluation of other keys. Similarly the evaluation of the LHS may call back into the rule engine to determine values for keys referred to by the qualifier. Beware of infinite recursion!
+
+When 2 or more rules of the same priority match the context, the most specific one wins. That is the one with the most complex LHS qualifier. Where this leaves ambiguity, you may see random results!
+
+As a rule of thumb, rules set up by core frameworks are given a priority of 0. Rules set up by client frameworks are given priorities of 50, 60, 70, … . Most framework rules should have priorities of 50. This allows them to override core framework rules. If you know a framework to have higher or lower priority you would assign its rules values of 60 respectively 40. Application rules generally have a priority of 100. Fine grain priority adjustments (51, 52, 53, …) are used within a given project to differentiate rules that may not be disambiguated by LHS complexity.
+
+An exception to the above-described way of handling priorities is the RuleContext method named allPossibleValuesUniquedByPriorityForKey. This returns multiple values for a single key. Priorities are used to determine the sort order of resulting values. This method will return the value created from the most specific rule for priority 0, followed by the most specific value for priority 1, … . Non-existent priority levels are skipped. 
