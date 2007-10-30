@@ -1,3 +1,8 @@
+Library/Frameworks/HoudahEOControl.framework
+Library/Frameworks/HoudahExtensions.framework
+Library/Frameworks/HoudahFoundation.framework
+Library/Frameworks/HoudahMessages.framework
+Library/Frameworks/HoudahRuleEngine.framework
 Library/Frameworks/HoudahEOAccess.framework
 Library/Frameworks/HoudahEOControl.framework
 Library/Frameworks/HoudahExtensions.framework

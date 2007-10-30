@@ -1,0 +1,10 @@
+#Tue Oct 30 12:37:21 CET 2007
+ValidateOGNLKey=false
+WarnOnAmbiguousKey=false
+CheckBindingValues=false
+WarnOnMissingCollectionKey=false
+WarnOnHelperFunctionKey=false
+eclipse.preferences.version=1
+WarnOnOperatorKey=false
+ErrorOnMissingNSKVCKey=false
+ValidateTemplatesKey=false

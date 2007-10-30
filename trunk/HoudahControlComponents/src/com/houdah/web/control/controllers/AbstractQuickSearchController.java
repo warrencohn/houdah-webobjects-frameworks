@@ -270,7 +270,7 @@ public abstract class AbstractQuickSearchController extends AbstractFormPageCont
 		return page().context().page();
 	}
 	
-	protected void checkAccessRights
+	protected void checkAccessRights()
 	{
 		// Don't perform the check!
 	}
