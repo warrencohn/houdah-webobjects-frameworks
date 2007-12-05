@@ -160,7 +160,7 @@ public class ExistsInRelationshipQualifierSupport extends
 			int crCount = componentRelationships.count();
 
             int relationshipIndex = keyPath.indexOf(relationship.name());
-            String prefix = keyPath.substring(0, relationshipIndex - 1);
+            String prefix = (relationshipIndex > 0) ? keyPath.substring(0, relationshipIndex - 1) : "";
             StringBuffer pathToPivot = new StringBuffer(prefix);
 			StringBuffer pathFromPivot = new StringBuffer();
 			
