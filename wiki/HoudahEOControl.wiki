@@ -18,7 +18,7 @@ utility methods. You will find yourself using this class quite often: you should
 prefer it to EOUtilities in your business layer so as to prevent a dependency 
 on the access layer. 
 
-The bulk of the HoudahEOControl code is made of custom qualifiers. 
+The bulk of the HoudahEOControl code is made of [QualifierAdditions custom qualifiers]. 
 Qualifiers describe criteria used to restrict the selection of objects. The 
 WebObject frameworks provide a set of frequently used qualifiers: 
 EOKeyValueQualifier, EOKeyComparisonQualifier, EOAndQualifier, 
