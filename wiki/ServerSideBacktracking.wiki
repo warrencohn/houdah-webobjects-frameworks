@@ -1,0 +1,5 @@
+#summary Your very own back button.
+
+This allows for a more graceful, i.e. application like behavior, where backtracking brings up the previous page instead of a previous state of the current one. E.g. if a form validation error is sanctioned by redisplaying the form augmented with an error message, the browser back button would return to the form as it was before validation. Server-side backtracking would bring up the page that let to the form.
+
+This code is located in the [HoudahAppServer] framework sources.
