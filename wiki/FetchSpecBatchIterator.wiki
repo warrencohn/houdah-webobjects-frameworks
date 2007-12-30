@@ -4,4 +4,4 @@ Iterator to lazily instantiate batches of objects matching a given fetch specifi
 
 FetchSpecBatchIterator is part of the [HoudahEOControl] framework.
 
-This code is dependant on the InSetQualifier. Ultimately this implies a runtime dependancy on the [HoudahEOAccess] framework. For obvious reasons there is no compile-time dependancy of the EOControl layer on the EOAccess layer.
+This code is dependant on the [QualifierAdditions InSetQualifier]. Ultimately this implies a runtime dependancy on the [HoudahEOAccess] framework. For obvious reasons there is no compile-time dependancy of the EOControl layer on the EOAccess layer.
