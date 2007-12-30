@@ -1,4 +1,4 @@
-#summary FetchSpecBatchIterator: Memory stable operations on large data sets
+#summary Memory stable operations on large data sets
 
 Iterator to lazily instantiate batches of objects matching a given fetch specification. Allows for memory stable operations on very large data sets.
 
