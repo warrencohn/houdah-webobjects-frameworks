@@ -17,4 +17,4 @@ Houdah Frameworks include a number of custom qualifiers:
 
 	•	FalseQualifier: qualifier to match no objects
 
-In-memory search implementations are found in the HoudahEOControl framework. Matching support classes for SQL generation are found in the HoudahEOAccess framework.
+In-memory search implementations are found in the [HoudahEOControl] framework. Matching support classes for SQL generation are found in the [HoudahEOAccess] framework.
