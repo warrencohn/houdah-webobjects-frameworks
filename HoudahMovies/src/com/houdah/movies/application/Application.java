@@ -37,24 +37,23 @@ public class Application extends com.houdah.agile.application.Application {
 	// Constructor
 
 	public Application() {
-		NSLog.out.appendln("Welcome to " + this.name() + " !");
-	}
-
-	// Instance methods
-	
-	public WOResponse dispatchRequest(WORequest aRequest) {
-		// In Direct Connect mode, each favicon request will generate a new session.
-		// This should workaround this problem.
-		if (isDirectConnectEnabled() && (aRequest != null) && "/favicon.ico".equals(aRequest.uri())) {
-			return new WOResponse();
-		} else {
-			return super.dispatchRequest(aRequest);
-		}
+		NSLog.out.appendln("Welcome to " + name() + " !");
 	}
 
 	// Public class methods
 
 	public static void main(String argv[]) {
 		WOApplication.main(argv, Application.class);
+	}
+
+	@Override
+	public WOResponse dispatchRequest(WORequest aRequest) {
+
+		// In Direct Connect mode, each favicon request will generate a new session.
+		// This should workaround this problem.
+		if (isDirectConnectEnabled() && aRequest != null && aRequest.uri().equals("/favicon.ico"))
+			return new WOResponse();
+		else
+			return super.dispatchRequest(aRequest);
 	}
 }

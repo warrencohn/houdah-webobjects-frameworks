@@ -11,6 +11,10 @@ mainPage: WOComponentContent
 {
 }
 
+hasPreviousPage: WOConditional
+{
+condition = hasPreviousPage;
+}
 
 styleSheetLinker: StyleSheetLinker
 {

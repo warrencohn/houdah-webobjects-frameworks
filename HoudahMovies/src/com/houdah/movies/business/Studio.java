@@ -27,70 +27,80 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.movies.business;
 
-import com.webobjects.foundation.*;
-import com.webobjects.eocontrol.*;
 import java.math.BigDecimal;
-import java.util.*;
 
-public class Studio extends EOGenericRecord {
+import com.houdah.eocontrol.GenericRecord;
+import com.webobjects.foundation.NSArray;
 
-    public Studio() {
-        super();
-    }
+public class Studio extends GenericRecord
+{
 
-/*
-    // If you implement the following constructor EOF will use it to
-    // create your objects, otherwise it will use the default
-    // constructor. For maximum performance, you should only
-    // implement this constructor if you depend on the arguments.
-    public Studio(EOEditingContext context, EOClassDescription classDesc, EOGlobalID gid) {
-        super(context, classDesc, gid);
-    }
+	/**
+	 * 
+	 */
+	private static final long	serialVersionUID	= -7131644664520740668L;
 
-    // If you add instance variables to store property values you
-    // should add empty implementions of the Serialization methods
-    // to avoid unnecessary overhead (the properties will be
-    // serialized for you in the superclass).
-    private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
-    }
+	public Studio() {
+		super();
+	}
 
-    private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, java.lang.ClassNotFoundException {
-    }
-*/
+	/*
+	 * // If you implement the following constructor EOF will use it to //
+	 * create your objects, otherwise it will use the default // constructor.
+	 * For maximum performance, you should only // implement this constructor if
+	 * you depend on the arguments. public Studio(EOEditingContext context,
+	 * EOClassDescription classDesc, EOGlobalID gid) { super(context, classDesc,
+	 * gid); } // If you add instance variables to store property values you //
+	 * should add empty implementions of the Serialization methods // to avoid
+	 * unnecessary overhead (the properties will be // serialized for you in the
+	 * superclass). private void writeObject(java.io.ObjectOutputStream out)
+	 * throws java.io.IOException { }
+	 * 
+	 * private void readObject(java.io.ObjectInputStream in) throws
+	 * java.io.IOException, java.lang.ClassNotFoundException { }
+	 */
 
-    public BigDecimal budget() {
-        return (BigDecimal)storedValueForKey("budget");
-    }
+	public BigDecimal budget()
+	{
+		return (BigDecimal) storedValueForKey("budget");
+	}
 
-    public void setBudget(BigDecimal value) {
-        takeStoredValueForKey(value, "budget");
-    }
+	public void setBudget(BigDecimal value)
+	{
+		takeStoredValueForKey(value, "budget");
+	}
 
-    public String name() {
-        return (String)storedValueForKey("name");
-    }
+	public String name()
+	{
+		return (String) storedValueForKey("name");
+	}
 
-    public void setName(String value) {
-        takeStoredValueForKey(value, "name");
-    }
+	public void setName(String value)
+	{
+		takeStoredValueForKey(value, "name");
+	}
 
-    public NSArray movies() {
-        return (NSArray)storedValueForKey("movies");
-    }
+	public NSArray movies()
+	{
+		return (NSArray) storedValueForKey("movies");
+	}
 
-    public void setMovies(NSArray value) {
-        takeStoredValueForKey(value, "movies");
-    }
+	public void setMovies(NSArray value)
+	{
+		takeStoredValueForKey(value, "movies");
+	}
 
-    public void addToMovies(com.houdah.movies.business.Movie object) {
-        includeObjectIntoPropertyWithKey(object, "movies");
-    }
+	public void addToMovies(com.houdah.movies.business.Movie object)
+	{
+		includeObjectIntoPropertyWithKey(object, "movies");
+	}
 
-    public void removeFromMovies(com.houdah.movies.business.Movie object) {
-        excludeObjectFromPropertyWithKey(object, "movies");
-    }
+	public void removeFromMovies(com.houdah.movies.business.Movie object)
+	{
+		excludeObjectFromPropertyWithKey(object, "movies");
+	}
 }

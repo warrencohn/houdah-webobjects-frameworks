@@ -27,54 +27,58 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.movies.business;
 
-import com.webobjects.foundation.*;
-import com.webobjects.eocontrol.*;
-import java.math.BigDecimal;
-import java.util.*;
+import com.houdah.eocontrol.GenericRecord;
+import com.webobjects.foundation.NSData;
 
-public class TalentPhoto extends EOGenericRecord {
+public class TalentPhoto extends GenericRecord
+{
 
-    public TalentPhoto() {
-        super();
-    }
+	/**
+	 * 
+	 */
+	private static final long	serialVersionUID	= -6016123165787849544L;
 
-/*
-    // If you implement the following constructor EOF will use it to
-    // create your objects, otherwise it will use the default
-    // constructor. For maximum performance, you should only
-    // implement this constructor if you depend on the arguments.
-    public TalentPhoto(EOEditingContext context, EOClassDescription classDesc, EOGlobalID gid) {
-        super(context, classDesc, gid);
-    }
+	public TalentPhoto() {
+		super();
+	}
 
-    // If you add instance variables to store property values you
-    // should add empty implementions of the Serialization methods
-    // to avoid unnecessary overhead (the properties will be
-    // serialized for you in the superclass).
-    private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
-    }
+	/*
+	 * // If you implement the following constructor EOF will use it to //
+	 * create your objects, otherwise it will use the default // constructor.
+	 * For maximum performance, you should only // implement this constructor if
+	 * you depend on the arguments. public TalentPhoto(EOEditingContext context,
+	 * EOClassDescription classDesc, EOGlobalID gid) { super(context, classDesc,
+	 * gid); } // If you add instance variables to store property values you //
+	 * should add empty implementions of the Serialization methods // to avoid
+	 * unnecessary overhead (the properties will be // serialized for you in the
+	 * superclass). private void writeObject(java.io.ObjectOutputStream out)
+	 * throws java.io.IOException { }
+	 * 
+	 * private void readObject(java.io.ObjectInputStream in) throws
+	 * java.io.IOException, java.lang.ClassNotFoundException { }
+	 */
 
-    private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, java.lang.ClassNotFoundException {
-    }
-*/
+	public NSData photo()
+	{
+		return (NSData) storedValueForKey("photo");
+	}
 
-    public NSData photo() {
-        return (NSData)storedValueForKey("photo");
-    }
+	public void setPhoto(NSData value)
+	{
+		takeStoredValueForKey(value, "photo");
+	}
 
-    public void setPhoto(NSData value) {
-        takeStoredValueForKey(value, "photo");
-    }
+	public com.houdah.movies.business.Talent talent()
+	{
+		return (com.houdah.movies.business.Talent) storedValueForKey("talent");
+	}
 
-    public com.houdah.movies.business.Talent talent() {
-        return (com.houdah.movies.business.Talent)storedValueForKey("talent");
-    }
-
-    public void setTalent(com.houdah.movies.business.Talent value) {
-        takeStoredValueForKey(value, "talent");
-    }
+	public void setTalent(com.houdah.movies.business.Talent value)
+	{
+		takeStoredValueForKey(value, "talent");
+	}
 }

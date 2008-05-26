@@ -27,35 +27,37 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.movies.business;
 
-import com.webobjects.eocontrol.EOGenericRecord;
+import com.houdah.eocontrol.GenericRecord;
 
-public class Director extends EOGenericRecord {
+public class Director extends GenericRecord
+{
 
-    public Director() {
-        super();
-    }
+	/**
+	 * 
+	 */
+	private static final long	serialVersionUID	= -6425676569902079251L;
 
-/*
-    // If you implement the following constructor EOF will use it to
-    // create your objects, otherwise it will use the default
-    // constructor. For maximum performance, you should only
-    // implement this constructor if you depend on the arguments.
-    public Director(EOEditingContext context, EOClassDescription classDesc, EOGlobalID gid) {
-        super(context, classDesc, gid);
-    }
+	public Director() {
+		super();
+	}
 
-    // If you add instance variables to store property values you
-    // should add empty implementions of the Serialization methods
-    // to avoid unnecessary overhead (the properties will be
-    // serialized for you in the superclass).
-    private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
-    }
-
-    private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, java.lang.ClassNotFoundException {
-    }
-*/
+	/*
+	 * // If you implement the following constructor EOF will use it to //
+	 * create your objects, otherwise it will use the default // constructor.
+	 * For maximum performance, you should only // implement this constructor if
+	 * you depend on the arguments. public Director(EOEditingContext context,
+	 * EOClassDescription classDesc, EOGlobalID gid) { super(context, classDesc,
+	 * gid); } // If you add instance variables to store property values you //
+	 * should add empty implementions of the Serialization methods // to avoid
+	 * unnecessary overhead (the properties will be // serialized for you in the
+	 * superclass). private void writeObject(java.io.ObjectOutputStream out)
+	 * throws java.io.IOException { }
+	 * 
+	 * private void readObject(java.io.ObjectInputStream in) throws
+	 * java.io.IOException, java.lang.ClassNotFoundException { }
+	 */
 }

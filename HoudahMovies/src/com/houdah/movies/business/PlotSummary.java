@@ -27,54 +27,57 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.movies.business;
 
-import com.webobjects.foundation.*;
-import com.webobjects.eocontrol.*;
-import java.math.BigDecimal;
-import java.util.*;
+import com.houdah.eocontrol.GenericRecord;
 
-public class PlotSummary extends EOGenericRecord {
+public class PlotSummary extends GenericRecord
+{
 
-    public PlotSummary() {
-        super();
-    }
+	/**
+	 * 
+	 */
+	private static final long	serialVersionUID	= -2720077747871424773L;
 
-/*
-    // If you implement the following constructor EOF will use it to
-    // create your objects, otherwise it will use the default
-    // constructor. For maximum performance, you should only
-    // implement this constructor if you depend on the arguments.
-    public PlotSummary(EOEditingContext context, EOClassDescription classDesc, EOGlobalID gid) {
-        super(context, classDesc, gid);
-    }
+	public PlotSummary() {
+		super();
+	}
 
-    // If you add instance variables to store property values you
-    // should add empty implementions of the Serialization methods
-    // to avoid unnecessary overhead (the properties will be
-    // serialized for you in the superclass).
-    private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
-    }
+	/*
+	 * // If you implement the following constructor EOF will use it to //
+	 * create your objects, otherwise it will use the default // constructor.
+	 * For maximum performance, you should only // implement this constructor if
+	 * you depend on the arguments. public PlotSummary(EOEditingContext context,
+	 * EOClassDescription classDesc, EOGlobalID gid) { super(context, classDesc,
+	 * gid); } // If you add instance variables to store property values you //
+	 * should add empty implementions of the Serialization methods // to avoid
+	 * unnecessary overhead (the properties will be // serialized for you in the
+	 * superclass). private void writeObject(java.io.ObjectOutputStream out)
+	 * throws java.io.IOException { }
+	 * 
+	 * private void readObject(java.io.ObjectInputStream in) throws
+	 * java.io.IOException, java.lang.ClassNotFoundException { }
+	 */
 
-    private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, java.lang.ClassNotFoundException {
-    }
-*/
+	public String summary()
+	{
+		return (String) storedValueForKey("summary");
+	}
 
-    public String summary() {
-        return (String)storedValueForKey("summary");
-    }
+	public void setSummary(String value)
+	{
+		takeStoredValueForKey(value, "summary");
+	}
 
-    public void setSummary(String value) {
-        takeStoredValueForKey(value, "summary");
-    }
+	public com.houdah.movies.business.Movie movie()
+	{
+		return (com.houdah.movies.business.Movie) storedValueForKey("movie");
+	}
 
-    public com.houdah.movies.business.Movie movie() {
-        return (com.houdah.movies.business.Movie)storedValueForKey("movie");
-    }
-
-    public void setMovie(com.houdah.movies.business.Movie value) {
-        takeStoredValueForKey(value, "movie");
-    }
+	public void setMovie(com.houdah.movies.business.Movie value)
+	{
+		takeStoredValueForKey(value, "movie");
+	}
 }
