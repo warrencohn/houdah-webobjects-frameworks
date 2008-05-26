@@ -183,13 +183,13 @@ public class ExistsInRelationshipQualifier extends Qualifier implements
 	public EOQualifier qualifierWithBindings(NSDictionary bindings,
 			boolean requiresAll)
 	{
-		EOQualifier qualifier = qualifier();
+		EOQualifier myQualifier = qualifier();
 		
-		if (qualifier != null) {
-			EOQualifier boundQualifier = qualifier.qualifierWithBindings(
+		if (myQualifier != null) {
+			EOQualifier boundQualifier = myQualifier.qualifierWithBindings(
 					bindings, requiresAll);
 			
-			if (qualifier != boundQualifier) {
+			if (myQualifier != boundQualifier) {
 				NSDictionary substitutions = new NSDictionary(boundQualifier,
 						QUALIFIER);
 				

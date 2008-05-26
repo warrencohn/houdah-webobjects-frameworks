@@ -31,10 +31,7 @@
 
 package com.houdah.movies.business;
 
-import com.webobjects.foundation.*;
-import com.webobjects.eocontrol.*;
-import java.math.BigDecimal;
-import java.util.*;
+import com.webobjects.eocontrol.EOGenericRecord;
 
 public class MovieRole extends EOGenericRecord {
 

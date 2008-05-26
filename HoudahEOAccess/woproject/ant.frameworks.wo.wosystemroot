@@ -10,7 +10,6 @@ Library/Java/Extensions/mlibwrapper_jai.jar
 Library/Java/Extensions/MRJToolkit.jar
 Library/Java/Extensions/QTJava.zip
 Library/Java/Extensions/vecmath.jar
-Library/Frameworks/JavaWOExtensions.framework
 Library/Frameworks/JavaEOAccess.framework
 Library/Frameworks/JavaEOControl.framework
 Library/Frameworks/JavaFoundation.framework

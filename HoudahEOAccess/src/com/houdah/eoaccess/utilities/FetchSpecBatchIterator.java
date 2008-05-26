@@ -184,13 +184,13 @@ public class FetchSpecBatchIterator implements Enumeration
 	{
 		if (hasMoreBatches()) {
 			NSArray batch = null;
-			NSArray primaryKeys = primaryKeys();
-			int pkCount = primaryKeys.count();
+			NSArray myPrimaryKeys = primaryKeys();
+			int pkCount = myPrimaryKeys.count();
 			int fetchCount = this.batchIndex * this.batchSize;
 			int length = (pkCount - fetchCount > this.batchSize) ? this.batchSize
 					: (pkCount - fetchCount);
 			NSRange range = new NSRange(fetchCount, length);
-			NSArray primaryKeysToFetch = primaryKeys.subarrayWithRange(range);
+			NSArray primaryKeysToFetch = myPrimaryKeys.subarrayWithRange(range);
 			String pkAttributeName = (String) this.fetchSpecification
 					.rawRowKeyPaths().objectAtIndex(0);
 			

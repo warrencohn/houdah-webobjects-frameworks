@@ -150,8 +150,8 @@ public class PeriodQualifier extends Qualifier implements EOQualifierEvaluation
 	public boolean evaluateWithObject(Object object)
 	{
 		Object rhs = period();
-		String keyPath = keyPath();
-		Object target = (keyPath != null) ? NSKeyValueCodingAdditions.Utility
+		String myKeyPath = keyPath();
+		Object target = (myKeyPath != null) ? NSKeyValueCodingAdditions.Utility
 				.valueForKeyPath(object, keyPath()) : object;
 		
 		Object year = NSKeyValueCoding.Utility.valueForKey(target, yearKey());
@@ -181,47 +181,47 @@ public class PeriodQualifier extends Qualifier implements EOQualifierEvaluation
 	public EOQualifier qualifierWithBindings(NSDictionary bindings,
 			boolean requiresAll)
 	{
-		Object yearValue = yearValue();
-		Object monthValue = monthValue();
+		Object myYearValue = yearValue();
+		Object myMonthValue = monthValue();
 		boolean hasBindings = false;
-		if (yearValue instanceof EOQualifierVariable) {
+		if (myYearValue instanceof EOQualifierVariable) {
 			Object value = null;
 			if (bindings != null) {
 				value = bindings
-						.valueForKeyPath(((EOQualifierVariable) yearValue)
+						.valueForKeyPath(((EOQualifierVariable) myYearValue)
 								.key());
 			}
 			
 			if (value != null) {
-				yearValue = value;
+				myYearValue = value;
 				hasBindings = true;
 			} else {
 				if (requiresAll) {
 					throw new EOQualifier.QualifierVariableSubstitutionException(
 							"Error in variable substitution: value for variable "
-									+ yearValue + " not found");
+									+ myYearValue + " not found");
 				} else {
 					return null;
 				}
 			}
 		}
 		
-		if (monthValue instanceof EOQualifierVariable) {
+		if (myMonthValue instanceof EOQualifierVariable) {
 			Object value = null;
 			if (bindings != null) {
 				value = bindings
-						.valueForKeyPath(((EOQualifierVariable) monthValue)
+						.valueForKeyPath(((EOQualifierVariable) myMonthValue)
 								.key());
 			}
 			
 			if (value != null) {
-				monthValue = value;
+				myMonthValue = value;
 				hasBindings = true;
 			} else {
 				if (requiresAll) {
 					throw new EOQualifier.QualifierVariableSubstitutionException(
 							"Error in variable substitution: value for variable "
-									+ monthValue + " not found");
+									+ myMonthValue + " not found");
 				} else {
 					return null;
 				}
@@ -230,7 +230,7 @@ public class PeriodQualifier extends Qualifier implements EOQualifierEvaluation
 		
 		if (hasBindings) {
 			return new PeriodQualifier(keyPath(), yearKey(), monthKey(),
-					qualifierOperator(), yearValue, monthValue);
+					qualifierOperator(), myYearValue, myMonthValue);
 		} else {
 			return this;
 		}
@@ -308,10 +308,10 @@ public class PeriodQualifier extends Qualifier implements EOQualifierEvaluation
 	public String yearPath()
 	{
 		String yearPath = yearKey();
-		String keyPath = keyPath();
+		String myKeyPath = keyPath();
 		
-		if (keyPath != null) {
-			yearPath = keyPath + NSKeyValueCodingAdditions.KeyPathSeparator
+		if (myKeyPath != null) {
+			yearPath = myKeyPath + NSKeyValueCodingAdditions.KeyPathSeparator
 					+ yearPath;
 		}
 		
@@ -321,11 +321,12 @@ public class PeriodQualifier extends Qualifier implements EOQualifierEvaluation
 	
 	public String monthPath()
 	{
-		String monthPath = monthKey();
-		String keyPath = keyPath();
 		
-		if (keyPath != null) {
-			monthPath = keyPath + NSKeyValueCodingAdditions.KeyPathSeparator
+		String monthPath = monthKey();
+		String myKeyPath = keyPath();
+		
+		if (myKeyPath != null) {
+			monthPath = myKeyPath + NSKeyValueCodingAdditions.KeyPathSeparator
 					+ monthPath;
 		}
 		
@@ -336,30 +337,30 @@ public class PeriodQualifier extends Qualifier implements EOQualifierEvaluation
 	public Object period()
 	{
 		if (this.period == null) {
-			Object yearValue = yearValue();
-			Object monthValue = monthValue();
+			Object myYearValue = yearValue();
+			Object myMonthValue = monthValue();
 			
-			if (yearValue instanceof EOQualifierVariable) {
+			if (myYearValue instanceof EOQualifierVariable) {
 				throw new IllegalStateException(
 						"Value must be substitued for yearValue variable."
 								+ " The qualifier variable '$"
-								+ ((EOQualifierVariable) yearValue).key()
+								+ ((EOQualifierVariable) myYearValue).key()
 								+ "' is unbound.");
 			}
 			
-			if (monthValue instanceof EOQualifierVariable) {
+			if (myMonthValue instanceof EOQualifierVariable) {
 				throw new IllegalStateException(
 						"Value must be substitued for monthValue variable."
 								+ " The qualifier variable '$"
-								+ ((EOQualifierVariable) monthValue).key()
+								+ ((EOQualifierVariable) myMonthValue).key()
 								+ "' is unbound.");
 			}
 			
-			if ((yearValue == null) || (monthValue == null)) {
+			if ((myYearValue == null) || (myMonthValue == null)) {
 				this.period = NSKeyValueCoding.NullValue;
 			} else {
-				this.period = new Integer(((Number) yearValue).intValue() * 100
-						+ ((Number) monthValue).intValue());
+				this.period = new Integer(((Number) myYearValue).intValue() * 100
+						+ ((Number) myMonthValue).intValue());
 			}
 		}
 		

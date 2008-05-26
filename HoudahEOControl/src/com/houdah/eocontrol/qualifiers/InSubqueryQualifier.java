@@ -303,19 +303,19 @@ public class InSubqueryQualifier extends Qualifier implements
 	public boolean evaluateWithObject(Object object)
 	{
 		EOEnterpriseObject eo = (EOEnterpriseObject) object;
-		String entityName = entityName();
+		String myEntityName = entityName();
 		
-		if (entityName == null) {
+		if (myEntityName == null) {
 			EOClassDescription classDescription = EOClassDescription
 					.classDescriptionForEntityName(eo.entityName());
 			EOClassDescription subDescription = classDescription
 					.classDescriptionForKeyPath(keyPath());
 			
-			entityName = subDescription.entityName();
+			myEntityName = subDescription.entityName();
 		}
 		
 		EOFetchSpecification fetchSpecification = new EOFetchSpecification(
-				entityName, subQualifier(), null);
+				myEntityName, subQualifier(), null);
 		NSArray matches = eo.editingContext().objectsWithFetchSpecification(
 				fetchSpecification);
 		
@@ -441,12 +441,12 @@ public class InSubqueryQualifier extends Qualifier implements
 	
 	// Protected instance methods
 	
-	protected void init(String keyPath, String entityName,
-			String attributePath, EOQualifier subQualifier)
+	protected void init(String aKeyPath, String anEntityName,
+			String anAttributePath, EOQualifier aSubQualifier)
 	{
-		this.keyPath = keyPath;
-		this.entityName = entityName;
-		this.attributePath = attributePath;
-		this.subQualifier = subQualifier;
+		this.keyPath = aKeyPath;
+		this.entityName = anEntityName;
+		this.attributePath = anAttributePath;
+		this.subQualifier = aSubQualifier;
 	}
 }

@@ -77,12 +77,16 @@ public class IdentifyException extends RuntimeException implements MessageExcept
 	public IdentifyException(String messageCode, String key, String entityName, Throwable cause)
 	{
 		super(messageCode, cause);
+		
 		this.key = key;
 		this.entityName = entityName;
-		NSMutableDictionary context = new NSMutableDictionary();
-		context.takeValueForKey(this.key, KEY);
-		context.takeValueForKey(this.entityName, ENTITY_NAME);
-		this.context = context.immutableClone();
+		
+		NSMutableDictionary exceptionContext = new NSMutableDictionary();
+		
+		exceptionContext.takeValueForKey(this.key, KEY);
+		exceptionContext.takeValueForKey(this.entityName, ENTITY_NAME);
+		
+		this.context = exceptionContext.immutableClone();
 	}
 	
 	

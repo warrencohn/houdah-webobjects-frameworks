@@ -127,7 +127,7 @@ public class Session extends com.houdah.web.control.application.Session
 			String entityName = (String) description.objectForKey(ENTITY_NAME_KEY);
 			String task = (String) description.objectForKey(TASK_KEY);
 			String controllerName = (String) description.objectForKey(CONTROLLER_CLASS_KEY);
-			RuleContext ruleContext = (RuleContext) description.objectForKey(RULE_CONTEXT_KEY);
+			RuleContext localRuleContext = (RuleContext) description.objectForKey(RULE_CONTEXT_KEY);
 			
 			assert entityName != null;
 			assert task != null;
@@ -135,13 +135,13 @@ public class Session extends com.houdah.web.control.application.Session
 			
 			AbstractController controller = null;
 			
-			if (ruleContext != null) {
+			if (localRuleContext != null) {
 				try {
 					Class controllerClass = Class.forName(controllerName);
 					Constructor constructor = controllerClass.getConstructor(new Class[] {
 							String.class, String.class, RuleContext.class });
 					controller = (AbstractController) constructor.newInstance(new Object[] {
-							entityName, task, ruleContext });
+							entityName, task, localRuleContext });
 				} catch (NoSuchMethodException nsme) {
 					controller = null;
 				}

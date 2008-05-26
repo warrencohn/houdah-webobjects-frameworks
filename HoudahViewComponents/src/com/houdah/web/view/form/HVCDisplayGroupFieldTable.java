@@ -413,11 +413,11 @@ public class HVCDisplayGroupFieldTable extends View
 	
 	protected Integer selectionIndex()
 	{
-		WODisplayGroup displayGroup = displayGroup();
-		Object selection = displayGroup.selectedObject();
+		WODisplayGroup myDisplayGroup = displayGroup();
+		Object selection = myDisplayGroup.selectedObject();
 		
 		if (selection != null) {
-			int index = displayGroup.displayedObjects().indexOfObject(selection);
+			int index = myDisplayGroup.displayedObjects().indexOfObject(selection);
 			
 			return new Integer(index);
 		}
@@ -428,11 +428,11 @@ public class HVCDisplayGroupFieldTable extends View
 	
 	protected void setSelectionIndex(Integer selectionIndex)
 	{
-		WODisplayGroup displayGroup = displayGroup();
+		WODisplayGroup myDisplayGroup = displayGroup();
 		int index = selectionIndex.intValue();
-		Object selection = displayGroup.displayedObjects().objectAtIndex(index);
+		Object selection = myDisplayGroup.displayedObjects().objectAtIndex(index);
 		
-		displayGroup.setSelectedObject(selection);
+		myDisplayGroup.setSelectedObject(selection);
 	}
 	
 	

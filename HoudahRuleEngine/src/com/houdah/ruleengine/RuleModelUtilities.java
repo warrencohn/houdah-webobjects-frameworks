@@ -326,13 +326,13 @@ public class RuleModelUtilities
 	protected static NSDictionary expansionLookup()
 	{
 		if (RuleModelUtilities.expansionLookup == null) {
-			NSDictionary compressionLookup = RuleModelUtilities.compressionLookup();
-			Enumeration keys = compressionLookup.keyEnumerator();
-			NSMutableDictionary lookup = new NSMutableDictionary(compressionLookup.count());
+			NSDictionary lookupDictionary = RuleModelUtilities.compressionLookup();
+			Enumeration keys = lookupDictionary.keyEnumerator();
+			NSMutableDictionary lookup = new NSMutableDictionary(lookupDictionary.count());
 			
 			while (keys.hasMoreElements()) {
 				Object key = keys.nextElement();
-				Object value = compressionLookup.objectForKey(key);
+				Object value = lookupDictionary.objectForKey(key);
 				
 				lookup.setObjectForKey(key, value);
 			}

@@ -263,7 +263,7 @@ public class InSetQualifierSupport extends QualifierGenerationSupport
 			
 			while (e1.hasMoreElements()) {
 				NSArray objects = (NSArray) e1.nextElement();
-				NSMutableArray values = new NSMutableArray(objects.count());
+				NSMutableArray valueArray = new NSMutableArray(objects.count());
 				Enumeration e2 = objects.objectEnumerator();
 				
 				while (e2.hasMoreElements()) {
@@ -277,7 +277,7 @@ public class InSetQualifierSupport extends QualifierGenerationSupport
 						}
 						
 						if (value != null) {
-							values.addObject(value);
+							valueArray.addObject(value);
 							didSubstitute = true;
 							
 							continue;
@@ -289,11 +289,11 @@ public class InSetQualifierSupport extends QualifierGenerationSupport
 											+ " not found");
 						}
 					} else {
-						values.addObject(object);
+						valueArray.addObject(object);
 					}
 				}
 				
-				boundValues.addObject(values);
+				boundValues.addObject(valueArray);
 			}
 			
 			if (didSubstitute) {

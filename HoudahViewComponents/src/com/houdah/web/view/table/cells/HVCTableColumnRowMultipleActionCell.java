@@ -1,7 +1,7 @@
 /*
  * Modified MIT License
  * 
- * Copyright (c) 2006-2007 Houdah Software s.à r.l.
+ * Copyright (c) 2006-2007 Houdah Software s.√† r.l.
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -92,17 +92,17 @@ public class HVCTableColumnRowMultipleActionCell extends TableColumnRowCell
 	
 	protected boolean isEnabled()
 	{
-		Action action = action();
+		Action currentAction = action();
 		Object object = displayedObject();
 		
-		return ((action != null) && (action.isEnabledFor(object)));
+		return ((currentAction != null) && (currentAction.isEnabledFor(object)));
 	}
 	
 	
 	protected String actionClass()
 	{
-		Action action = action();
-		String actionClass = (action != null) ? action.cssClass() : null;
+		Action myAction = action();
+		String actionClass = (myAction != null) ? myAction.cssClass() : null;
 		
 		return (actionClass != null) ? (actionClass + " multipleActionCellLink")
 				: "multipleActionCellLink";

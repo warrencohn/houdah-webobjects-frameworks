@@ -322,10 +322,10 @@ public class BestMatchQualifier extends Qualifier implements Cloneable,
 						|| (subQualifier().evaluateWithObject(object))) {
 					Object value = NSKeyValueCodingAdditions.Utility
 							.valueForKeyPath(object, keyPath());
-					Object limit = limit();
-					boolean resultOne = (limit == NSKeyValueCoding.NullValue)
+					Object myLimit = limit();
+					boolean resultOne = (myLimit == NSKeyValueCoding.NullValue)
 							|| EOQualifier.ComparisonSupport.compareValues(
-									value, limit, qualifierOperator());
+									value, myLimit, qualifierOperator());
 					
 					if (resultOne) {
 						boolean resultTwo = (bestValue == null)

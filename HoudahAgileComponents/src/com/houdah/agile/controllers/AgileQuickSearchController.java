@@ -148,16 +148,16 @@ public class AgileQuickSearchController extends AbstractQuickSearchController
 		
 		localContext.takeValueForKey(cellDescriptor.key(), "key");
 		
-		String valueType = (String) localContext.valueForKey("valueType");
-		NSArray values = (NSArray) localContext.valueForKey("values");
+		String localValueType = (String) localContext.valueForKey("valueType");
+		NSArray localValues = (NSArray) localContext.valueForKey("values");
 		
-		int vCount = values.count();
+		int vCount = localValues.count();
 		NSMutableArray array = new NSMutableArray(vCount);
 		DescriptorFactory descriptorFactory = DescriptorFactory.sharedFactory();
 		
 		for (int v = 0; v < vCount; v++) {
-			Object rawValue = values.objectAtIndex(v);
-			Object value = descriptorFactory.valueForType(rawValue, valueType);
+			Object rawValue = localValues.objectAtIndex(v);
+			Object value = descriptorFactory.valueForType(rawValue, localValueType);
 			
 			array.addObject(value);
 		}

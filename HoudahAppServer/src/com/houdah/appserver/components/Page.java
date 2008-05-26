@@ -135,12 +135,12 @@ public abstract class Page extends BackButtonPage
 	 */
 	public boolean claimID(String id)
 	{
-		NSMutableSet claimedIDs = claimedIDs();
+		NSMutableSet claimedIDSet = claimedIDs();
 		
-		if (claimedIDs.containsObject(id)) {
+		if (claimedIDSet.containsObject(id)) {
 			return false;
 		} else {
-			claimedIDs.addObject(id);
+			claimedIDSet.addObject(id);
 			
 			return true;
 		}

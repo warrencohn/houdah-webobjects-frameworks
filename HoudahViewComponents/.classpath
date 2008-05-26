@@ -4,6 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/HoudahFoundation"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/HoudahAppServer"/>
-	<classpathentry kind="con" path="org.objectstyle.wolips.WO_CLASSPATH/JavaEOControl/JavaFoundation/JavaWebObjects/JavaWOExtensions"/>
+	<classpathentry kind="con" path="org.objectstyle.wolips.ContainerInitializer/10/1/JavaEOControl/1/nil/1/nil/1/0/1/false/10/1/JavaFoundation/1/nil/1/nil/1/0/1/false/10/1/JavaWebObjects/1/nil/1/nil/1/0/1/false/10/1/JavaWOExtensions/1/nil/1/nil/1/0/1/false"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -188,7 +188,7 @@ public class InSetQualifier extends Qualifier implements Cloneable,
 	{
 		Enumeration e = values().objectEnumerator();
 		boolean didSubstitute = false;
-		NSMutableSet values = new NSMutableSet(values().count());
+		NSMutableSet valueSet = new NSMutableSet(values().count());
 		
 		while (e.hasMoreElements()) {
 			Object object = e.nextElement();
@@ -203,7 +203,7 @@ public class InSetQualifier extends Qualifier implements Cloneable,
 				}
 				
 				if (value != null) {
-					values.addObject(value);
+					valueSet.addObject(value);
 					didSubstitute = true;
 					
 					continue;
@@ -215,14 +215,14 @@ public class InSetQualifier extends Qualifier implements Cloneable,
 									+ object + " not found");
 				}
 			} else {
-				values.addObject(object);
+				valueSet.addObject(object);
 			}
 		}
 		
 		if (didSubstitute) {
 			InSetQualifier clone = (InSetQualifier) clone();
 			
-			clone.setValues(values);
+			clone.setValues(valueSet);
 			
 			return clone;
 		} else {

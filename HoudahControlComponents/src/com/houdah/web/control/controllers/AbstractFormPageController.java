@@ -138,7 +138,7 @@ public abstract class AbstractFormPageController extends AbstractPageController
 			ChoiceValue choiceValue = (ChoiceValue) value;
 			
 			if (choiceValue.valueList() == null) {
-				NSArray values = null;
+				NSArray valueArray = null;
 				EOProperty property = ModelUtilities.propertyAtPath(entity(), cellDescriptor.key());
 				
 				if (property instanceof EORelationship) {
@@ -148,7 +148,7 @@ public abstract class AbstractFormPageController extends AbstractPageController
 							cellDescriptor, destinationEntity);
 					
 					if (fetchSpecification != null) {
-						values = activeEditingContext().objectsWithFetchSpecification(
+						valueArray = activeEditingContext().objectsWithFetchSpecification(
 								fetchSpecification);
 					}
 					
@@ -156,16 +156,16 @@ public abstract class AbstractFormPageController extends AbstractPageController
 					// Add NSKeyValueCoding.NullValue to handle optional to-one
 					// relationships
 					if ((!relationship.isMandatory())
-							&& (!values.containsObject(NSKeyValueCoding.NullValue))) {
-						values = new NSArray(NSKeyValueCoding.NullValue)
-								.arrayByAddingObjectsFromArray(values);
+							&& (!valueArray.containsObject(NSKeyValueCoding.NullValue))) {
+						valueArray = new NSArray(NSKeyValueCoding.NullValue)
+								.arrayByAddingObjectsFromArray(valueArray);
 					}
 				} else {
-					values = values(cellDescriptor);
+					valueArray = values(cellDescriptor);
 				}
 				
-				if (values != null) {
-					choiceValue.setValueList(values);
+				if (valueArray != null) {
+					choiceValue.setValueList(valueArray);
 				} else {
 					choiceValue.setValueList(new NSArray());
 				}
@@ -190,10 +190,10 @@ public abstract class AbstractFormPageController extends AbstractPageController
 			Format formatter = Application.sharedInstance().entityIdentifier(entityName);
 			
 			try {
-				NSDictionary values = (NSDictionary) formatter.parseObject(stringValue);
+				NSDictionary valueDictionary = (NSDictionary) formatter.parseObject(stringValue);
 				
 				return ControlUtilities.objectMatchingValues(activeEditingContext(), entityName,
-						values);
+						valueDictionary);
 			} catch (ObjectNotAvailableException onae) {
 				throw new IdentifyException(IdentifyException.IDENTIFY_NO_MATCH, cellDescriptor.key(), entityName, onae);
 			} catch (MoreThanOneException mtoe) {
