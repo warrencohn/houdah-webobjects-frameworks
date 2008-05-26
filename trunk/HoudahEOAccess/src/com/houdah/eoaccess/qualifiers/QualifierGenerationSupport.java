@@ -131,7 +131,7 @@ public abstract class QualifierGenerationSupport extends
 	
 	protected EORelationship relationshipForPath(EOEntity entity, String keyPath)
 	{
-		if (keyPath != null) {
+		if ((keyPath != null) && (keyPath.length() > 0)) {
 			StringTokenizer tokenizer = new StringTokenizer(keyPath,
 					NSKeyValueCodingAdditions.KeyPathSeparator);
 			EORelationship relationship = null;
