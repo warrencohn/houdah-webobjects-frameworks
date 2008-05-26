@@ -1,13 +1,13 @@
 
 {
-    EOModelVersion = 2.1;
-    adaptorName = JDBC;
-    connectionDictionary = 
-    {
-        databaseEncoding = "ISO Latin-1";
-        URL = jdbc:openbase://127.0.0.1/WOMovies;
-        LC_ALL = iso_1;
-    };
+	EOModelVersion = "2.1"; 
+	adaptorName = JDBC; 
+	connectionDictionary = {
+	    "LC_ALL" = "iso_1"; 
+	    URL = "jdbc:derby:movies"; 
+	    databaseEncoding = "ISO Latin-1"; 
+	    driver = "org.apache.derby.jdbc.EmbeddedDriver"; 
+	}; 
     entities = 
     (
        
@@ -56,31 +56,4 @@
            name = Voting;
        }
     );
-    internalInfo = 
-    {
-        _deletedEntityNamesInObjectStore = 
-        (
-
-        );
-    };
-    userInfo = 
-    {
-        _EntityModeler = 
-        {
-            activeDatabaseConfigName = Default;
-            databaseConfigs = 
-            {
-                Default = 
-                {
-                    adaptorName = JDBC;
-                    connectionDictionary = 
-                    {
-                        databaseEncoding = "ISO Latin-1";
-                        URL = jdbc:openbase://127.0.0.1/WOMovies;
-                        LC_ALL = iso_1;
-                    };
-                };
-            };
-        };
-    };
 }
