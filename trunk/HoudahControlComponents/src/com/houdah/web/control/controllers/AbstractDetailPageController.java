@@ -129,15 +129,15 @@ public abstract class AbstractDetailPageController extends AbstractPageControlle
 	public void willAwake()
 	{
 		if (this.displayGroupNeedsInit) {
-			WODisplayGroup displayGroup = displayGroup();
+			WODisplayGroup myDisplayGroup = displayGroup();
 			
-			if (displayGroup == null) {
+			if (myDisplayGroup == null) {
 				throw new IllegalStateException("A display group is needed");
 			} else {
-				displayGroup.fetch();
+				myDisplayGroup.fetch();
 				
-				if (displayGroup.selectedObject() == null) {
-					displayGroup.setSelectionIndexes(new NSArray(new Integer(0)));
+				if (myDisplayGroup.selectedObject() == null) {
+					myDisplayGroup.setSelectionIndexes(new NSArray(new Integer(0)));
 				}
 			}
 			
@@ -270,11 +270,11 @@ public abstract class AbstractDetailPageController extends AbstractPageControlle
 		ControllerPage nextPage = session().pageWithEntityAndTask(entityName(),
 				Application.EDIT_TASK, page().context());
 		AbstractEditPageController controller = (AbstractEditPageController) nextPage.controller();
-		WODisplayGroup displayGroup = displayGroup();
-		EOEnterpriseObject object = (EOEnterpriseObject) displayGroup.selectedObject();
+		WODisplayGroup myDisplayGroup = displayGroup();
+		EOEnterpriseObject object = (EOEnterpriseObject) myDisplayGroup.selectedObject();
 		EOEditingContext editingContext = object.editingContext();
 		
-		controller.setObject(editingContext.globalIDForObject(object), displayGroup);
+		controller.setObject(editingContext.globalIDForObject(object), myDisplayGroup);
 		
 		return nextPage;
 	}
@@ -285,11 +285,11 @@ public abstract class AbstractDetailPageController extends AbstractPageControlle
 		ControllerPage nextPage = session().pageWithEntityAndTask(entityName(),
 				Application.EDIT_TASK, page().context());
 		AbstractEditPageController controller = (AbstractEditPageController) nextPage.controller();
-		WODisplayGroup displayGroup = displayGroup();
-		EOEnterpriseObject object = (EOEnterpriseObject) displayGroup.selectedObject();
+		WODisplayGroup myDisplayGroup = displayGroup();
+		EOEnterpriseObject object = (EOEnterpriseObject) myDisplayGroup.selectedObject();
 		EOEditingContext editingContext = object.editingContext();
 		
-		controller.setObject(editingContext.globalIDForObject(object), displayGroup);
+		controller.setObject(editingContext.globalIDForObject(object), myDisplayGroup);
 		
 		return controller.deleteObject();
 	}
@@ -305,8 +305,8 @@ public abstract class AbstractDetailPageController extends AbstractPageControlle
 	 */
 	protected WOActionResults navigateAction(String keyPath)
 	{
-		WODisplayGroup displayGroup = displayGroup();
-		EOEnterpriseObject object = (EOEnterpriseObject) displayGroup.selectedObject();
+		WODisplayGroup myDisplayGroup = displayGroup();
+		EOEnterpriseObject object = (EOEnterpriseObject) myDisplayGroup.selectedObject();
 		
 		if (keyPath.startsWith("@")) {
 			String propertyPath = keyPath.substring(1);
@@ -328,7 +328,7 @@ public abstract class AbstractDetailPageController extends AbstractPageControlle
 					.controller();
 			
 			WODisplayGroup destinationDisplayGroup = controller.displayGroup();
-			EODetailDataSource destinationDataSource = (EODetailDataSource) displayGroup
+			EODetailDataSource destinationDataSource = (EODetailDataSource) myDisplayGroup
 					.dataSource().dataSourceQualifiedByKey(keyPath);
 			
 			destinationDataSource.qualifyWithRelationshipKey(keyPath, object);
@@ -342,7 +342,7 @@ public abstract class AbstractDetailPageController extends AbstractPageControlle
 		} else if (destination instanceof EOEnterpriseObject) {
 			EOEnterpriseObject destinationObject = (EOEnterpriseObject) destination;
 			WODisplayGroup destinationDisplayGroup = sessionController().createDisplayGroup();
-			EODetailDataSource destinationDataSource = (EODetailDataSource) displayGroup
+			EODetailDataSource destinationDataSource = (EODetailDataSource) myDisplayGroup
 					.dataSource().dataSourceQualifiedByKey(keyPath);
 			
 			destinationDataSource.setMasterClassDescription(object.classDescription());

@@ -321,12 +321,12 @@ public abstract class AbstractEditPageController extends AbstractFormPageControl
 	
 	// Delegate methods
 	
-	public Boolean finishInitialization(FormValueFieldDescriptor cellDescriptor, Value value)
+	public Boolean finishInitialization(FormValueFieldDescriptor aCellDescriptor, Value value)
 	{
-		if (super.finishInitialization(cellDescriptor, value).booleanValue()) {
-			if (this.readOnlyFields.containsObject(cellDescriptor)) {
+		if (super.finishInitialization(aCellDescriptor, value).booleanValue()) {
+			if (this.readOnlyFields.containsObject(aCellDescriptor)) {
 				value.setReadOnly(true);
-			} else if ((!isNew()) && (this.readOnlyOnEditFields.containsObject(cellDescriptor))) {
+			} else if ((!isNew()) && (this.readOnlyOnEditFields.containsObject(aCellDescriptor))) {
 				value.setReadOnly(true);
 			}
 			return Boolean.TRUE;
@@ -572,7 +572,7 @@ public abstract class AbstractEditPageController extends AbstractFormPageControl
 			
 			success = true;
 		} catch (NSValidation.ValidationException ve) {
-			NSDictionary values = values().dictionary();
+			NSDictionary valueDictionary = values().dictionary();
 			NSArray keys = null;
 			
 			if (ve instanceof HEVValidationException) {
@@ -587,7 +587,7 @@ public abstract class AbstractEditPageController extends AbstractFormPageControl
 			
 			for (int k = 0; k < kCount; k++) {
 				String key = (String) keys.objectAtIndex(k);
-				Value value = (Value) values.objectForKey(key);
+				Value value = (Value) valueDictionary.objectForKey(key);
 				
 				if (value != null) {
 					value.addCssClass("error");
@@ -799,15 +799,14 @@ public abstract class AbstractEditPageController extends AbstractFormPageControl
 	/**
 	 * Create a fresh values container
 	 * 
-	 * @param fieldsetDescriptor
-	 *            the deacriptor
+	 * @param fieldsetDescriptor the descriptor
 	 * @return values the values container
 	 */
 	protected ValueContainer prepareValues(NSArray fieldsetDescriptors)
 	{
-		ValueContainer values = new ValueContainer(this);
+		ValueContainer newValueContainer = new ValueContainer(this);
 		
-		return values;
+		return newValueContainer;
 	}
 	
 	
@@ -819,34 +818,34 @@ public abstract class AbstractEditPageController extends AbstractFormPageControl
 			writingContext.setFetchTimestamp(System.currentTimeMillis());
 			writingContext.invalidateObjectsWithGlobalIDs(new NSArray(this.globalID));
 			
-			EOEnterpriseObject object = writingContext.faultForGlobalID(this.globalID,
+			EOEnterpriseObject editedObject = writingContext.faultForGlobalID(this.globalID,
 					writingContext);
 			
 			if ((this.displayGroup != null) && (this.displayGroup.dataSource() != null)) {
 				EODataSource dataSource = localDataSource(writingContext, this.displayGroup
 						.dataSource());
 				
-				dataSource.insertObject(object);
+				dataSource.insertObject(editedObject);
 			}
 			
-			setObject(object);
+			setObject(editedObject);
 		} else if ((this.displayGroup != null) && (this.displayGroup.dataSource() != null)) {
 			EODataSource dataSource = localDataSource(writingContext, this.displayGroup
 					.dataSource());
-			EOEnterpriseObject object = (EOEnterpriseObject) dataSource.createObject();
+			EOEnterpriseObject editedObject = (EOEnterpriseObject) dataSource.createObject();
 			
 			
 			// Allow for object initialization or substitution
-			object = prepareNewObject(object);
+			editedObject = prepareNewObject(editedObject);
 			
-			dataSource.insertObject(object);
+			dataSource.insertObject(editedObject);
 			
-			setObject(object);
+			setObject(editedObject);
 		} else {
-			EOEnterpriseObject object = EOUtilities.createAndInsertInstance(writingContext,
+			EOEnterpriseObject editedObject = EOUtilities.createAndInsertInstance(writingContext,
 					entityName());
 			
-			setObject(prepareNewObject(object));
+			setObject(prepareNewObject(editedObject));
 		}
 		
 		if (this.isDeletion) {
@@ -1069,13 +1068,12 @@ public abstract class AbstractEditPageController extends AbstractFormPageControl
 	 * An alternative object may be substituted provided the object passed in as
 	 * an argument is correctly disposed of.
 	 * 
-	 * @param object
-	 *            newly created object
-	 * @return fully initialized obbject
+	 * @param newObject newly created object
+	 * @return fully initialized object
 	 */
-	protected EOEnterpriseObject prepareNewObject(EOEnterpriseObject object)
+	protected EOEnterpriseObject prepareNewObject(EOEnterpriseObject newObject)
 	{
-		return object;
+		return newObject;
 	}
 	
 	
@@ -1127,8 +1125,8 @@ public abstract class AbstractEditPageController extends AbstractFormPageControl
 		int sCount = fieldsets.count();
 		
 		for (int s = 0; s < sCount; s++) {
-			FieldsetDescriptor fieldsetDescriptor = (FieldsetDescriptor) fieldsets.objectAtIndex(s);
-			NSArray rows = fieldsetDescriptor.rows();
+			FieldsetDescriptor currentFieldsetDescriptor = (FieldsetDescriptor) fieldsets.objectAtIndex(s);
+			NSArray rows = currentFieldsetDescriptor.rows();
 			int rCount = rows.count();
 			
 			for (int r = 0; r < rCount; r++) {

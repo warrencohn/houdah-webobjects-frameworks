@@ -133,11 +133,11 @@ public abstract class Application extends com.houdah.web.control.application.App
 	
 	protected RuleContext createRuleContext()
 	{
-		RuleContext ruleContext = new RuleContext(this.ruleModel);
+		RuleContext newRuleContext = new RuleContext(this.ruleModel);
 		
-		ruleContext.takeValueForKey(this, "application");
+		newRuleContext.takeValueForKey(this, "application");
 		
-		return ruleContext;
+		return newRuleContext;
 	}
 	
 	

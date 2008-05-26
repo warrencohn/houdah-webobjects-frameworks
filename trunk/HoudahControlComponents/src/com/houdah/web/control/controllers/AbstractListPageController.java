@@ -139,11 +139,11 @@ public abstract class AbstractListPageController extends AbstractPageController 
 		}
 		this.selectedObjects = new NSMutableSet();
 		
-		WODisplayGroup displayGroup = displayGroup();
+		WODisplayGroup myDisplayGroup = displayGroup();
 		
-		initDisplayGroup(displayGroup);
+		initDisplayGroup(myDisplayGroup);
 		
-		displayGroup.fetch();
+		myDisplayGroup.fetch();
 		
 		super.willInitializePage();
 	}
@@ -187,11 +187,11 @@ public abstract class AbstractListPageController extends AbstractPageController 
 		ControllerPage nextPage = session().pageWithEntityAndTask(entityName(),
 				Application.EDIT_TASK, page().context());
 		AbstractEditPageController controller = (AbstractEditPageController) nextPage.controller();
-		WODisplayGroup displayGroup = displayGroup();
+		WODisplayGroup myDisplayGroup = displayGroup();
 		EOEnterpriseObject enterpriseObject = (EOEnterpriseObject) object;
 		EOEditingContext editingContext = enterpriseObject.editingContext();
 		
-		controller.setObject(editingContext.globalIDForObject(enterpriseObject), displayGroup);
+		controller.setObject(editingContext.globalIDForObject(enterpriseObject), myDisplayGroup);
 		
 		
 		// Avoid returning on quickSearch.
@@ -330,10 +330,10 @@ public abstract class AbstractListPageController extends AbstractPageController 
 		EOSortOrdering sortOrdering = new EOSortOrdering(cellDescriptor.keyPath(),
 				this.sortAscending.booleanValue() ? EOSortOrdering.CompareCaseInsensitiveAscending
 						: EOSortOrdering.CompareCaseInsensitiveDescending);
-		WODisplayGroup displayGroup = displayGroup();
+		WODisplayGroup myDisplayGroup = displayGroup();
 		
-		displayGroup.setSortOrderings(new NSArray(sortOrdering));
-		displayGroup.fetch();
+		myDisplayGroup.setSortOrderings(new NSArray(sortOrdering));
+		myDisplayGroup.fetch();
 		
 		return page().context().page();
 	}
@@ -357,11 +357,11 @@ public abstract class AbstractListPageController extends AbstractPageController 
 		ControllerPage nextPage = session().pageWithEntityAndTask(entityName(),
 				Application.EDIT_TASK, page().context());
 		AbstractEditPageController controller = (AbstractEditPageController) nextPage.controller();
-		WODisplayGroup displayGroup = displayGroup();
-		EOEnterpriseObject object = (EOEnterpriseObject) displayGroup.selectedObject();
+		WODisplayGroup myDisplayGroup = displayGroup();
+		EOEnterpriseObject object = (EOEnterpriseObject) myDisplayGroup.selectedObject();
 		EOEditingContext editingContext = object.editingContext();
 		
-		controller.setObject(editingContext.globalIDForObject(object), displayGroup);
+		controller.setObject(editingContext.globalIDForObject(object), myDisplayGroup);
 		
 		return nextPage;
 	}
@@ -436,26 +436,26 @@ public abstract class AbstractListPageController extends AbstractPageController 
 	 * displayGroup's sort orderings avoiding to override sort orderings
 	 * specified by fecthSpecification.
 	 * 
-	 * @param displayGroup
+	 * @param aDisplayGroup
 	 *            The displayGroup to initialize
 	 * 
 	 */
-	protected void initDisplayGroup(WODisplayGroup displayGroup)
+	protected void initDisplayGroup(WODisplayGroup aDisplayGroup)
 	{
-		if (displayGroup.dataSource() == null) {
+		if (aDisplayGroup.dataSource() == null) {
 			EODatabaseDataSource dataSource = new EODatabaseDataSource(editingContext(),
 					entityName());
 			
-			displayGroup.setDataSource(dataSource);
+			aDisplayGroup.setDataSource(dataSource);
 		}
 		
-		if (displayGroup.sortOrderings() == null
-				&& displayGroup.dataSource() instanceof EODatabaseDataSource) {
-			EODatabaseDataSource dataSource = (EODatabaseDataSource) displayGroup.dataSource();
+		if (aDisplayGroup.sortOrderings() == null
+				&& aDisplayGroup.dataSource() instanceof EODatabaseDataSource) {
+			EODatabaseDataSource dataSource = (EODatabaseDataSource) aDisplayGroup.dataSource();
 			if (dataSource.fetchSpecification() != null) {
 				NSArray sortOrderings = dataSource.fetchSpecification().sortOrderings();
 				if (sortOrderings != null && sortOrderings != NSArray.EmptyArray) {
-					displayGroup.setSortOrderings(sortOrderings);
+					aDisplayGroup.setSortOrderings(sortOrderings);
 					// Avoid column header descriptor providing information on
 					// sorting.
 					this.sortColumn = null;
@@ -463,7 +463,7 @@ public abstract class AbstractListPageController extends AbstractPageController 
 			}
 		}
 		
-		if ((displayGroup.sortOrderings() == null) && (this.sortColumn != null)
+		if ((aDisplayGroup.sortOrderings() == null) && (this.sortColumn != null)
 				&& (this.sortColumn.rowDescriptor() instanceof TableColumnRowTextDescriptor)) {
 			TableColumnRowTextDescriptor cellDescriptor = (TableColumnRowTextDescriptor) this.sortColumn
 					.rowDescriptor();
@@ -472,7 +472,7 @@ public abstract class AbstractListPageController extends AbstractPageController 
 					this.sortAscending.booleanValue() ? EOSortOrdering.CompareCaseInsensitiveAscending
 							: EOSortOrdering.CompareCaseInsensitiveDescending);
 			
-			displayGroup.setSortOrderings(new NSArray(sortOrdering));
+			aDisplayGroup.setSortOrderings(new NSArray(sortOrdering));
 		}
 	}
 }

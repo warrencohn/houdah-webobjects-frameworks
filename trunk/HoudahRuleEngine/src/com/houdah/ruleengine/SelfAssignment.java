@@ -138,7 +138,7 @@ public abstract class SelfAssignment extends KVCObject implements Assignment
 					.getConstructor(new Class[] { String.class, String.class });
 			
 			SelfAssignment clone = (SelfAssignment) constructor
-					.newInstance(new String[] { keyPath(), value() });
+					.newInstance((Object[]) new String[] { keyPath(), value() });
 			
 			return clone;
 		} catch (NoSuchMethodException nsme) {
@@ -169,7 +169,7 @@ public abstract class SelfAssignment extends KVCObject implements Assignment
 					.getConstructor(new Class[] { String.class, String.class });
 			
 			SelfAssignment clone = (SelfAssignment) constructor
-					.newInstance(new String[] { (String) coder.decodeObject(),
+					.newInstance((Object[]) new String[] { (String) coder.decodeObject(),
 							(String) coder.decodeObject() });
 			
 			return clone;
@@ -210,7 +210,7 @@ public abstract class SelfAssignment extends KVCObject implements Assignment
 					.getConstructor(new Class[] { String.class, String.class });
 			
 			SelfAssignment clone = (SelfAssignment) constructor
-					.newInstance(new String[] {
+					.newInstance((Object[]) new String[] {
 							(String) keyValueUnarchiver
 									.decodeObjectForKey(KEYPATH_KEY),
 							(String) keyValueUnarchiver

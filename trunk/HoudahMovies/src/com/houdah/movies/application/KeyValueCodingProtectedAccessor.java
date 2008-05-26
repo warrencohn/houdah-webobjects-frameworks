@@ -63,7 +63,7 @@ public class KeyValueCodingProtectedAccessor extends
 			throws IllegalArgumentException, IllegalAccessException,
 			InvocationTargetException
 	{
-		return method.invoke(object, null);
+		return method.invoke(object, (Object[])null);
 	}
 	
 	

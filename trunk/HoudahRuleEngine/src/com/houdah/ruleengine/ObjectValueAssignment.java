@@ -106,9 +106,9 @@ public class ObjectValueAssignment implements Assignment
 	
 	public Object fireInContext(RuleContext context)
 	{
-		String value = (String) value();
+		String myValue = (String) value();
 		
-		return evaluate(context, value, context);
+		return evaluate(context, myValue, context);
 	}
 	
 	

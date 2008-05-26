@@ -144,13 +144,13 @@ public abstract class Value extends KVCObject
 	
 	protected void finishInitialization()
 	{
-		FormValueFieldDescriptor cellDescriptor = cellDescriptor();
+		FormValueFieldDescriptor formValueFieldDescriptor = cellDescriptor();
 		Delegate delegateProxy = valueDelegate();
 		
 		if ((delegateProxy != null)
 				&& delegateProxy.respondsTo(ValueDelegate.FINISH_INITIALIZATION)) {
 			boolean success = delegateProxy.booleanPerform(ValueDelegate.FINISH_INITIALIZATION,
-					cellDescriptor, this);
+					formValueFieldDescriptor, this);
 			
 			if (!success) {
 				throw new IllegalStateException("Failed to finish value initialization");
@@ -306,10 +306,10 @@ public abstract class Value extends KVCObject
 	}
 	
 	
-	public String displayString(Object value)
+	public String displayString(Object aValue)
 	{
 		Delegate delegateProxy = valueDelegate();
-		Object intermediateOne = cellDescriptor().displayValue(value);
+		Object intermediateOne = cellDescriptor().displayValue(aValue);
 		
 		if ((delegateProxy != null) && delegateProxy.respondsTo(ValueDelegate.WILL_FORMAT)) {
 			intermediateOne = delegateProxy.perform(ValueDelegate.WILL_FORMAT, cellDescriptor(),
@@ -365,10 +365,10 @@ public abstract class Value extends KVCObject
 	}
 	
 	
-	protected Object value(Object rawValue) throws Exception
+	protected Object value(Object aRawValue) throws Exception
 	{
 		Delegate delegateProxy = valueDelegate();
-		Object intermediateOne = rawValue;
+		Object intermediateOne = aRawValue;
 		
 		if ((delegateProxy != null) && delegateProxy.respondsTo(ValueDelegate.WILL_PARSE)) {
 			intermediateOne = delegateProxy.perform(ValueDelegate.WILL_PARSE, cellDescriptor(),
@@ -404,9 +404,9 @@ public abstract class Value extends KVCObject
 	}
 	
 	
-	protected Object rawValue(Object value)
+	protected Object rawValue(Object aValue)
 	{
-		return displayString(value);
+		return displayString(aValue);
 	}
 	
 	

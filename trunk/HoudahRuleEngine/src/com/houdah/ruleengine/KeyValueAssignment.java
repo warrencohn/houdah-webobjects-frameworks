@@ -90,10 +90,10 @@ public class KeyValueAssignment implements Assignment
 		// whatever value is at that key path within the context. When using
 		// KeyAssignments, be careful not to create circular rule dependencies;
 		
-		Object value = value();
+		Object myValue = value();
 		
-		if (value instanceof String) {
-			return context.valueForKeyPath((String) value);
+		if (myValue instanceof String) {
+			return context.valueForKeyPath((String) myValue);
 		} else {
 			return null;
 		}

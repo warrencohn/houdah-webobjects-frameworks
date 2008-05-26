@@ -5,6 +5,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/HoudahFoundation"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/HoudahRuleEngine"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="org.objectstyle.wolips.WO_CLASSPATH/HoudahEOControl/HoudahFoundation/HoudahRuleEngine/JavaEOControl/JavaFoundation/JavaJDBCAdaptor/JavaWebObjects/JavaWOExtensions/JavaXML"/>
+	<classpathentry kind="con" path="org.objectstyle.wolips.ContainerInitializer/10/1/HoudahEOControl/1/nil/1/nil/1/0/1/false/10/1/HoudahFoundation/1/nil/1/nil/1/0/1/false/10/1/HoudahRuleEngine/1/nil/1/nil/1/0/1/false/10/1/JavaEOControl/1/nil/1/nil/1/0/1/false/10/1/JavaFoundation/1/nil/1/nil/1/0/1/false/10/1/JavaJDBCAdaptor/1/nil/1/nil/1/0/1/false/10/1/JavaWebObjects/1/nil/1/nil/1/0/1/false/10/1/JavaWOExtensions/1/nil/1/nil/1/0/1/false/10/1/JavaXML/1/nil/1/nil/1/0/1/false"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

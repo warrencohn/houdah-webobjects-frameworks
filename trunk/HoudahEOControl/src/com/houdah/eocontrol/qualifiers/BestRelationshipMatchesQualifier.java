@@ -222,10 +222,10 @@ public class BestRelationshipMatchesQualifier extends Qualifier implements
 	
 	public boolean evaluateWithObject(Object object)
 	{
-		String keyPath = keyPath();
-		int dotIndex = keyPath.lastIndexOf('.');
-		String key = keyPath.substring(dotIndex + 1);
-		String path = keyPath.substring(0, dotIndex);
+		String myKeyPath = keyPath();
+		int dotIndex = myKeyPath.lastIndexOf('.');
+		String key = myKeyPath.substring(dotIndex + 1);
+		String path = myKeyPath.substring(0, dotIndex);
 		BestMatchQualifier bmQualifier = new BestMatchQualifier(key, limit(),
 				qualifierOperator(), subQualifier());
 		Object values = NSKeyValueCodingAdditions.Utility.valueForKeyPath(

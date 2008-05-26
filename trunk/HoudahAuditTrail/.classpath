@@ -7,6 +7,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/HoudahEOValidation"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/HoudahExtensions"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/HoudahFoundation"/>
-	<classpathentry kind="con" path="org.objectstyle.wolips.WO_CLASSPATH/HoudahEOAccess/HoudahEOControl/HoudahEOValidation/HoudahExtensions/HoudahFoundation/JavaEOAccess/JavaEOControl/JavaFoundation/JavaJDBCAdaptor/JavaWebObjects/JavaWOExtensions/JavaXML"/>
+	<classpathentry kind="con" path="org.objectstyle.wolips.ContainerInitializer/10/1/HoudahEOAccess/1/nil/1/nil/1/0/1/false/10/1/HoudahEOControl/1/nil/1/nil/1/0/1/false/10/1/HoudahEOValidation/1/nil/1/nil/1/0/1/false/10/1/HoudahExtensions/1/nil/1/nil/1/0/1/false/10/1/HoudahFoundation/1/nil/1/nil/1/0/1/false/10/1/JavaEOAccess/1/nil/1/nil/1/0/1/false/10/1/JavaEOControl/1/nil/1/nil/1/0/1/false/10/1/JavaFoundation/1/nil/1/nil/1/0/1/false/10/1/JavaJDBCAdaptor/1/nil/1/nil/1/0/1/false/10/1/JavaWebObjects/1/nil/1/nil/1/0/1/false/10/1/JavaWOExtensions/1/nil/1/nil/1/0/1/false/10/1/JavaXML/1/nil/1/nil/1/0/1/false"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

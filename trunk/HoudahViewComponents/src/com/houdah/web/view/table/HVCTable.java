@@ -401,11 +401,11 @@ public class HVCTable extends Element
 		headerClass = (headerClass != null) ? headerClass : "";
 		
 		if (this.currentColumnDescriptor == sortColumn()) {
-			Boolean sortAscending = sortAscending();
+			Boolean mySortAscending = sortAscending();
 			
-			if (Boolean.TRUE.equals(sortAscending)) {
+			if (Boolean.TRUE.equals(mySortAscending)) {
 				headerClass += " ascending";
-			} else if (sortAscending != null) {
+			} else if (mySortAscending != null) {
 				headerClass += " descending";
 			}
 		}

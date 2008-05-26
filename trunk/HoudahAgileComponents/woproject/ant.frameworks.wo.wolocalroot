@@ -1,3 +1,4 @@
+Library/Java/Extensions/frontbasejdbc.jar
 Library/Frameworks/HoudahAppServer.framework
 Library/Frameworks/HoudahControlComponents.framework
 Library/Frameworks/HoudahEOAccess.framework
@@ -8,6 +9,7 @@ Library/Frameworks/HoudahMessages.framework
 Library/Frameworks/HoudahQueryBlessing.framework
 Library/Frameworks/HoudahRuleEngine.framework
 Library/Frameworks/HoudahViewComponents.framework
+Library/Frameworks/JavaWOExtensions.framework
 Library/Frameworks/HoudahAppServer.framework
 Library/Frameworks/HoudahControlComponents.framework
 Library/Frameworks/HoudahEOAccess.framework

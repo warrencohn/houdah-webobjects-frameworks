@@ -47,15 +47,14 @@ import com.webobjects.foundation.NSTimestampFormatter;
  * <ul>
  * <li>Implements non lenient parsing
  * <li>Allow only realistic dates to be parsed
- * <li>Work arounds a bug in NSTimestampFormatter where dates seem to be always
- * parsed in the GMT timezone
+ * <li>Works around a bug in NSTimestampFormatter where dates seem to be always parsed in the GMT timezone
  * <li>Formats both NSTimestamps & dates
  * </ul>
  * 
  * <b>CAVEAT:</b> These are patches & workarounds most likely at the expense of
  * performance.
  * 
- * @author bernard
+ * @deprecated
  */
 public class TimestampFormatter extends NSTimestampFormatter
 {
@@ -77,6 +76,7 @@ public class TimestampFormatter extends NSTimestampFormatter
 	
 	// Constructors
 	
+	@SuppressWarnings("deprecation")
 	public TimestampFormatter()
 	{
 		super();
@@ -85,6 +85,7 @@ public class TimestampFormatter extends NSTimestampFormatter
 	}
 	
 	
+	@SuppressWarnings("deprecation")
 	public TimestampFormatter(String aPattern)
 	{
 		super(aPattern);
@@ -93,6 +94,7 @@ public class TimestampFormatter extends NSTimestampFormatter
 	}
 	
 	
+	@SuppressWarnings("deprecation")
 	public TimestampFormatter(String aPattern, DateFormatSymbols symbols)
 	{
 		super(aPattern, symbols);
@@ -163,6 +165,7 @@ public class TimestampFormatter extends NSTimestampFormatter
 	 * @see java.text.Format#format(java.lang.Object, java.lang.StringBuffer,
 	 *      java.text.FieldPosition)
 	 */
+	@SuppressWarnings("deprecation")
 	public StringBuffer format(Object date, StringBuffer stringBuffer, FieldPosition fieldPosition)
 	{
 		if (!(date instanceof NSTimestamp) && (date instanceof Date)) {
@@ -179,6 +182,7 @@ public class TimestampFormatter extends NSTimestampFormatter
 	}
 	
 	
+	@SuppressWarnings("deprecation")
 	public void setPattern(String pattern)
 	{
 		this.simpleDateFormat = null;
@@ -193,6 +197,7 @@ public class TimestampFormatter extends NSTimestampFormatter
 	/**
 	 * Lazily creates a SimpleDateFormat object used for parsing.
 	 */
+	@SuppressWarnings("deprecation")
 	private SimpleDateFormat getSimpleDateFormat()
 	{
 		if (this.simpleDateFormat == null) {
