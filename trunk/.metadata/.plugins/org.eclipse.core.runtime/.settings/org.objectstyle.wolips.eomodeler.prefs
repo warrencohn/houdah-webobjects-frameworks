@@ -1,9 +1,0 @@
-#Tue Oct 30 12:39:01 CET 2007
-EntityModeler.org.objectstyle.wolips.eomodeler.core.model.EOJoin.columns=sourceAttributeName,destinationAttributeName
-EntityModeler.org.objectstyle.wolips.eomodeler.core.model.EOSortOrdering.columns=key,ascending,caseInsensitive
-eclipse.preferences.version=1
-EntityModeler.org.objectstyle.wolips.eomodeler.core.model.EOEntity.columns=name,externalName,className,parent
-EntityModeler.org.objectstyle.wolips.eomodeler.core.model.EOFetchSpecification.columns=sharesObjects,name
-EntityModeler.org.objectstyle.wolips.eomodeler.core.model.EOAttribute.columns=primaryKey,classProperty,usedForLocking,allowsNull,prototype,name,columnName,width,precision,scale
-EntityModeler.org.objectstyle.wolips.eomodeler.core.model.EORelationship.columns=toMany,classProperty,name,destination,sourceAttribute,destinationAttribute
-EntityModeler.org.objectstyle.wolips.eomodeler.core.model.EOArgument.columns=name,columnName,direction
