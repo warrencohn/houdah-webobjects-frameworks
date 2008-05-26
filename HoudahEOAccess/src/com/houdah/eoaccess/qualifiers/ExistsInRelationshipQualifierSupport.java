@@ -24,7 +24,7 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.eoaccess.qualifiers;
 
@@ -32,7 +32,7 @@ import java.util.Enumeration;
 
 import com.houdah.eocontrol.qualifiers.ExistsInRelationshipQualifier;
 import com.houdah.eocontrol.qualifiers.InSubqueryQualifier;
-
+import com.houdah.eocontrol.qualifiers.Qualifier;
 import com.webobjects.eoaccess.EOAttribute;
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eoaccess.EOJoin;
@@ -52,19 +52,17 @@ import com.webobjects.foundation.NSMutableDictionary;
  * 
  * @author bernard
  */
-public class ExistsInRelationshipQualifierSupport extends
-		QualifierGenerationSupport
+public class ExistsInRelationshipQualifierSupport extends QualifierGenerationSupport
 {
 	// Public instance methods
-	
+
 	/*
 	 * (non-Javadoc)
 	 * 
 	 * @see com.webobjects.eoaccess.EOQualifierSQLGeneration.Support#sqlStringForSQLExpression(com.webobjects.eocontrol.EOQualifier,
 	 *      com.webobjects.eoaccess.EOSQLExpression)
 	 */
-	public String sqlStringForSQLExpression(EOQualifier qualifier,
-			EOSQLExpression expression)
+	public String sqlStringForSQLExpression(EOQualifier qualifier, EOSQLExpression expression)
 	{
 		ExistsInRelationshipQualifier eirQualifier = (ExistsInRelationshipQualifier) qualifier;
 		String keyPath = eirQualifier.keyPath();
@@ -76,38 +74,36 @@ public class ExistsInRelationshipQualifierSupport extends
 		EOQualifier subQualifier = eirQualifier.qualifier();
 		StringBuffer subBuffer = new StringBuffer();
 		EOSQLExpression subExpression = expressionForEntity(subEntity);
-		EOFetchSpecification subFetch = new EOFetchSpecification(subEntity
-				.name(), subQualifier, null);
+		EOFetchSpecification subFetch = new EOFetchSpecification(subEntity.name(), subQualifier, null);
 		StringBuffer buffer = new StringBuffer();
 		int minCount = eirQualifier.minCount();
-		
+
 		if (minCount > 1) {
 			buffer.append(" ");
 			buffer.append(eirQualifier.minCount());
 			buffer.append(" <= ");
-			
+
 			subBuffer.append(" (SELECT count(*) FROM ");
-		} else {
+		}
+		else {
 			buffer.append(" EXISTS (");
-			
+
 			subBuffer.append("SELECT 1 FROM ");
 		}
-		
-		subExpression.prepareSelectExpressionWithAttributes(subEntity
-				.primaryKeyAttributes(), false, subFetch);
-		
+
+		subExpression.prepareSelectExpressionWithAttributes(subEntity.primaryKeyAttributes(), false, subFetch);
+
 		subBuffer.append(subExpression.tableListWithRootEntity(subEntity));
 		subBuffer.append(" WHERE ");
 		subBuffer.append(subExpression.whereClauseString());
-		
-		if ((subExpression.joinClauseString() != null)
-				&& (subExpression.joinClauseString().length() > 0)) {
+
+		if ((subExpression.joinClauseString() != null) && (subExpression.joinClauseString().length() > 0)) {
 			subBuffer.append(" AND ");
 			subBuffer.append(subExpression.joinClauseString());
 		}
-		
+
 		replaceTableAliasesInExpressionBuffer(subBuffer, subExpression);
-		
+
 		if (joinCount > 0) {
 			for (int j = 0; j < joinCount; j++) {
 				EOJoin join = (EOJoin) joins.objectAtIndex(j);
@@ -115,126 +111,108 @@ public class ExistsInRelationshipQualifierSupport extends
 				EOAttribute destinationAttribute = join.destinationAttribute();
 				
 				subBuffer.append(" AND ");
-				subBuffer.append(expression
-						._aliasForRelatedAttributeRelationshipPath(
-								sourceAttribute, ""));
+				subBuffer.append(expression._aliasForRelatedAttributeRelationshipPath(sourceAttribute, Qualifier
+						.allButLastPathComponent(keyPath)));
 				subBuffer.append(" = ");
-				subBuffer.append(subExpression
-						._aliasForRelatedAttributeRelationshipPath(
-								destinationAttribute, ""));
+				subBuffer.append(subExpression._aliasForRelatedAttributeRelationshipPath(destinationAttribute, ""));
 			}
 		}
-		
+
 		buffer.append(subBuffer);
 		buffer.append(")");
-		
-		Enumeration bindVariables = subExpression.bindVariableDictionaries()
-				.objectEnumerator();
-		
+
+		Enumeration bindVariables = subExpression.bindVariableDictionaries().objectEnumerator();
+
 		while (bindVariables.hasMoreElements()) {
-			expression.addBindVariableDictionary((NSDictionary) bindVariables
-					.nextElement());
+			expression.addBindVariableDictionary((NSDictionary) bindVariables.nextElement());
 		}
-		
+
 		return buffer.toString();
 	}
-	
-	
-	
+
 	/*
 	 * (non-Javadoc)
 	 * 
 	 * @see com.webobjects.eoaccess.EOQualifierSQLGeneration.Support#schemaBasedQualifierWithRootEntity(com.webobjects.eocontrol.EOQualifier,
 	 *      com.webobjects.eoaccess.EOEntity)
 	 */
-	public EOQualifier schemaBasedQualifierWithRootEntity(
-			EOQualifier qualifier, EOEntity entity)
+	public EOQualifier schemaBasedQualifierWithRootEntity(EOQualifier qualifier, EOEntity entity)
 	{
 		NSMutableDictionary substitutions = new NSMutableDictionary(1);
 		ExistsInRelationshipQualifier eirQualifier = (ExistsInRelationshipQualifier) qualifier;
 		String keyPath = eirQualifier.keyPath();
 		EORelationship relationship = relationshipForPath(entity, keyPath);
-		
+
 		if ((relationship != null) && relationship.isFlattened()) {
-            NSArray componentRelationships = relationship.componentRelationships();
+			NSArray componentRelationships = relationship.componentRelationships();
 			int crCount = componentRelationships.count();
 
-            int relationshipIndex = keyPath.indexOf(relationship.name());
-            String prefix = (relationshipIndex > 0) ? keyPath.substring(0, relationshipIndex - 1) : "";
-            StringBuffer pathToPivot = new StringBuffer(prefix);
+			int relationshipIndex = keyPath.indexOf(relationship.name());
+			String prefix = (relationshipIndex > 0) ? keyPath.substring(0, relationshipIndex - 1) : "";
+			StringBuffer pathToPivot = new StringBuffer(prefix);
 			StringBuffer pathFromPivot = new StringBuffer();
-			
+
 			StringBuffer path = pathToPivot;
 			EOEntity subEntity = null;
-			
+
 			for (int cr = 0; cr < crCount; cr++) {
-				EORelationship component = (EORelationship) componentRelationships
-						.objectAtIndex(cr);
-				
+				EORelationship component = (EORelationship) componentRelationships.objectAtIndex(cr);
+
 				if (path.length() > 0) {
 					path.append(NSKeyValueCodingAdditions.KeyPathSeparator);
 				}
-				
+
 				path.append(component.name());
-				
+
 				if ((subEntity == null) && component.isToMany()) {
 					path = pathFromPivot;
 					subEntity = component.destinationEntity();
 				}
 			}
-			
-			substitutions.setObjectForKey(pathToPivot.toString(),
-					ExistsInRelationshipQualifier.KEY_PATH);
-			
-			InSubqueryQualifier isQualifier = new InSubqueryQualifier(
-					pathFromPivot.toString(), eirQualifier.qualifier());
+
+			substitutions.setObjectForKey(pathToPivot.toString(), ExistsInRelationshipQualifier.KEY_PATH);
+
+			InSubqueryQualifier isQualifier = new InSubqueryQualifier(pathFromPivot.toString(), eirQualifier.qualifier());
 			Support support = supportForClass(isQualifier.getClass());
-			
+
 			if (support == null) {
-				throw new IllegalArgumentException("Qualifier " + isQualifier
-						+ " has no support class");
-			} else {
-				substitutions.setObjectForKey(support
-						.schemaBasedQualifierWithRootEntity(isQualifier,
-								subEntity),
-						ExistsInRelationshipQualifier.QUALIFIER);
+				throw new IllegalArgumentException("Qualifier " + isQualifier + " has no support class");
 			}
-		} else {
-			EOEntity subEntity = (relationship != null) ? relationship
-					.destinationEntity() : entity;
-			EOQualifier subQualifier = eirQualifier.qualifier();
-			
-			if (subQualifier != null) {
-				Support support = supportForClass(subQualifier.getClass());
-				
-				substitutions.setObjectForKey(support
-						.schemaBasedQualifierWithRootEntity(subQualifier,
-								subEntity),
+			else {
+				substitutions.setObjectForKey(support.schemaBasedQualifierWithRootEntity(isQualifier, subEntity),
 						ExistsInRelationshipQualifier.QUALIFIER);
 			}
 		}
-		
+		else {
+			EOEntity subEntity = (relationship != null) ? relationship.destinationEntity() : entity;
+			EOQualifier subQualifier = eirQualifier.qualifier();
+
+			if (subQualifier != null) {
+				Support support = supportForClass(subQualifier.getClass());
+
+				substitutions.setObjectForKey(support.schemaBasedQualifierWithRootEntity(subQualifier, subEntity),
+						ExistsInRelationshipQualifier.QUALIFIER);
+			}
+		}
+
 		return eirQualifier.clone(substitutions);
 	}
-	
-	
-	
+
 	/*
 	 * (non-Javadoc)
 	 * 
 	 * @see com.webobjects.eoaccess.EOQualifierSQLGeneration.Support#qualifierMigratedFromEntityRelationshipPath(com.webobjects.eocontrol.EOQualifier,
 	 *      com.webobjects.eoaccess.EOEntity, java.lang.String)
 	 */
-	public EOQualifier qualifierMigratedFromEntityRelationshipPath(
-			EOQualifier qualifier, EOEntity entity, String relationshipPath)
+	public EOQualifier qualifierMigratedFromEntityRelationshipPath(EOQualifier qualifier, EOEntity entity,
+			String relationshipPath)
 	{
 		ExistsInRelationshipQualifier eirQualifier = (ExistsInRelationshipQualifier) qualifier;
 		NSMutableDictionary substitutions = new NSMutableDictionary(1);
-		
-		substitutions.setObjectForKey(translateKeyAcrossRelationshipPath(
-				eirQualifier.keyPath(), relationshipPath, entity),
-				ExistsInRelationshipQualifier.KEY_PATH);
-		
+
+		substitutions.setObjectForKey(translateKeyAcrossRelationshipPath(eirQualifier.keyPath(), relationshipPath,
+				entity), ExistsInRelationshipQualifier.KEY_PATH);
+
 		return eirQualifier.clone(substitutions);
 	}
 }

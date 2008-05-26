@@ -453,19 +453,14 @@ public class InSetQualifierSupport extends QualifierGenerationSupport
 					
 					
 					// This is ugly: We generate SQL for a key-value qualifier
-					// and then extract
-					// the part representing the value. Unfortunately, there are
-					// case where the
-					// database adaptor must apply vendor specific magic to the
-					// value. One such
-					// transformation is padding values for qualifying against
-					// fixed width CHAR
-					// columns. These transformations are not publicly exposed
-					// by the adaptor.
+					// and then extract the part representing the value. Unfortunately, 
+					// there are cases where the database adaptor must apply vendor
+					// specific magic to the value. One such transformation is padding
+					// values for qualifying against fixed width CHAR columns. These
+					// transformations are not publicly exposed by the adaptor.
 					//
 					// I guess the below code is the best we can get while still
-					// database vendor
-					// independant.
+					// database vendor independent.
 					
 					EOKeyValueQualifier kvQualifier = new EOKeyValueQualifier(keyPath,
 							EOQualifier.QualifierOperatorEqual, oneValue);

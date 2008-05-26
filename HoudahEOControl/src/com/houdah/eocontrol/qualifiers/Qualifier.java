@@ -32,7 +32,6 @@ import java.util.StringTokenizer;
 
 import com.webobjects.eocontrol.EOClassDescription;
 import com.webobjects.eocontrol.EOQualifier;
-
 import com.webobjects.foundation.NSKeyValueCodingAdditions;
 
 /**
@@ -54,12 +53,12 @@ public abstract class Qualifier extends EOQualifier
 	
 	// Public class methods
 	
-	public static String allButLastPathComponent(String path)
-	{
-		int i = path.lastIndexOf(KEY_PATH_SEPARATOR_CHAR);
-		
-		return (i < 0) ? null : path.substring(0, i);
-	}
+	public static String allButLastPathComponent(String path) 
+	{ 
+		int i = path.lastIndexOf(KEY_PATH_SEPARATOR_CHAR); 
+
+		return (i < 0) ? "" : path.substring(0, i); 
+	} 
 	
 	
 	public static String lastPathComponent(String path)
