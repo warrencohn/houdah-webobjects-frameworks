@@ -68,7 +68,8 @@ public class ExistsInRelationshipQualifier extends Qualifier implements
 	 * Key value for the one argument clone method
 	 */
 	public static final String	KEY_PATH			= "keyPath",
-			QUALIFIER = "qualifier", MIN_COUNT = "minCount";
+								QUALIFIER 			= "qualifier", 
+								MIN_COUNT 			= "minCount";
 	
 	
 	
@@ -259,9 +260,21 @@ public class ExistsInRelationshipQualifier extends Qualifier implements
 	{
 		NSArray values = (NSArray) NSKeyValueCodingAdditions.Utility
 				.valueForKeyPath(object, keyPath());
+		EOQualifier myQualifier = qualifier();
+		int count;
 		
-		return EOQualifier.filteredArrayWithQualifier(values, qualifier())
-				.count() >= this.minCount;
+		if (values != null) {
+			if (myQualifier != null) {
+				count = EOQualifier.filteredArrayWithQualifier(values, myQualifier).count();
+			}
+			else {
+				count = values.count();
+			}
+		}
+		else {
+			count = values.count();
+		}
+		return count >= this.minCount;
 	}
 	
 	
