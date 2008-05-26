@@ -27,166 +27,201 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.movies.business;
 
-import com.webobjects.foundation.*;
-import com.webobjects.eocontrol.*;
 import java.math.BigDecimal;
-import java.util.*;
 
-public class Movie extends EOGenericRecord {
+import com.houdah.eocontrol.GenericRecord;
+import com.webobjects.foundation.NSArray;
+import com.webobjects.foundation.NSTimestamp;
 
-    public Movie() {
-        super();
-    }
+public class Movie extends GenericRecord
+{
 
-/*
-    // If you implement the following constructor EOF will use it to
-    // create your objects, otherwise it will use the default
-    // constructor. For maximum performance, you should only
-    // implement this constructor if you depend on the arguments.
-    public Movie(EOEditingContext context, EOClassDescription classDesc, EOGlobalID gid) {
-        super(context, classDesc, gid);
-    }
+	/**
+	 * 
+	 */
+	private static final long	serialVersionUID	= 6330935994353366558L;
 
-    // If you add instance variables to store property values you
-    // should add empty implementions of the Serialization methods
-    // to avoid unnecessary overhead (the properties will be
-    // serialized for you in the superclass).
-    private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
-    }
+	public Movie() {
+		super();
+	}
 
-    private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, java.lang.ClassNotFoundException {
-    }
-*/
+	/*
+	 * // If you implement the following constructor EOF will use it to //
+	 * create your objects, otherwise it will use the default // constructor.
+	 * For maximum performance, you should only // implement this constructor if
+	 * you depend on the arguments. public Movie(EOEditingContext context,
+	 * EOClassDescription classDesc, EOGlobalID gid) { super(context, classDesc,
+	 * gid); } // If you add instance variables to store property values you //
+	 * should add empty implementions of the Serialization methods // to avoid
+	 * unnecessary overhead (the properties will be // serialized for you in the
+	 * superclass). private void writeObject(java.io.ObjectOutputStream out)
+	 * throws java.io.IOException { }
+	 * 
+	 * private void readObject(java.io.ObjectInputStream in) throws
+	 * java.io.IOException, java.lang.ClassNotFoundException { }
+	 */
 
-    public String category() {
-        return (String)storedValueForKey("category");
-    }
+	public String category()
+	{
+		return (String) storedValueForKey("category");
+	}
 
-    public void setCategory(String value) {
-        takeStoredValueForKey(value, "category");
-    }
+	public void setCategory(String value)
+	{
+		takeStoredValueForKey(value, "category");
+	}
 
-    public NSTimestamp dateReleased() {
-        return (NSTimestamp)storedValueForKey("dateReleased");
-    }
+	public NSTimestamp dateReleased()
+	{
+		return (NSTimestamp) storedValueForKey("dateReleased");
+	}
 
-    public void setDateReleased(NSTimestamp value) {
-        takeStoredValueForKey(value, "dateReleased");
-    }
+	public void setDateReleased(NSTimestamp value)
+	{
+		takeStoredValueForKey(value, "dateReleased");
+	}
 
-    public String posterName() {
-        return (String)storedValueForKey("posterName");
-    }
+	public String posterName()
+	{
+		return (String) storedValueForKey("posterName");
+	}
 
-    public void setPosterName(String value) {
-        takeStoredValueForKey(value, "posterName");
-    }
+	public void setPosterName(String value)
+	{
+		takeStoredValueForKey(value, "posterName");
+	}
 
-    public String rated() {
-        return (String)storedValueForKey("rated");
-    }
+	public String rated()
+	{
+		return (String) storedValueForKey("rated");
+	}
 
-    public void setRated(String value) {
-        takeStoredValueForKey(value, "rated");
-    }
+	public void setRated(String value)
+	{
+		takeStoredValueForKey(value, "rated");
+	}
 
-    public BigDecimal revenue() {
-        return (BigDecimal)storedValueForKey("revenue");
-    }
+	public BigDecimal revenue()
+	{
+		return (BigDecimal) storedValueForKey("revenue");
+	}
 
-    public void setRevenue(BigDecimal value) {
-        takeStoredValueForKey(value, "revenue");
-    }
+	public void setRevenue(BigDecimal value)
+	{
+		takeStoredValueForKey(value, "revenue");
+	}
 
-    public String title() {
-        return (String)storedValueForKey("title");
-    }
+	public String title()
+	{
+		return (String) storedValueForKey("title");
+	}
 
-    public void setTitle(String value) {
-        takeStoredValueForKey(value, "title");
-    }
+	public void setTitle(String value)
+	{
+		takeStoredValueForKey(value, "title");
+	}
 
-    public String trailerName() {
-        return (String)storedValueForKey("trailerName");
-    }
+	public String trailerName()
+	{
+		return (String) storedValueForKey("trailerName");
+	}
 
-    public void setTrailerName(String value) {
-        takeStoredValueForKey(value, "trailerName");
-    }
+	public void setTrailerName(String value)
+	{
+		takeStoredValueForKey(value, "trailerName");
+	}
 
-    public com.houdah.movies.business.PlotSummary plotSummary() {
-        return (com.houdah.movies.business.PlotSummary)storedValueForKey("plotSummary");
-    }
+	public com.houdah.movies.business.PlotSummary plotSummary()
+	{
+		return (com.houdah.movies.business.PlotSummary) storedValueForKey("plotSummary");
+	}
 
-    public void setPlotSummary(com.houdah.movies.business.PlotSummary value) {
-        takeStoredValueForKey(value, "plotSummary");
-    }
+	public void setPlotSummary(com.houdah.movies.business.PlotSummary value)
+	{
+		takeStoredValueForKey(value, "plotSummary");
+	}
 
-    public com.houdah.movies.business.Studio studio() {
-        return (com.houdah.movies.business.Studio)storedValueForKey("studio");
-    }
+	public com.houdah.movies.business.Studio studio()
+	{
+		return (com.houdah.movies.business.Studio) storedValueForKey("studio");
+	}
 
-    public void setStudio(com.houdah.movies.business.Studio value) {
-        takeStoredValueForKey(value, "studio");
-    }
+	public void setStudio(com.houdah.movies.business.Studio value)
+	{
+		takeStoredValueForKey(value, "studio");
+	}
 
-    public com.houdah.movies.business.Voting voting() {
-        return (com.houdah.movies.business.Voting)storedValueForKey("voting");
-    }
+	public com.houdah.movies.business.Voting voting()
+	{
+		return (com.houdah.movies.business.Voting) storedValueForKey("voting");
+	}
 
-    public void setVoting(com.houdah.movies.business.Voting value) {
-        takeStoredValueForKey(value, "voting");
-    }
+	public void setVoting(com.houdah.movies.business.Voting value)
+	{
+		takeStoredValueForKey(value, "voting");
+	}
 
-    public NSArray directors() {
-        return (NSArray)storedValueForKey("directors");
-    }
+	public NSArray directors()
+	{
+		return (NSArray) storedValueForKey("directors");
+	}
 
-    public void setDirectors(NSArray value) {
-        takeStoredValueForKey(value, "directors");
-    }
+	public void setDirectors(NSArray value)
+	{
+		takeStoredValueForKey(value, "directors");
+	}
 
-    public void addToDirectors(com.houdah.movies.business.Talent object) {
-        includeObjectIntoPropertyWithKey(object, "directors");
-    }
+	public void addToDirectors(com.houdah.movies.business.Talent object)
+	{
+		includeObjectIntoPropertyWithKey(object, "directors");
+	}
 
-    public void removeFromDirectors(com.houdah.movies.business.Talent object) {
-        excludeObjectFromPropertyWithKey(object, "directors");
-    }
+	public void removeFromDirectors(com.houdah.movies.business.Talent object)
+	{
+		excludeObjectFromPropertyWithKey(object, "directors");
+	}
 
-    public NSArray reviews() {
-        return (NSArray)storedValueForKey("reviews");
-    }
+	public NSArray reviews()
+	{
+		return (NSArray) storedValueForKey("reviews");
+	}
 
-    public void setReviews(NSArray value) {
-        takeStoredValueForKey(value, "reviews");
-    }
+	public void setReviews(NSArray value)
+	{
+		takeStoredValueForKey(value, "reviews");
+	}
 
-    public void addToReviews(com.houdah.movies.business.Review object) {
-        includeObjectIntoPropertyWithKey(object, "reviews");
-    }
+	public void addToReviews(com.houdah.movies.business.Review object)
+	{
+		includeObjectIntoPropertyWithKey(object, "reviews");
+	}
 
-    public void removeFromReviews(com.houdah.movies.business.Review object) {
-        excludeObjectFromPropertyWithKey(object, "reviews");
-    }
+	public void removeFromReviews(com.houdah.movies.business.Review object)
+	{
+		excludeObjectFromPropertyWithKey(object, "reviews");
+	}
 
-    public NSArray roles() {
-        return (NSArray)storedValueForKey("roles");
-    }
+	public NSArray roles()
+	{
+		return (NSArray) storedValueForKey("roles");
+	}
 
-    public void setRoles(NSArray value) {
-        takeStoredValueForKey(value, "roles");
-    }
+	public void setRoles(NSArray value)
+	{
+		takeStoredValueForKey(value, "roles");
+	}
 
-    public void addToRoles(com.houdah.movies.business.MovieRole object) {
-        includeObjectIntoPropertyWithKey(object, "roles");
-    }
+	public void addToRoles(com.houdah.movies.business.MovieRole object)
+	{
+		includeObjectIntoPropertyWithKey(object, "roles");
+	}
 
-    public void removeFromRoles(com.houdah.movies.business.MovieRole object) {
-        excludeObjectFromPropertyWithKey(object, "roles");
-    }
+	public void removeFromRoles(com.houdah.movies.business.MovieRole object)
+	{
+		excludeObjectFromPropertyWithKey(object, "roles");
+	}
 }

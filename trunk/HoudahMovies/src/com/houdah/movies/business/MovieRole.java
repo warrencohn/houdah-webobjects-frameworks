@@ -27,59 +27,67 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.movies.business;
 
-import com.webobjects.eocontrol.EOGenericRecord;
+import com.houdah.eocontrol.GenericRecord;
 
-public class MovieRole extends EOGenericRecord {
+public class MovieRole extends GenericRecord
+{
 
-    public MovieRole() {
-        super();
-    }
+	/**
+	 * 
+	 */
+	private static final long	serialVersionUID	= -2666036331461355396L;
 
-/*
-    // If you implement the following constructor EOF will use it to
-    // create your objects, otherwise it will use the default
-    // constructor. For maximum performance, you should only
-    // implement this constructor if you depend on the arguments.
-    public MovieRole(EOEditingContext context, EOClassDescription classDesc, EOGlobalID gid) {
-        super(context, classDesc, gid);
-    }
+	public MovieRole() {
+		super();
+	}
 
-    // If you add instance variables to store property values you
-    // should add empty implementions of the Serialization methods
-    // to avoid unnecessary overhead (the properties will be
-    // serialized for you in the superclass).
-    private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
-    }
+	/*
+	 * // If you implement the following constructor EOF will use it to //
+	 * create your objects, otherwise it will use the default // constructor.
+	 * For maximum performance, you should only // implement this constructor if
+	 * you depend on the arguments. public MovieRole(EOEditingContext context,
+	 * EOClassDescription classDesc, EOGlobalID gid) { super(context, classDesc,
+	 * gid); } // If you add instance variables to store property values you //
+	 * should add empty implementions of the Serialization methods // to avoid
+	 * unnecessary overhead (the properties will be // serialized for you in the
+	 * superclass). private void writeObject(java.io.ObjectOutputStream out)
+	 * throws java.io.IOException { }
+	 * 
+	 * private void readObject(java.io.ObjectInputStream in) throws
+	 * java.io.IOException, java.lang.ClassNotFoundException { }
+	 */
 
-    private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, java.lang.ClassNotFoundException {
-    }
-*/
+	public String roleName()
+	{
+		return (String) storedValueForKey("roleName");
+	}
 
-    public String roleName() {
-        return (String)storedValueForKey("roleName");
-    }
+	public void setRoleName(String value)
+	{
+		takeStoredValueForKey(value, "roleName");
+	}
 
-    public void setRoleName(String value) {
-        takeStoredValueForKey(value, "roleName");
-    }
+	public com.houdah.movies.business.Movie movie()
+	{
+		return (com.houdah.movies.business.Movie) storedValueForKey("movie");
+	}
 
-    public com.houdah.movies.business.Movie movie() {
-        return (com.houdah.movies.business.Movie)storedValueForKey("movie");
-    }
+	public void setMovie(com.houdah.movies.business.Movie value)
+	{
+		takeStoredValueForKey(value, "movie");
+	}
 
-    public void setMovie(com.houdah.movies.business.Movie value) {
-        takeStoredValueForKey(value, "movie");
-    }
+	public com.houdah.movies.business.Talent talent()
+	{
+		return (com.houdah.movies.business.Talent) storedValueForKey("talent");
+	}
 
-    public com.houdah.movies.business.Talent talent() {
-        return (com.houdah.movies.business.Talent)storedValueForKey("talent");
-    }
-
-    public void setTalent(com.houdah.movies.business.Talent value) {
-        takeStoredValueForKey(value, "talent");
-    }
+	public void setTalent(com.houdah.movies.business.Talent value)
+	{
+		takeStoredValueForKey(value, "talent");
+	}
 }

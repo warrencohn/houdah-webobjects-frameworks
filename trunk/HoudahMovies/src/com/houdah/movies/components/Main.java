@@ -24,57 +24,43 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.movies.components;
 
+import com.houdah.movies.application.Application;
+import com.houdah.movies.application.Session;
 import com.webobjects.appserver.WOComponent;
 import com.webobjects.appserver.WOContext;
 
-public class Main extends com.houdah.appserver.components.Page
-{
+public class Main extends com.houdah.appserver.components.Page {
 	// Private class constants
-	
-	private static final long	serialVersionUID	= 2785766875610597965L;
-	
-	
-	
-	
+
+	private static final long serialVersionUID = 2785766875610597965L;
+
 	// Constructor
-	
-	public Main(WOContext context)
-	{
+
+	public Main(WOContext context) {
 		super(context);
 	}
-	
-	
-	
+
 	// Action methods
-	
-	protected WOComponent searchMovies()
-	{
-		// Session session = (Session) session();
-		// WOComponent nextPage = session.pageWithEntityAndTask(User.entityName,
-		// Application.SEARCH_TASK, context());
-		//		
-		// return nextPage;
-		return null;
+
+	protected WOComponent searchMovies() {
+		Session session = (Session) session();
+		WOComponent nextPage = session.pageWithEntityAndTask("Movie", Application.SEARCH_TASK, context());
+
+		return nextPage;
 	}
-	
-	
-	protected WOComponent createMovie()
-	{
-		// Session session = (Session) session();
-		// WOComponent nextPage = session.pageWithEntityAndTask(User.entityName,
-		// Application.EDIT_TASK, context());
-		//		
-		// return nextPage;
-		return null;
+
+	protected WOComponent createMovie() {
+		Session session = (Session) session();
+		WOComponent nextPage = session.pageWithEntityAndTask("Movie", Application.EDIT_TASK, context());
+
+		return nextPage;
 	}
-	
-	
-	protected boolean needsBackTrackDetection()
-	{
+
+	protected boolean needsBackTrackDetection() {
 		return false;
 	}
 }

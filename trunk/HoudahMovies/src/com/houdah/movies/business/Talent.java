@@ -27,94 +27,88 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.movies.business;
 
-import com.webobjects.foundation.*;
-import com.webobjects.eocontrol.*;
-import java.math.BigDecimal;
-import java.util.*;
+import com.houdah.eocontrol.GenericRecord;
+import com.webobjects.foundation.NSArray;
 
-public class Talent extends EOGenericRecord {
+public class Talent extends GenericRecord {
 
-    public Talent() {
-        super();
-    }
+	/**
+	 * 
+	 */
+	private static final long	serialVersionUID	= -3103261087069431335L;
 
-/*
-    // If you implement the following constructor EOF will use it to
-    // create your objects, otherwise it will use the default
-    // constructor. For maximum performance, you should only
-    // implement this constructor if you depend on the arguments.
-    public Talent(EOEditingContext context, EOClassDescription classDesc, EOGlobalID gid) {
-        super(context, classDesc, gid);
-    }
+	public Talent() {
+		super();
+	}
 
-    // If you add instance variables to store property values you
-    // should add empty implementions of the Serialization methods
-    // to avoid unnecessary overhead (the properties will be
-    // serialized for you in the superclass).
-    private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
-    }
+	/*
+	 * // If you implement the following constructor EOF will use it to // create your objects, otherwise it will use the default // constructor. For maximum
+	 * performance, you should only // implement this constructor if you depend on the arguments. public Talent(EOEditingContext context, EOClassDescription
+	 * classDesc, EOGlobalID gid) { super(context, classDesc, gid); }
+	 *  // If you add instance variables to store property values you // should add empty implementions of the Serialization methods // to avoid unnecessary
+	 * overhead (the properties will be // serialized for you in the superclass). private void writeObject(java.io.ObjectOutputStream out) throws
+	 * java.io.IOException { }
+	 * 
+	 * private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, java.lang.ClassNotFoundException { }
+	 */
 
-    private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, java.lang.ClassNotFoundException {
-    }
-*/
+	public String firstName() {
+		return (String) storedValueForKey("firstName");
+	}
 
-    public String firstName() {
-        return (String)storedValueForKey("firstName");
-    }
+	public void setFirstName(String value) {
+		takeStoredValueForKey(value, "firstName");
+	}
 
-    public void setFirstName(String value) {
-        takeStoredValueForKey(value, "firstName");
-    }
+	public String lastName() {
+		return (String) storedValueForKey("lastName");
+	}
 
-    public String lastName() {
-        return (String)storedValueForKey("lastName");
-    }
+	public void setLastName(String value) {
+		takeStoredValueForKey(value, "lastName");
+	}
 
-    public void setLastName(String value) {
-        takeStoredValueForKey(value, "lastName");
-    }
+	public com.houdah.movies.business.TalentPhoto photo() {
+		return (com.houdah.movies.business.TalentPhoto) storedValueForKey("photo");
+	}
 
-    public com.houdah.movies.business.TalentPhoto photo() {
-        return (com.houdah.movies.business.TalentPhoto)storedValueForKey("photo");
-    }
+	public void setPhoto(com.houdah.movies.business.TalentPhoto value) {
+		takeStoredValueForKey(value, "photo");
+	}
 
-    public void setPhoto(com.houdah.movies.business.TalentPhoto value) {
-        takeStoredValueForKey(value, "photo");
-    }
+	public NSArray moviesDirected() {
+		return (NSArray) storedValueForKey("moviesDirected");
+	}
 
-    public NSArray moviesDirected() {
-        return (NSArray)storedValueForKey("moviesDirected");
-    }
+	public void setMoviesDirected(NSArray value) {
+		takeStoredValueForKey(value, "moviesDirected");
+	}
 
-    public void setMoviesDirected(NSArray value) {
-        takeStoredValueForKey(value, "moviesDirected");
-    }
+	public void addToMoviesDirected(com.houdah.movies.business.Movie object) {
+		includeObjectIntoPropertyWithKey(object, "moviesDirected");
+	}
 
-    public void addToMoviesDirected(com.houdah.movies.business.Movie object) {
-        includeObjectIntoPropertyWithKey(object, "moviesDirected");
-    }
+	public void removeFromMoviesDirected(com.houdah.movies.business.Movie object) {
+		excludeObjectFromPropertyWithKey(object, "moviesDirected");
+	}
 
-    public void removeFromMoviesDirected(com.houdah.movies.business.Movie object) {
-        excludeObjectFromPropertyWithKey(object, "moviesDirected");
-    }
+	public NSArray roles() {
+		return (NSArray) storedValueForKey("roles");
+	}
 
-    public NSArray roles() {
-        return (NSArray)storedValueForKey("roles");
-    }
+	public void setRoles(NSArray value) {
+		takeStoredValueForKey(value, "roles");
+	}
 
-    public void setRoles(NSArray value) {
-        takeStoredValueForKey(value, "roles");
-    }
+	public void addToRoles(com.houdah.movies.business.MovieRole object) {
+		includeObjectIntoPropertyWithKey(object, "roles");
+	}
 
-    public void addToRoles(com.houdah.movies.business.MovieRole object) {
-        includeObjectIntoPropertyWithKey(object, "roles");
-    }
-
-    public void removeFromRoles(com.houdah.movies.business.MovieRole object) {
-        excludeObjectFromPropertyWithKey(object, "roles");
-    }
+	public void removeFromRoles(com.houdah.movies.business.MovieRole object) {
+		excludeObjectFromPropertyWithKey(object, "roles");
+	}
 }

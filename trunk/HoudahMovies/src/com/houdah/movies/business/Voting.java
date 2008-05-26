@@ -27,62 +27,67 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.movies.business;
 
-import com.webobjects.foundation.*;
-import com.webobjects.eocontrol.*;
-import java.math.BigDecimal;
-import java.util.*;
+import com.houdah.eocontrol.GenericRecord;
 
-public class Voting extends EOGenericRecord {
+public class Voting extends GenericRecord
+{
 
-    public Voting() {
-        super();
-    }
+	/**
+	 * 
+	 */
+	private static final long	serialVersionUID	= -4200725663443688689L;
 
-/*
-    // If you implement the following constructor EOF will use it to
-    // create your objects, otherwise it will use the default
-    // constructor. For maximum performance, you should only
-    // implement this constructor if you depend on the arguments.
-    public Voting(EOEditingContext context, EOClassDescription classDesc, EOGlobalID gid) {
-        super(context, classDesc, gid);
-    }
+	public Voting() {
+		super();
+	}
 
-    // If you add instance variables to store property values you
-    // should add empty implementions of the Serialization methods
-    // to avoid unnecessary overhead (the properties will be
-    // serialized for you in the superclass).
-    private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
-    }
+	/*
+	 * // If you implement the following constructor EOF will use it to //
+	 * create your objects, otherwise it will use the default // constructor.
+	 * For maximum performance, you should only // implement this constructor if
+	 * you depend on the arguments. public Voting(EOEditingContext context,
+	 * EOClassDescription classDesc, EOGlobalID gid) { super(context, classDesc,
+	 * gid); } // If you add instance variables to store property values you //
+	 * should add empty implementions of the Serialization methods // to avoid
+	 * unnecessary overhead (the properties will be // serialized for you in the
+	 * superclass). private void writeObject(java.io.ObjectOutputStream out)
+	 * throws java.io.IOException { }
+	 * 
+	 * private void readObject(java.io.ObjectInputStream in) throws
+	 * java.io.IOException, java.lang.ClassNotFoundException { }
+	 */
 
-    private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, java.lang.ClassNotFoundException {
-    }
-*/
+	public Number numberOfVotes()
+	{
+		return (Number) storedValueForKey("numberOfVotes");
+	}
 
-    public Number numberOfVotes() {
-        return (Number)storedValueForKey("numberOfVotes");
-    }
+	public void setNumberOfVotes(Number value)
+	{
+		takeStoredValueForKey(value, "numberOfVotes");
+	}
 
-    public void setNumberOfVotes(Number value) {
-        takeStoredValueForKey(value, "numberOfVotes");
-    }
+	public Number runningAverage()
+	{
+		return (Number) storedValueForKey("runningAverage");
+	}
 
-    public Number runningAverage() {
-        return (Number)storedValueForKey("runningAverage");
-    }
+	public void setRunningAverage(Number value)
+	{
+		takeStoredValueForKey(value, "runningAverage");
+	}
 
-    public void setRunningAverage(Number value) {
-        takeStoredValueForKey(value, "runningAverage");
-    }
+	public com.houdah.movies.business.Movie movie()
+	{
+		return (com.houdah.movies.business.Movie) storedValueForKey("movie");
+	}
 
-    public com.houdah.movies.business.Movie movie() {
-        return (com.houdah.movies.business.Movie)storedValueForKey("movie");
-    }
-
-    public void setMovie(com.houdah.movies.business.Movie value) {
-        takeStoredValueForKey(value, "movie");
-    }
+	public void setMovie(com.houdah.movies.business.Movie value)
+	{
+		takeStoredValueForKey(value, "movie");
+	}
 }
