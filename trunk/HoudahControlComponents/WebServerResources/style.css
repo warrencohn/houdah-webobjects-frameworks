@@ -39,10 +39,9 @@ legend
 	padding-top: 5px;
 }
 
-.search .bvcFieldsetRow input[value="Search"]
+.search .bvcFieldsetRow .searchAction
 {
-	position: absolute;
-	right: 0;
+	float: right;
 }
 
 .search select,

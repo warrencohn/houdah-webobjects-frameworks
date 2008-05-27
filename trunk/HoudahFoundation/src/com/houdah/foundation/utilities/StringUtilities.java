@@ -264,7 +264,7 @@ public class StringUtilities
 			}
 			
 			
-			// Check for new lines in the remaider of the string
+			// Check for new lines in the remainder of the string
 			while ((maxIndex = string.indexOf('\n', currentIndex)) > 0) {
 				buffer.append(string.substring(currentIndex, maxIndex));
 				buffer.append(newLine);
@@ -347,11 +347,11 @@ public class StringUtilities
 	
 	
 	/**
-	 * Creates a copy of the string where all occurences of either specialChar
+	 * Creates a copy of the string where all occurrences of either specialChar
 	 * or escapeChar are prefixed with an escapeChar.
 	 * 
 	 * @param string
-	 *            the string in which to escape all occurences of specialChar
+	 *            the string in which to escape all occurrences of specialChar
 	 *            escape
 	 * @param specialChar
 	 *            the special char
