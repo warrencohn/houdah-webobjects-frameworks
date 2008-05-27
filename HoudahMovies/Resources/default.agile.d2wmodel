@@ -8,64 +8,28 @@
         "qualifiers" = (
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "entityName"; 
+            "key" = "task"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
-          }
-        ); 
-      }; 
-      "rhs" = {
-        "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "columns"; 
-        "value" = (
-          "title"
-        ); 
-      }; 
-    }, 
-    {
-      "author" = "100"; 
-      "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
+            "value" = "edit"; 
+          }, 
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "entityName"; 
+            "key" = "fieldset"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
-          }
-        ); 
-      }; 
-      "rhs" = {
-        "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "fields"; 
-        "value" = (
-          (
-            "title"
-          )
-        ); 
-      }; 
-    }, 
-    {
-      "author" = "100"; 
-      "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
+            "value" = "fieldset"; 
+          }, 
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "entityName"; 
+            "key" = "language"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
+            "value" = "French"; 
           }
         ); 
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "properties"; 
-        "value" = (
-          "title"
-        ); 
+        "keyPath" = "legend"; 
+        "value" = "Edition"; 
       }; 
     }, 
     {
@@ -81,20 +45,23 @@
             "value" = "list"; 
           }, 
           {
-            "class" = "com.webobjects.eocontrol.EONotQualifier"; 
-            "qualifier" = {
-              "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-              "key" = "key"; 
-              "selectorName" = "isEqualTo"; 
-              "value" = "title"; 
-            }; 
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "detailActionKey"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "actionType"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "action"; 
           }
         ); 
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "actionName1"; 
-        "value" = "xxxxxxxxxxxAction"; 
+        "keyPath" = "actionLabel"; 
+        "value" = ""; 
       }; 
     }, 
     {
@@ -105,10 +72,132 @@
         "qualifiers" = (
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "entityName"; 
+            "key" = "task"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
+            "value" = "search"; 
           }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "fieldset"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "fieldset"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "legend"; 
+        "value" = "Recherche"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "task"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "list"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "detailActionKey"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "descriptorType"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "columnHeader"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = ""; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "task"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "list"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "detailActionKey"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "actionType"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "action"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "cssClass"; 
+        "value" = "detailAction"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "task"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "list"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "detailActionKey"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "descriptorType"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "columnHeader"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "supportsSorting"; 
+        "value" = "0"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "descriptorType"; 
@@ -119,14 +208,62 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "title"; 
+            "value" = "detailActionKey"; 
           }
         ); 
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "descriptorClass1"; 
+        "keyPath" = "descriptorClass"; 
         "value" = "com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "descriptorType"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "field"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EONotQualifier"; 
+            "qualifier" = {
+              "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+              "key" = "attribute"; 
+              "selectorName" = "isEqualTo"; 
+              "value" = {
+                "class" = "com.webobjects.foundation.NSKeyValueCoding$Null"; 
+              }; 
+            }; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOOrQualifier"; 
+            "qualifiers" = (
+              {
+                "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+                "key" = "attribute.valueClassName"; 
+                "selectorName" = "isEqualTo"; 
+                "value" = "NSDate"; 
+              }, 
+              {
+                "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+                "key" = "attribute.valueClassName"; 
+                "selectorName" = "isEqualTo"; 
+                "value" = "NSCalendarDate"; 
+              }
+            ); 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "descriptorClass"; 
+        "value" = "com.houdah.web.view.table.descriptors.FormTextfieldValueFieldDescriptor"; 
       }; 
     }
   ); 

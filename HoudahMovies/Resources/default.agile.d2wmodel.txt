@@ -1,0 +1,10 @@
+(
+    100 : (task = 'edit' and fieldset = 'fieldset' and language = 'French') => legend = Edition [com.webobjects.directtoweb.Assignment],
+    100 : (task = 'list' and key = 'detailActionKey' and actionType = 'action') => actionLabel =  [com.webobjects.directtoweb.Assignment],
+    100 : (task = 'search' and fieldset = 'fieldset' and language = 'French') => legend = Recherche [com.webobjects.directtoweb.Assignment],
+    100 : (task = 'list' and key = 'detailActionKey' and descriptorType = 'columnHeader') => label =  [com.webobjects.directtoweb.Assignment],
+    100 : (task = 'list' and key = 'detailActionKey' and actionType = 'action') => cssClass = detailAction [com.webobjects.directtoweb.Assignment],
+    100 : (task = 'list' and key = 'detailActionKey' and descriptorType = 'columnHeader') => supportsSorting = 0 [com.webobjects.directtoweb.Assignment],
+    100 : (descriptorType = 'columnRow' and key = 'detailActionKey') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment],
+    100 : (descriptorType = 'field' and not (attribute = null) and (attribute.valueClassName = 'NSDate' or attribute.valueClassName = 'NSCalendarDate')) => descriptorClass = com.houdah.web.view.table.descriptors.FormTextfieldValueFieldDescriptor [com.webobjects.directtoweb.Assignment]
+)

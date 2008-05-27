@@ -55,25 +55,22 @@ public class Session extends com.houdah.agile.application.Session
 	public Session()
 	{
 		sessionController().setWrapperName(Layout.class.getName());
-		sessionController().setEditingContextFactory(
-				new EditingContextFactory());
+		sessionController().setEditingContextFactory(new EditingContextFactory());
 		sessionController().setSecurityManager(new LaxSecurityManager());
 		
 		MessageFactory messageFactory = new MessageFactory();
 		RuleContext messageContext = messageFactory.messageContext();
 		
-		messageContext.takeValueForKey("English", "language");
 //		messageContext.takeValueForKey("French", "language");
+		messageContext.takeValueForKey("English", "language");
 		
 		sessionController().setMessageFactory(messageFactory);
 		
-		messageContext.takeValueForKey("English", "language");
-//		messageContext.takeValueForKey("French", "language");
+//		ruleContext().takeValueForKey("French", "language");
+		ruleContext().takeValueForKey("English", "language");
 		
-		sessionController().securityManager().revokeAccess("Voting",
-				Application.EDIT_TASK);
-		sessionController().securityManager().revokeAccess("Voting",
-				Application.DETAIL_TASK);
+		sessionController().securityManager().revokeAccess("Voting", Application.EDIT_TASK);
+		sessionController().securityManager().revokeAccess("Voting", Application.DETAIL_TASK);
 	}
 	
 	
