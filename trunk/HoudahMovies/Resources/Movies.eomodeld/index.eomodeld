@@ -1,59 +1,21 @@
-
 {
-	EOModelVersion = "2.1"; 
-	adaptorName = JDBC; 
-	connectionDictionary = {
-	    "LC_ALL" = "iso_1"; 
-	    URL = "jdbc:derby:movies"; 
-	    databaseEncoding = "ISO Latin-1"; 
-	    driver = "org.apache.derby.jdbc.EmbeddedDriver"; 
-	}; 
-    entities = 
-    (
-       
-       {
-           className = com.houdah.movies.business.Director;
-           name = Director;
-       }, 
-       
-       {
-           className = com.houdah.movies.business.Movie;
-           name = Movie;
-       }, 
-       
-       {
-           className = com.houdah.movies.business.MovieRole;
-           name = MovieRole;
-       }, 
-       
-       {
-           className = com.houdah.movies.business.PlotSummary;
-           name = PlotSummary;
-       }, 
-       
-       {
-           className = com.houdah.movies.business.Review;
-           name = Review;
-       }, 
-       
-       {
-           className = com.houdah.movies.business.Studio;
-           name = Studio;
-       }, 
-       
-       {
-           className = com.houdah.movies.business.Talent;
-           name = Talent;
-       }, 
-       
-       {
-           className = com.houdah.movies.business.TalentPhoto;
-           name = TalentPhoto;
-       }, 
-       
-       {
-           className = com.houdah.movies.business.Voting;
-           name = Voting;
-       }
-    );
+    EOModelVersion = "2.1"; 
+    adaptorName = JDBC; 
+    connectionDictionary = {
+        "LC_ALL" = "iso_1"; 
+        URL = "jdbc:derby:movies"; 
+        databaseEncoding = "ISO Latin-1"; 
+        driver = "org.apache.derby.jdbc.EmbeddedDriver"; 
+    }; 
+    entities = (
+        {className = "com.houdah.movies.business.Director"; name = Director; }, 
+        {className = "com.houdah.movies.business.Movie"; name = Movie; }, 
+        {className = "com.houdah.movies.business.MovieRole"; name = MovieRole; }, 
+        {className = "com.houdah.movies.business.PlotSummary"; name = PlotSummary; }, 
+        {className = "com.houdah.movies.business.Review"; name = Review; }, 
+        {className = "com.houdah.movies.business.Studio"; name = Studio; }, 
+        {className = "com.houdah.movies.business.Talent"; name = Talent; }, 
+        {className = "com.houdah.movies.business.TalentPhoto"; name = TalentPhoto; }, 
+        {className = "com.houdah.movies.business.Voting"; name = Voting; }
+    ); 
 }

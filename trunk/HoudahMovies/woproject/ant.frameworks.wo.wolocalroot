@@ -11,9 +11,9 @@ Library/Frameworks/HoudahMessages.framework
 Library/Frameworks/HoudahQueryBlessing.framework
 Library/Frameworks/HoudahRuleEngine.framework
 Library/Frameworks/HoudahViewComponents.framework
-Library/Frameworks/OpenBasePKPlugin.framework
 Library/Frameworks/JavaWOExtensions.framework
 Library/Java/Extensions/frontbasejdbc.jar
+Library/WebObjects/Extensions/derby.jar
 Library/Frameworks/HoudahAgileComponents.framework
 Library/Frameworks/HoudahAppServer.framework
 Library/Frameworks/HoudahAuditTrail.framework
