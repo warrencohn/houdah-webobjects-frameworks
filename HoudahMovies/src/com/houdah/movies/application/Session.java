@@ -62,11 +62,13 @@ public class Session extends com.houdah.agile.application.Session
 		MessageFactory messageFactory = new MessageFactory();
 		RuleContext messageContext = messageFactory.messageContext();
 		
-		messageContext.takeValueForKey("French", "language");
+		messageContext.takeValueForKey("English", "language");
+//		messageContext.takeValueForKey("French", "language");
 		
 		sessionController().setMessageFactory(messageFactory);
 		
-		ruleContext().takeValueForKey("French", "language");
+		messageContext.takeValueForKey("English", "language");
+//		messageContext.takeValueForKey("French", "language");
 		
 		sessionController().securityManager().revokeAccess("Voting",
 				Application.EDIT_TASK);
