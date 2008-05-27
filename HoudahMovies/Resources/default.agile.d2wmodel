@@ -93,7 +93,7 @@
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "actionName"; 
+        "keyPath" = "actionName1"; 
         "value" = "xxxxxxxxxxxAction"; 
       }; 
     }, 
@@ -125,7 +125,7 @@
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "descriptorClass"; 
+        "keyPath" = "descriptorClass1"; 
         "value" = "com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor"; 
       }; 
     }

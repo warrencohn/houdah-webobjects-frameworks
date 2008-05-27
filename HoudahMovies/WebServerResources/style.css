@@ -1,3 +1,16 @@
+/** Layout */
+
+html, body
+{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font: 12pt arial,sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
 #errorArea
 {
 	position: relative;
@@ -9,22 +22,4 @@
 	background: #fafafa;
 	font-size: 120%;
 	text-align: left;
-}
-/** Layout */
-
-html,
-body
-{
-	margin: 0;
-	padding: 0;
-	font: 10pt arial,sans-serif;
-}
-
-.previousBatch {
-}
-.nextBatch {
-}
-.previousObject {
-}
-.nextObject {
 }

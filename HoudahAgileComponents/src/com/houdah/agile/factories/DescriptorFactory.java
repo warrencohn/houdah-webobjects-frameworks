@@ -107,7 +107,6 @@ public class DescriptorFactory
 	{
 		RuleContext localContext = new RuleContext(ruleContext);
 		
-		
 		// Feed rule engine
 		localContext.takeValueForKey(descriptorType, "descriptorType");
 		localContext.takeValueForKey(keyPath, "key");
