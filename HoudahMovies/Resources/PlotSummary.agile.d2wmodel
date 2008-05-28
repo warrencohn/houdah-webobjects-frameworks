@@ -1,99 +1,38 @@
 {
   "rules" = (
     {
-      "author" = "90"; 
-      "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
-          {
-            "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-            "qualifiers" = (
-              {
-                "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                "key" = "entityName"; 
-                "selectorName" = "isEqualTo"; 
-                "value" = "Movie"; 
-              }, 
-              {
-                "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                "key" = "key"; 
-                "selectorName" = "isEqualTo"; 
-                "value" = "plotSummary.summary"; 
-              }
-            ); 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "language"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "French"; 
-          }
-        ); 
-      }; 
-      "rhs" = {
-        "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "label"; 
-        "value" = "R\U00e9sum\U00e9"; 
-      }; 
-    }, 
-    {
-      "author" = "90"; 
-      "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
-          {
-            "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-            "qualifiers" = (
-              {
-                "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                "key" = "entityName"; 
-                "selectorName" = "isEqualTo"; 
-                "value" = "Movie"; 
-              }, 
-              {
-                "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                "key" = "key"; 
-                "selectorName" = "isEqualTo"; 
-                "value" = "plotSummary.summary"; 
-              }
-            ); 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "language"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "English"; 
-          }
-        ); 
-      }; 
-      "rhs" = {
-        "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "label"; 
-        "value" = "Summary"; 
-      }; 
-    }, 
-    {
       "author" = "100"; 
       "class" = "com.webobjects.directtoweb.Rule"; 
       "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "entityName"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
-          }
-        ); 
+        "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+        "key" = "entityName"; 
+        "selectorName" = "isEqualTo"; 
+        "value" = "PlotSummary"; 
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "columns"; 
         "value" = (
-          "title", 
-          "category"
+          "movie.title", 
+          "summary"
+        ); 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+        "key" = "entityName"; 
+        "selectorName" = "isEqualTo"; 
+        "value" = "PlotSummary"; 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "properties"; 
+        "value" = (
+          "movie.title", 
+          "summary"
         ); 
       }; 
     }, 
@@ -107,7 +46,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "entityName"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
+            "value" = "PlotSummary"; 
           }, 
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
@@ -119,7 +58,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "title"; 
+            "value" = "movie.title"; 
           }
         ); 
       }; 
@@ -139,7 +78,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "entityName"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
+            "value" = "PlotSummary"; 
           }, 
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
@@ -154,7 +93,7 @@
         "keyPath" = "formatter"; 
         "value" = (
           {
-            "keyPath" = "title"; 
+            "keyPath" = "movie.title"; 
           }
         ); 
       }; 
@@ -169,7 +108,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "abstractEntityName"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
+            "value" = "PlotSummary"; 
           }, 
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
@@ -184,7 +123,7 @@
         "keyPath" = "formatter"; 
         "value" = (
           {
-            "keyPath" = "title"; 
+            "keyPath" = "movie.title"; 
           }
         ); 
       }; 
@@ -199,25 +138,32 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "entityName"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
+            "value" = "PlotSummary"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "task"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "edit"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "fieldset"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "fieldset"; 
           }
         ); 
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "properties"; 
+        "keyPath" = "fields"; 
         "value" = (
-          "title", 
-          "posterName", 
-          "trailerName", 
-          "category", 
-          "revenue", 
-          "plotSummary.summary", 
-          "studio", 
-          "directors", 
-          "roles", 
-          "reviews", 
-          "voting"
+          (
+            "movie"
+          ), 
+          (
+            "summary"
+          )
         ); 
       }; 
     }, 
@@ -231,7 +177,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "entityName"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
+            "value" = "PlotSummary"; 
           }, 
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
@@ -255,11 +201,7 @@
             "title"
           ), 
           (
-            "category"
-          ), 
-          (
-            "posterName", 
-            "trailerName"
+            "summary"
           )
         ); 
       }; 
@@ -274,7 +216,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "entityName"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
+            "value" = "PlotSummary"; 
           }, 
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
@@ -286,7 +228,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isEqualTo"; 
-            "value" = "title"; 
+            "value" = "movie.title"; 
           }
         ); 
       }; 
@@ -294,72 +236,6 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "descriptorClass"; 
         "value" = "com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor"; 
-      }; 
-    }, 
-    {
-      "author" = "100"; 
-      "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "entityName"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "task"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "edit"; 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "fieldset"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "fieldset"; 
-          }
-        ); 
-      }; 
-      "rhs" = {
-        "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "fields"; 
-        "value" = (
-          (
-            "title"
-          ), 
-          (
-            "posterName"
-          ), 
-          (
-            "trailerName"
-          ), 
-          (
-            "category"
-          ), 
-          (
-            "revenue"
-          ), 
-          (
-            "plotSummary.summary"
-          ), 
-          (
-            "studio"
-          ), 
-          (
-            "directors"
-          ), 
-          (
-            "roles"
-          ), 
-          (
-            "reviews"
-          ), 
-          (
-            "voting"
-          )
-        ); 
       }; 
     }
   ); 

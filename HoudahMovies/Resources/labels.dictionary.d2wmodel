@@ -10,6 +10,32 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isEqualTo"; 
+            "value" = "roles"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Roles"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
             "value" = "title"; 
           }, 
           {
@@ -24,6 +50,58 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "label"; 
         "value" = "Titre"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "voting"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Vote"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "roles"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Roles"; 
       }; 
     }, 
     {
@@ -88,6 +166,110 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isEqualTo"; 
+            "value" = "studio"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Studio"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "revenue"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Revenu"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "studio"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Studio"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "voting"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Voting"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
             "value" = "rated"; 
           }, 
           {
@@ -102,6 +284,84 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "label"; 
         "value" = "Evaluation"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "revenue"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Revenue"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "reviews"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Reviews"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "reviews"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Critiques"; 
       }; 
     }, 
     {
@@ -154,6 +414,58 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "label"; 
         "value" = "Category"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "plotSummary"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "R\U00e9sum\U00e9"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "directors"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Directors"; 
       }; 
     }, 
     {
@@ -270,6 +582,32 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isEqualTo"; 
+            "value" = "plotSummary"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Plot summary"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
             "value" = "trailerName"; 
           }, 
           {
@@ -362,6 +700,32 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "label"; 
         "value" = "Release date"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "directors"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Metteurs-en-sc\U00e8ne"; 
       }; 
     }, 
     {
