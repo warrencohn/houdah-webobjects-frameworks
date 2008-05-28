@@ -1,0 +1,16 @@
+(
+    100 : entityName = 'PlotSummary' => columns = ("movie.title",summary
+) [com.webobjects.directtoweb.Assignment],
+    100 : entityName = 'PlotSummary' => properties = ("movie.title",summary
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'PlotSummary' and task = 'list' and key = 'movie.title') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'PlotSummary' and task = 'describe') => formatter = (    {    keyPath = "movie.title";}
+) [com.webobjects.directtoweb.Assignment],
+    100 : (abstractEntityName = 'PlotSummary' and task = 'identify') => formatter = (    {    keyPath = "movie.title";}
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'PlotSummary' and task = 'edit' and fieldset = 'fieldset') => fields = (    (    movie),    (    summary)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'PlotSummary' and task = 'search' and fieldset = 'fieldset') => fields = (    (    title),    (    summary)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'PlotSummary' and descriptorType = 'columnRow' and key = 'movie.title') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment]
+)

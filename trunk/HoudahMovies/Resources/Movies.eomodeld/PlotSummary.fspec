@@ -1,0 +1,24 @@
+{
+    search = {
+        class = EOFetchSpecification; 
+        entityName = PlotSummary; 
+        prefetchingRelationshipKeyPaths = (); 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "movie.title"; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = title; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = summary; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = summary; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+    }; 
+}

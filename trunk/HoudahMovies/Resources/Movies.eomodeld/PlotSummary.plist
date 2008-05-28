@@ -20,7 +20,6 @@
     className = "com.houdah.movies.business.PlotSummary"; 
     classProperties = (summary, movie); 
     externalName = plotsummary; 
-    fetchSpecificationDictionary = {}; 
     internalInfo = {
         "_clientClassPropertyNames" = (summary, movie); 
         "_nameInObjectStore" = "PLOT_SUMMARY"; 
