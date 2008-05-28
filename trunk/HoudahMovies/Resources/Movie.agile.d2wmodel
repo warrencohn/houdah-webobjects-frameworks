@@ -16,9 +16,10 @@
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "properties"; 
+        "keyPath" = "columns"; 
         "value" = (
-          "title"
+          "title", 
+          "category"
         ); 
       }; 
     }, 
@@ -33,24 +34,7 @@
             "key" = "entityName"; 
             "selectorName" = "isEqualTo"; 
             "value" = "Movie"; 
-          }
-        ); 
-      }; 
-      "rhs" = {
-        "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "columns"; 
-        "value" = (
-          "title", 
-          "category"
-        ); 
-      }; 
-    }, 
-    {
-      "author" = "100"; 
-      "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
+          }, 
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "task"; 
@@ -99,6 +83,38 @@
             "posterName", 
             "trailerName"
           )
+        ); 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "entityName"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "Movie"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "properties"; 
+        "value" = (
+          "title", 
+          "posterName", 
+          "trailerName", 
+          "category", 
+          "revenue", 
+          "plotSummary", 
+          "studio", 
+          "directors", 
+          "roles", 
+          "reviews", 
+          "voting"
         ); 
       }; 
     }, 

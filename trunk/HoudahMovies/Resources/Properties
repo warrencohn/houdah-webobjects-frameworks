@@ -1,1 +1,2 @@
 derby.system.home=/Users/houdah/Library/Databases/derby-10.3.2.1/data/
+EOAdaptorDebugEnabled=true
