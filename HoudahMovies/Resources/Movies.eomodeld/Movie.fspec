@@ -1,116 +1,94 @@
-
 {
-    DeepFetchOneMovie = 
-    {
-        class = EOFetchSpecification;
-        entityName = Movie;
-        fetchLimit = 0;
-        isDeep = YES;
-        prefetchingRelationshipKeyPaths = 
-        (
-           directors, 
-           plotSummary, 
-           reviews, 
-           roles, 
-           roles.talent, 
-           roles.talent.photo, 
-           studio, 
-           voting
-        );
-        qualifier = 
-        {
-            class = EOKeyValueQualifier;
-            key = movieID;
-            selectorName = isEqualTo:;
-            value = 
-            {
-                _key = myMovie;
-                class = EOQualifierVariable;
-            };
-        };
-    };
-    QualifierVariable = 
-    {
-        class = EOFetchSpecification;
-        entityName = Movie;
-        fetchLimit = 0;
-        isDeep = YES;
-        qualifier = 
-        {
-            class = EOOrQualifier;
-            qualifiers = 
-            (
-               
-               {
-                   class = EOKeyValueQualifier;
-                   key = studio;
-                   selectorName = isEqualTo:;
-                   value = 
-                   {
-                       _key = studio;
-                       class = EOQualifierVariable;
-                   };
-               }, 
-               
-               {
-                   class = EOKeyValueQualifier;
-                   key = title;
-                   selectorName = isCaseInsensitiveLike:;
-                   value = 
-                   {
-                       _key = title;
-                       class = EOQualifierVariable;
-                   };
-               }, 
-               
-               {
-                   class = EOKeyValueQualifier;
-                   key = studio.name;
-                   selectorName = isCaseInsensitiveLike:;
-                   value = 
-                   {
-                       _key = studioName;
-                       class = EOQualifierVariable;
-                   };
-               }, 
-               
-               {
-                   class = EOKeyValueQualifier;
-                   key = revenue;
-                   selectorName = isGreaterThan:;
-                   value = 
-                   {
-                       _key = revenue;
-                       class = EOQualifierVariable;
-                   };
-               }
-            );
-        };
-    };
-    search = 
-    {
-        class = EOFetchSpecification;
-        entityName = Movie;
-        fetchLimit = 0;
-        qualifier = 
-        {
-            class = EOKeyValueQualifier;
-            key = title;
-            selectorName = isEqualTo:;
-            value = 
-            {
-                _key = title;
-                class = EOQualifierVariable;
-            };
-        };
-        sortOrderings = 
-        (
-           
-           {
-               class = EOSortOrdering;
-               key = title;
-               selectorName = compareAscending:;
-           }
-        );
-    };
+    DeepFetchOneMovie = {
+        class = EOFetchSpecification; 
+        entityName = Movie; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        prefetchingRelationshipKeyPaths = (
+            directors, 
+            plotSummary, 
+            reviews, 
+            roles, 
+            "roles.talent", 
+            "roles.talent.photo", 
+            studio, 
+            voting
+        ); 
+        qualifier = {
+            class = EOKeyValueQualifier; 
+            key = movieID; 
+            selectorName = "isEqualTo:"; 
+            value = {"_key" = myMovie; class = EOQualifierVariable; }; 
+        }; 
+    }; 
+    QualifierVariable = {
+        class = EOFetchSpecification; 
+        entityName = Movie; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOOrQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = studio; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = studio; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = title; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = title; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "studio.name"; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = studioName; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = revenue; 
+                    selectorName = "isGreaterThan:"; 
+                    value = {"_key" = revenue; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+    }; 
+    search = {
+        class = EOFetchSpecification; 
+        entityName = Movie; 
+        fetchLimit = 0; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = title; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = title; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = category; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = category; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = posterName; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = posterName; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = trailerName; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = trailerName; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+        sortOrderings = ({class = EOSortOrdering; key = title; selectorName = "compareAscending:"; }); 
+    }; 
 }
