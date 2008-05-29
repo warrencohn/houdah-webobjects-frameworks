@@ -1,4 +1,10 @@
 (
+    0 : (descriptorType = 'field' and key = 'maxBudget') => formatterName = integerNumber [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorType = 'field' and key = 'minBudget') => formatterName = integerNumber [com.webobjects.directtoweb.Assignment],
+    90 : ((entityName = 'Studio' and key = 'maxBudget') and language = 'French') => label = Budget au plus [com.webobjects.directtoweb.Assignment],
+    90 : ((entityName = 'Studio' and key = 'minBudget') and language = 'French') => label = Budget au moins [com.webobjects.directtoweb.Assignment],
+    90 : ((entityName = 'Studio' and key = 'maxBudget') and language = 'English') => label = Budget lower than [com.webobjects.directtoweb.Assignment],
+    90 : ((entityName = 'Studio' and key = 'minBudget') and language = 'English') => label = Budget greater than [com.webobjects.directtoweb.Assignment],
     100 : entityName = 'Studio' => columns = (name,budget
 ) [com.webobjects.directtoweb.Assignment],
     100 : entityName = 'Studio' => properties = (name,budget
@@ -10,7 +16,9 @@
 ) [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Studio' and task = 'edit' and fieldset = 'fieldset') => fields = (    (    name),    (    budget)
 ) [com.webobjects.directtoweb.Assignment],
-    100 : (entityName = 'Studio' and task = 'search' and fieldset = 'fieldset') => fields = (    (    name),    (    budget)
+    100 : (entityName = 'Studio' and task = 'search' and fieldset = 'fieldset') => fields = (    (    name),    (    minBudget,    maxBudget)
 ) [com.webobjects.directtoweb.Assignment],
+    100 : (descriptorType = 'field' and key = 'maxBudget') => descriptorClass = com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor [com.webobjects.directtoweb.Assignment],
+    100 : (descriptorType = 'field' and key = 'minBudget') => descriptorClass = com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Studio' and descriptorType = 'columnRow' and key = 'name') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment]
 )

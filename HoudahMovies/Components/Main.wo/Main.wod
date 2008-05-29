@@ -1,7 +1,44 @@
-createMovie: WOHyperlink {
-	action = createMovie;
+Layout: Layout
+{
 }
 
-searchMovies: WOHyperlink {
-	action = searchMovies;
+listMovies: WOHyperlink
+{
+	action = list.Movie;
 }
+
+insertMovie: WOHyperlink
+{
+	action = insert.Movie;
+}
+
+listStudios: WOHyperlink
+{
+	action = list.Studio;
+}
+
+insertStudio: WOHyperlink
+{
+	action = insert.Studio;
+}
+
+listDirectors: WOHyperlink
+{
+	action = list.Director;
+}
+
+insertDirector: WOHyperlink
+{
+	action = insert.Director;
+}
+
+listTalents: WOHyperlink
+{
+	action = list.Talent;
+}
+
+insertTalent: WOHyperlink
+{
+	action = insert.Talent;
+}
+

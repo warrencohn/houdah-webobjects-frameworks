@@ -32,35 +32,60 @@ import com.houdah.movies.application.Application;
 import com.houdah.movies.application.Session;
 import com.webobjects.appserver.WOComponent;
 import com.webobjects.appserver.WOContext;
+import com.webobjects.foundation.NSKeyValueCoding;
 
-public class Main extends com.houdah.appserver.components.Page {
+public class Main extends com.houdah.appserver.components.Page
+{
 	// Private class constants
 
-	private static final long serialVersionUID = 2785766875610597965L;
+	private static final long	serialVersionUID	= 2785766875610597965L;
 
 	// Constructor
 
-	public Main(WOContext context) {
+	public Main(WOContext context)
+	{
 		super(context);
 	}
 
-	// Action methods
+	// Accessor methods
 
-	protected WOComponent searchMovies() {
-		Session session = (Session) session();
-		WOComponent nextPage = session.pageWithEntityAndTask("Movie", Application.SEARCH_TASK, context());
-
-		return nextPage;
-	}
-
-	protected WOComponent createMovie() {
-		Session session = (Session) session();
-		WOComponent nextPage = session.pageWithEntityAndTask("Movie", Application.EDIT_TASK, context());
-
-		return nextPage;
-	}
-
-	protected boolean needsBackTrackDetection() {
+	protected boolean needsBackTrackDetection()
+	{
 		return false;
+	}
+
+
+	protected NSKeyValueCoding list()
+	{
+		return new TaskActionProxy(Application.SEARCH_TASK);
+	}
+
+	protected NSKeyValueCoding insert()
+	{
+		return new TaskActionProxy(Application.EDIT_TASK);
+	}
+
+	// Inner class
+
+	protected class TaskActionProxy implements NSKeyValueCoding
+	{
+		private String	task;
+
+		public TaskActionProxy(String aTask) {
+			this.task = aTask;
+		}
+
+		public Object valueForKey(String key)
+		{
+			Session session = (Session) session();
+			WOComponent nextPage = session.pageWithEntityAndTask(key, this.task, context());
+
+			return nextPage;
+		}
+
+		public void takeValueForKey(Object value, String key)
+		{
+			throw new IllegalAccessError("The proxy is not meant to be used this way!");
+		}
 	}
 }

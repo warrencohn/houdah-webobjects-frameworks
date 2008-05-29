@@ -6,15 +6,22 @@
 	</head>
 	<body>
 		<webobject name="showNavigationControls">
-			<div>
-<webobject name="hasPreviousPage">
-<webobject name="backAction">Back</webobject>
-</webobject> 
-</div>
-			</webobject>		
+			<div id="navigationControls">
+				<div class="flushLeft">
+					<webobject name="hasPreviousPage">
+						<webobject name="backAction">Back</webobject>
+					</webobject> 
+				</div>
+				<div class="flushLeft">
+					English - French
+				</div>
+			</div>
+		</webobject>		
 		<br/>
-		<div>
-			<webobject name="mainPage"></webobject>
+		<div id="contentContainer">
+			<div id="content">
+				<webobject name="mainPage"></webobject>
+			</div>
 		</div>
 	</body>
 </html>

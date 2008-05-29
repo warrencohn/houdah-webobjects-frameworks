@@ -23,3 +23,45 @@ html, body
 	font-size: 120%;
 	text-align: left;
 }
+
+/** Main Page */
+
+#main
+{
+	display: table;
+	border: 1px solid grey;
+	margin-left: 5em;
+}
+
+.mainHeaderGroup
+{
+	display: table-header-group;
+	background-color: grey;
+	color: white;
+}
+
+
+.mainEntityGroup
+{
+	display: table-row-group;
+}
+
+.mainHeaderRow,
+.mainEntityRow 
+{
+	display: table-row;
+
+}
+
+.mainHeaderRow 
+{
+	font-weight: bold;
+}
+
+.mainHeaderRow span,
+.mainEntityRow span
+{
+	display: table-cell;
+	padding: 0.5em;
+	width: 20em;
+}
