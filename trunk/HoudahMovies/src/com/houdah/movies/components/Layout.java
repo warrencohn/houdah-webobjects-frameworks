@@ -28,8 +28,10 @@
 
 package com.houdah.movies.components;
 
+import com.houdah.movies.application.Session;
 import com.houdah.web.control.components.HCCLayout;
 
+import com.webobjects.appserver.WOActionResults;
 import com.webobjects.appserver.WOContext;
 
 public class Layout extends HCCLayout
@@ -55,4 +57,24 @@ public class Layout extends HCCLayout
 		super(context);
 	}
 	
+	
+	// Action methods
+	
+	protected WOActionResults englishHome()
+	{
+		Session session = (Session) session();
+		
+		session.setSessionLanguage("English");
+		
+		return pageWithName(null);
+	}
+	
+	protected WOActionResults frenchHome()
+	{
+		Session session = (Session) session();
+		
+		session.setSessionLanguage("French");
+		
+		return pageWithName(null);
+	}
 }

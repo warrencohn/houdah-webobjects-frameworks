@@ -1,0 +1,24 @@
+{
+    search = {
+        class = EOFetchSpecification; 
+        entityName = Talent; 
+        prefetchingRelationshipKeyPaths = (); 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = firstName; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = firstName; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = lastName; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = lastName; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+    }; 
+}

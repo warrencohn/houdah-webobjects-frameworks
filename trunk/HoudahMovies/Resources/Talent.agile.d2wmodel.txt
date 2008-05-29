@@ -1,0 +1,18 @@
+(
+    100 : entityName = 'Talent' => columns = (lastName,firstName
+) [com.webobjects.directtoweb.Assignment],
+    100 : entityName = 'Talent' => properties = (lastName,firstName,roles,moviesDirected
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Talent' and task = 'list' and key = 'lastName') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Talent' and task = 'list' and key = 'firstName') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
+    100 : (abstractEntityName = 'Talent' and task = 'identify') => formatter = (    {    keyPath = lastName;}
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Talent' and task = 'search' and fieldset = 'fieldset') => fields = (    (    lastName),    (    firstName)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Talent' and task = 'describe') => formatter = (    {    keyPath = lastName;},    {    keyPath = firstName;}
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Talent' and task = 'edit' and fieldset = 'fieldset') => fields = (    (    lastName),    (    firstName),    (    roles),    (    moviesDirected)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Talent' and descriptorType = 'columnRow' and key = 'lastName') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Talent' and descriptorType = 'columnRow' and key = 'firstName') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment]
+)

@@ -27,7 +27,6 @@
     className = "com.houdah.movies.business.Talent"; 
     classProperties = (firstName, lastName, roles, moviesDirected, photo); 
     externalName = talent; 
-    fetchSpecificationDictionary = {}; 
     internalInfo = {
         "_clientClassPropertyNames" = (firstName, lastName, roles, moviesDirected, photo); 
         "_javaClientClassName" = "webobjectsexamples.businesslogic.movies.common.Talent"; 
