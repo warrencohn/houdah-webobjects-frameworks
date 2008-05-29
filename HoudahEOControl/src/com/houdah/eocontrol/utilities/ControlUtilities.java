@@ -80,8 +80,7 @@ public class ControlUtilities
 	/**
 	 * Binds a fetch specification.
 	 * 
-	 * This method specifically takes care of multiple (aka. Colelction)
-	 * bindings.
+	 * This method specifically takes care of multiple (aka. Collection) bindings.
 	 * 
 	 * @param fetchSpecification
 	 *            the unbound fetch specification

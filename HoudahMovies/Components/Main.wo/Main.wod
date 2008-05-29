@@ -22,16 +22,6 @@ insertStudio: WOHyperlink
 	action = insert.Studio;
 }
 
-listDirectors: WOHyperlink
-{
-	action = list.Director;
-}
-
-insertDirector: WOHyperlink
-{
-	action = insert.Director;
-}
-
 listTalents: WOHyperlink
 {
 	action = list.Talent;
@@ -41,4 +31,3 @@ insertTalent: WOHyperlink
 {
 	action = insert.Talent;
 }
-

@@ -1,0 +1,16 @@
+(
+    100 : entityName = 'Director' => columns = (toMovie,toTalent
+) [com.webobjects.directtoweb.Assignment],
+    100 : entityName = 'Director' => properties = (toMovie,toTalent
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Director' and task = 'list') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Director' and task = 'edit' and fieldset = 'fieldset') => fields = (    (    toMovie),    (    toTalent)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Director' and task = 'search' and fieldset = 'fieldset') => fields = (    (    toMovie),    (    toTalent)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Director' and task = 'describe') => formatter = (    {    keyPath = toMovie;},    {    keyPath = toTalent;}
+) [com.webobjects.directtoweb.Assignment],
+    100 : (abstractEntityName = 'Director' and task = 'identify') => formatter = (    {    keyPath = "toMovie.title";},    {    keyPath = "toTalent.name";}
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Director' and descriptorType = 'columnRow') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment]
+)

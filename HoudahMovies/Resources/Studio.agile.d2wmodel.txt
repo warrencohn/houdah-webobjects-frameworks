@@ -1,14 +1,14 @@
 (
-    0 : (descriptorType = 'field' and key = 'maxBudget') => formatterName = integerNumber [com.webobjects.directtoweb.Assignment],
-    0 : (descriptorType = 'field' and key = 'minBudget') => formatterName = integerNumber [com.webobjects.directtoweb.Assignment],
     90 : ((entityName = 'Studio' and key = 'maxBudget') and language = 'French') => label = Budget au plus [com.webobjects.directtoweb.Assignment],
     90 : ((entityName = 'Studio' and key = 'minBudget') and language = 'French') => label = Budget au moins [com.webobjects.directtoweb.Assignment],
     90 : ((entityName = 'Studio' and key = 'maxBudget') and language = 'English') => label = Budget lower than [com.webobjects.directtoweb.Assignment],
     90 : ((entityName = 'Studio' and key = 'minBudget') and language = 'English') => label = Budget greater than [com.webobjects.directtoweb.Assignment],
     100 : entityName = 'Studio' => columns = (name,budget
 ) [com.webobjects.directtoweb.Assignment],
-    100 : entityName = 'Studio' => properties = (name,budget
+    100 : entityName = 'Studio' => properties = (name,budget,movies
 ) [com.webobjects.directtoweb.Assignment],
+    100 : (descriptorType = 'field' and key = 'maxBudget') => formatterName = integerNumber [com.webobjects.directtoweb.Assignment],
+    100 : (descriptorType = 'field' and key = 'minBudget') => formatterName = integerNumber [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Studio' and task = 'list' and key = 'name') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Studio' and task = 'describe') => formatter = (    {    keyPath = name;}
 ) [com.webobjects.directtoweb.Assignment],
