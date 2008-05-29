@@ -24,3 +24,13 @@ showNavigationControls: WOConditional
 {
 	condition = ^showNavigationControls;
 }
+
+englishHome: WOHyperlink
+{
+	action = englishHome;
+}
+
+frenchHome: WOHyperlink
+{
+	action = frenchHome;
+}
