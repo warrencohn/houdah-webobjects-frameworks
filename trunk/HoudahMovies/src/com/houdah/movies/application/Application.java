@@ -28,28 +28,35 @@
 
 package com.houdah.movies.application;
 
+import com.houdah.movies.initialization.Formatters;
 import com.webobjects.appserver.WOApplication;
 import com.webobjects.appserver.WORequest;
 import com.webobjects.appserver.WOResponse;
 import com.webobjects.foundation.NSLog;
 
-public class Application extends com.houdah.agile.application.Application {
+public class Application extends com.houdah.agile.application.Application
+{
 	// Constructor
 
-	public Application() {
+	public Application()
+	{
 		NSLog.out.appendln("Welcome to " + name() + " !");
+
+		Formatters.initialize();
 	}
 
 	// Public class methods
 
-	public static void main(String argv[]) {
+	public static void main(String argv[])
+	{
 		WOApplication.main(argv, Application.class);
 	}
 
 	@Override
-	public WOResponse dispatchRequest(WORequest aRequest) {
-
-		// In Direct Connect mode, each favicon request will generate a new session.
+	public WOResponse dispatchRequest(WORequest aRequest)
+	{
+		// In Direct Connect mode, each favicon request will generate a new
+		// session.
 		// This should workaround this problem.
 		if (isDirectConnectEnabled() && aRequest != null && aRequest.uri().equals("/favicon.ico"))
 			return new WOResponse();

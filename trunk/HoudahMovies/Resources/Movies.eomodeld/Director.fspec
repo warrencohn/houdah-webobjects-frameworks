@@ -1,0 +1,36 @@
+{
+    search = {
+        class = EOFetchSpecification; 
+        entityName = Director; 
+        prefetchingRelationshipKeyPaths = (); 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = toMovie; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = toMovie; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = toTalent; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = toTalent; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "toMovie.title"; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = movie; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "toTalent.name"; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = talent; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+    }; 
+}

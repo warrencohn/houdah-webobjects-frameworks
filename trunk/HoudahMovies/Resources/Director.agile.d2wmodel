@@ -1,0 +1,236 @@
+{
+  "rules" = (
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+        "key" = "entityName"; 
+        "selectorName" = "isEqualTo"; 
+        "value" = "Director"; 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "columns"; 
+        "value" = (
+          "toMovie", 
+          "toTalent"
+        ); 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+        "key" = "entityName"; 
+        "selectorName" = "isEqualTo"; 
+        "value" = "Director"; 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "properties"; 
+        "value" = (
+          "toMovie", 
+          "toTalent"
+        ); 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "entityName"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "Director"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "task"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "list"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "actionName"; 
+        "value" = "detailAction"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "entityName"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "Director"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "task"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "edit"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "fieldset"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "fieldset"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "fields"; 
+        "value" = (
+          (
+            "toMovie"
+          ), 
+          (
+            "toTalent"
+          )
+        ); 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "entityName"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "Director"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "task"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "search"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "fieldset"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "fieldset"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "fields"; 
+        "value" = (
+          (
+            "toMovie"
+          ), 
+          (
+            "toTalent"
+          )
+        ); 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "entityName"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "Director"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "task"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "describe"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "formatter"; 
+        "value" = (
+          {
+            "keyPath" = "toMovie"; 
+          }, 
+          {
+            "keyPath" = "toTalent"; 
+          }
+        ); 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "abstractEntityName"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "Director"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "task"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "identify"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "formatter"; 
+        "value" = (
+          {
+            "keyPath" = "toMovie.title"; 
+          }, 
+          {
+            "keyPath" = "toTalent.name"; 
+          }
+        ); 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "entityName"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "Director"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "descriptorType"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "columnRow"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "descriptorClass"; 
+        "value" = "com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor"; 
+      }; 
+    }
+  ); 
+}

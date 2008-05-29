@@ -18,7 +18,6 @@
     attributesUsedForLocking = (movieID, talentID); 
     className = "com.houdah.movies.business.Director"; 
     externalName = director; 
-    fetchSpecificationDictionary = {}; 
     internalInfo = {"_nameInObjectStore" = DIRECTOR; }; 
     maxNumberOfInstancesToBatchFetch = 10; 
     name = Director; 

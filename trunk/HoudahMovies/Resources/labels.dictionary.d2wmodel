@@ -36,6 +36,32 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isEqualTo"; 
+            "value" = "movie"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Film"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
             "value" = "name"; 
           }, 
           {
@@ -114,6 +140,32 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isEqualTo"; 
+            "value" = "movies"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Film"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
             "value" = "voting"; 
           }, 
           {
@@ -128,6 +180,32 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "label"; 
         "value" = "Vote"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "movie"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Movie"; 
       }; 
     }, 
     {
@@ -180,6 +258,32 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "label"; 
         "value" = "Title"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "toMovie"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Film"; 
       }; 
     }, 
     {
@@ -270,6 +374,58 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isEqualTo"; 
+            "value" = "movies"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Movie"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "talent"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Artiste"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
             "value" = "budget"; 
           }, 
           {
@@ -348,6 +504,32 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isEqualTo"; 
+            "value" = "talent"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Talent"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
             "value" = "voting"; 
           }, 
           {
@@ -362,6 +544,32 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "label"; 
         "value" = "Voting"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "toMovie"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Movie"; 
       }; 
     }, 
     {
@@ -440,6 +648,58 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "label"; 
         "value" = "Reviews"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "toTalent"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Artiste"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "toTalent"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Talent"; 
       }; 
     }, 
     {
