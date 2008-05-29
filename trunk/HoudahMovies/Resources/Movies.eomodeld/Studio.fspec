@@ -1,18 +1,39 @@
-
 {
-    RawFetchAllStudios = 
-    {
-        class = EOFetchSpecification;
-        entityName = Studio;
-        fetchLimit = 0;
-        hints = 
-        {
-            EOCustomQueryExpressionHintKey = "SELECT NAME, STUDIO_ID FROM STUDIO ORDER BY NAME asc";
-        };
-        rawRowKeyPaths = 
-        (
-           name, 
-           studioID
-        );
-    };
+    RawFetchAllStudios = {
+        class = EOFetchSpecification; 
+        entityName = Studio; 
+        fetchLimit = 0; 
+        hints = {
+            EOCustomQueryExpressionHintKey = "SELECT NAME, STUDIO_ID FROM STUDIO ORDER BY NAME asc"; 
+        }; 
+        rawRowKeyPaths = (name, studioID); 
+    }; 
+    search = {
+        class = EOFetchSpecification; 
+        entityName = Studio; 
+        prefetchingRelationshipKeyPaths = (); 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = name; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = name; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = budget; 
+                    selectorName = "isGreaterThanOrEqualTo:"; 
+                    value = {"_key" = minBudget; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = budget; 
+                    selectorName = "isLessThanOrEqualTo:"; 
+                    value = {"_key" = maxBudget; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+    }; 
 }

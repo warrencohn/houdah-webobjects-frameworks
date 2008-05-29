@@ -1,9 +1,29 @@
-<html>
-	<head>
-		<title>Houdah Movies</title>
-	</head>
-	<body>
-		<p><webobject name="searchMovies">Search Movies</webobject></p>
-		<p><webobject name="createMovie">Create Movie</webobject></p>
-	</body>
-</html>
+<webobject name="Layout">
+<div id="main">
+	<div class="mainHeaderGroup">
+		<div class="mainHeaderRow">
+			<span>Browse</span><span>Insert</span>
+		</div>
+	</div>
+	<div class="mainEntityGroup">
+		<div class="mainEntityRow">
+			<span><webobject name="listMovies">Movies…</webobject></span><span><webobject name="insertMovie">New Movie</webobject></span>
+		</div>
+	</div>
+	<div class="mainEntityGroup">
+		<div class="mainEntityRow">
+			<span><webobject name="listStudios">Studios…</webobject></span><span><webobject name="insertStudio">New Studio</webobject></span>
+		</div>
+	</div>
+	<div class="mainEntityGroup">
+		<div class="mainEntityRow">
+			<span><webobject name="listDirectors">Directors…</webobject></span><span><webobject name="insertDirector">New Director</webobject></span>
+		</div>
+	</div>
+	<div class="mainEntityGroup">
+		<div class="mainEntityRow">
+			<span><webobject name="listTalents">Talents…</webobject></span><span><webobject name="insertTalent">New Talent</webobject></span>
+		</div>
+	</div>
+</div>
+</webobject>
