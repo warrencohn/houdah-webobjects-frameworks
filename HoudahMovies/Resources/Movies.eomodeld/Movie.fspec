@@ -86,6 +86,12 @@
                     key = trailerName; 
                     selectorName = "isCaseInsensitiveLike:"; 
                     value = {"_key" = trailerName; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "plotSummary.summary"; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = summary; class = EOQualifierVariable; }; 
                 }
             ); 
         }; 
