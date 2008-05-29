@@ -1,0 +1,205 @@
+(
+    0 : *true* => mayAdd = true [BooleanAssignment],
+    0 : *true* => lines = (
+) [com.webobjects.directtoweb.Assignment],
+    0 : *true* => fields = (
+) [com.webobjects.directtoweb.Assignment],
+    0 : *true* => columns = (
+) [com.webobjects.directtoweb.Assignment],
+    0 : *true* => escapeHTML = 0 [com.webobjects.directtoweb.Assignment],
+    0 : *true* => alignment = LEFT [com.webobjects.directtoweb.Assignment],
+    0 : *true* => properties = (
+) [com.webobjects.directtoweb.Assignment],
+    0 : *true* => path = key [com.webobjects.directtoweb.KeyValueAssignment],
+    0 : *true* => label = key [com.webobjects.directtoweb.KeyValueAssignment],
+    0 : *true* => minNumberOfRows = 0 [com.webobjects.directtoweb.Assignment],
+    0 : *true* => supportsSorting = 1 [com.webobjects.directtoweb.Assignment],
+    0 : *true* => addActionLabel = Add [com.webobjects.directtoweb.Assignment],
+    0 : *true* => editActionLabel = Edit [com.webobjects.directtoweb.Assignment],
+    0 : *true* => nextActionLabel = next [com.webobjects.directtoweb.Assignment],
+    0 : *true* => saveActionLabel = Save [com.webobjects.directtoweb.Assignment],
+    0 : *true* => fieldsets = (fieldset
+) [com.webobjects.directtoweb.Assignment],
+    0 : *true* => cancelActionLabel = Cancel [com.webobjects.directtoweb.Assignment],
+    0 : *true* => createActionLabel = Create [com.webobjects.directtoweb.Assignment],
+    0 : *true* => deleteActionLabel = Delete [com.webobjects.directtoweb.Assignment],
+    0 : *true* => searchActionLabel = Search [com.webobjects.directtoweb.Assignment],
+    0 : *true* => previousActionLabel = previous [com.webobjects.directtoweb.Assignment],
+    0 : *true* => quickSearchLoupeLabel = Select [com.webobjects.directtoweb.Assignment],
+    0 : valueType = 'Boolean' => values = (0,1
+) [com.webobjects.directtoweb.Assignment],
+    0 : *true* => quickSearchActionLabel = Search [com.webobjects.directtoweb.Assignment],
+    0 : task = 'describe' => formatterName = dummy [com.webobjects.directtoweb.Assignment],
+    0 : task = 'identify' => formatterName = dummy [com.webobjects.directtoweb.Assignment],
+    0 : *true* => framework = HoudahAgileComponents [com.webobjects.directtoweb.Assignment],
+    0 : language = 'French' => addActionLabel = Ajouter [com.webobjects.directtoweb.Assignment],
+    0 : language = 'French' => editActionLabel = Editer [com.webobjects.directtoweb.Assignment],
+    0 : language = 'French' => createActionLabel = Créer [com.webobjects.directtoweb.Assignment],
+    0 : language = 'French' => nextActionLabel = Prochain [com.webobjects.directtoweb.Assignment],
+    0 : *true* => valueFetchSpecificationName = valueFetch [com.webobjects.directtoweb.Assignment],
+    0 : task = 'search' => fetchSpecificationName = search [com.webobjects.directtoweb.Assignment],
+    0 : language = 'French' => cancelActionLabel = Annuler [com.webobjects.directtoweb.Assignment],
+    0 : language = 'French' => deleteActionLabel = Supprimer [com.webobjects.directtoweb.Assignment],
+    0 : language = 'French' => saveActionLabel = Enregistrer [com.webobjects.directtoweb.Assignment],
+    0 : language = 'French' => searchActionLabel = Rechercher [com.webobjects.directtoweb.Assignment],
+    0 : language = 'French' => previousActionLabel = Précédent [com.webobjects.directtoweb.Assignment],
+    0 : language = 'French' => quickSearchLoupeLabel = Choisir [com.webobjects.directtoweb.Assignment],
+    0 : relationship.isToMany = 1 => formatterName = arrayCount [com.webobjects.directtoweb.Assignment],
+    0 : language = 'French' => quickSearchActionLabel = Rechercher [com.webobjects.directtoweb.Assignment],
+    0 : (task = 'edit' and fieldset = 'fieldset') => legend = Edit [com.webobjects.directtoweb.Assignment],
+    0 : actionType = 'navigationAction' => actionName = key [com.webobjects.directtoweb.KeyValueAssignment],
+    0 : task = 'quickSearch' => fetchSpecificationName = quickSearch [com.webobjects.directtoweb.Assignment],
+    0 : *true* => mayEdit = session.sessionController.securityManager/@entityName/edit [ObjectValueAssignment],
+    0 : *true* => mayList = session.sessionController.securityManager/@entityName/list [ObjectValueAssignment],
+    0 : (task = 'search' and fieldset = 'fieldset') => legend = Search [com.webobjects.directtoweb.Assignment],
+    0 : (relationship != null and relationship.isToMany = 0) => mayListRelationship = false [BooleanAssignment],
+    0 : (task = 'edit' and fieldset = 'fieldset') => minNumberOfRows = 0 [com.webobjects.directtoweb.Assignment],
+    0 : (task = 'list' and not (key = null)) => actionName = detailAction [com.webobjects.directtoweb.Assignment],
+    0 : *true* => mayCreate = session.sessionController.securityManager/@entityName/create [ObjectValueAssignment],
+    0 : *true* => mayDelete = session.sessionController.securityManager/@entityName/delete [ObjectValueAssignment],
+    0 : *true* => mayDetail = session.sessionController.securityManager/@entityName/detail [ObjectValueAssignment],
+    0 : (task = 'search' and fieldset = 'fieldset') => minNumberOfRows = 10 [com.webobjects.directtoweb.Assignment],
+    0 : (relationship != null and relationship.isToMany = 1) => mayDetailRelationship = false [BooleanAssignement¨],
+    0 : actionType = 'action' => actionClass = com.houdah.web.view.actions.Action [com.webobjects.directtoweb.Assignment],
+    0 : task = 'edit' => controllerClass = com.houdah.agile.controllers.AgileEditPageController [com.webobjects.directtoweb.Assignment],
+    0 : task = 'list' => controllerClass = com.houdah.agile.controllers.AgileListPageController [com.webobjects.directtoweb.Assignment],
+    0 : task = 'detail' => controllerClass = com.houdah.agile.controllers.AgileDetailPageController [com.webobjects.directtoweb.Assignment],
+    0 : task = 'search' => controllerClass = com.houdah.agile.controllers.AgileSearchPageController [com.webobjects.directtoweb.Assignment],
+    0 : actionType = 'navigationAction' => actionClass = com.houdah.web.control.actions.NavigationAction [com.webobjects.directtoweb.Assignment],
+    0 : task = 'quickSearch' => controllerClass = com.houdah.agile.controllers.AgileQuickSearchController [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.control.descriptors.FormQuickSearchFieldDescriptor' => size = 20 [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormEmptyFieldDescriptor' => arguments = (
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormEmptyFieldDescriptor' => signature = (
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor' => size = 20 [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormTextfieldActionFieldDescriptor' => size = 20 [com.webobjects.directtoweb.Assignment],
+    0 : descriptorType = 'column' => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : descriptorType = 'property' => descriptorClass = com.houdah.web.view.list.descriptors.ListPropertyDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyLabelTextDescriptor' => arguments = (label
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyLabelTextDescriptor' => signature = (String
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorType = 'columnRow' => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowTextDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : (not (attribute = null) and attribute.valueClassName = 'NSNumber' and attribute.valueType = 'c') => valueType = Boolean [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnDescriptor' => arguments = (columnHeader,columnRow
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorType = 'columnHeader' => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnHeaderTextDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : descriptorType = 'propertyLabel' => descriptorClass = com.houdah.web.view.list.descriptors.ListPropertyLabelTextDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : descriptorType = 'propertyValue' => descriptorClass = com.houdah.web.view.list.descriptors.ListPropertyValueTextDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : (not (attribute = null) and attribute.valueClassName = 'NSNumber' and attribute.valueType = 'c') => formatterName = boolean [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormBooleanValueDescriptor' => signature = (String,String,Class,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyValueTextDescriptor' => signature = (String,Format,boolean
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnHeaderTextDescriptor' => signature = (String,boolean,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : (not (attribute = null) and attribute.valueClassName = 'NSNumber' and attribute.valueType = 'i') => formatterName = integerNumber [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormBooleanValueDescriptor' => arguments = (key,label,valueClass,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyDescriptor' => arguments = (propertyLabel,propertyValue,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyValueTextDescriptor' => arguments = (path,formatterName,escapeHTML
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormTextValueFieldDescriptor' => signature = (String,String,Format,Class,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnHeaderTextDescriptor' => arguments = (label,supportsSorting,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnRowTextDescriptor' => signature = (String,Format,boolean,Alignment,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : (relationship != null and relationship.isToMany = 1) => mayListRelationship = session.sessionController.securityManager/@relationship.destinationEntity.name/list [ObjectValueAssignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormTextValueFieldDescriptor' => arguments = (key,label,formatterName,valueClass,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyValueActionDescriptor' => signature = (NavigationAction,String,Format,boolean
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormCheckBoxValueFieldDescriptor' => signature = (String,String,String,Format,Class,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : (relationship != null and relationship.isToMany = 0) => mayDetailRelationship = session.sessionController.securityManager/@relationship.destinationEntity.name/detail [ObjectValueAssignment],
+    0 : descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnDescriptor' => signature = (TableColumnHeaderDescriptor,TableColumnRowDescriptor
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.control.descriptors.FormQuickSearchFieldDescriptor' => signature = (String,String,String,int,Integer,String,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormRadioButtonValueFieldDescriptor' => signature = (String,String,String,Format,Class,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormPopUpValueFieldDescriptor' => signature = (String,String,String,Format,String,Class,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor' => signature = (Action,String,Format,boolean,Alignment,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormDatefieldValueFieldDescriptor' => arguments = (key,label,formatterName,valueClass,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnRowTextDescriptor' => arguments = (path,formatterName,escapeHTML,alignment,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormDatefieldValueFieldDescriptor' => signature = (String,String,TimestampFormatter,Class,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyValueActionDescriptor' => arguments = (navigationAction,path,formatterName,escapeHTML
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormCheckBoxValueFieldDescriptor' => arguments = (key,label,keyPath,formatterName,valueClass,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.form.descriptors.FormPopUpValueFieldDescriptor' and (task = 'search' or task = 'quickSearch')) => noSelectionString = - [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyDescriptor' => signature = (ListPropertyLabelDescriptor,ListPropertyValueDescriptor,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor' => signature = (String,String,Format,int,Integer,String,Class,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor' => arguments = (action,path,formatterName,escapeHTML,alignment,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormTextfieldActionFieldDescriptor' => signature = (String,String,Format,int,Integer,Class,Action,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormRadioButtonValueFieldDescriptor' => arguments = (key,label,keyPath,formatterName,valueClass,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor' => arguments = (key,label,formatterName,size,maxLength,hint,valueClass,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorType = 'field' and not (relationship = null) and relationship.isToMany = 0) => descriptorClass = com.houdah.web.view.form.descriptors.FormPopUpValueFieldDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormPopUpValueFieldDescriptor' => arguments = (key,label,keyPath,formatterName,noSelectionString,valueClass,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.view.form.descriptors.FormTextfieldActionFieldDescriptor' => arguments = (key,label,formatterName,size,maxLength,valueClass,action,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorType = 'field' and not (relationship = null) and relationship.isToMany = 1) => descriptorClass = com.houdah.web.view.form.descriptors.FormCheckBoxValueFieldDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.form.descriptors.FormCheckBoxValueFieldDescriptor' and relationship != null) => signature = (String,String,String,Describe,Class,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.form.descriptors.FormRadioButtonValueFieldDescriptor' and relationship != null) => signature = (String,String,String,Describe,Class,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.form.descriptors.FormPopUpValueFieldDescriptor' and relationship != null) => signature = (String,String,String,Describe,String,Class,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyValueActionDescriptor' and relationship.isToMany = 0) => signature = (NavigationAction,String,Describe,boolean
+) [com.webobjects.directtoweb.Assignment],
+    0 : (not (attribute = null) and ((attribute.valueClassName = 'NSNumber' and attribute.valueType = 'd') or attribute.valueClassName = 'NSDecimalNumber')) => formatterName = decimalNumber [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyValueTextDescriptor' and not (relationship = null) and relationship.isToMany = 0) => signature = (String,Describe,boolean
+) [com.webobjects.directtoweb.Assignment],
+    0 : descriptorClass = 'com.houdah.web.control.descriptors.FormQuickSearchFieldDescriptor' => arguments = (key,label,"relationship.destinationEntity.name",size,maxLength,quickSearchLoupeLabel,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor' and not (attribute = null) and attribute.valueClassName = 'NSString' and attribute.width = 0) => size = 100 [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnRowTextDescriptor' and not (relationship = null) and relationship.isToMany = 0) => signature = (String,Describe,boolean,Alignment,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.form.descriptors.FormCheckBoxValueFieldDescriptor' and relationship != null) => arguments = (key,label,keyPath,"relationship.destinationEntity.name",valueClass,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyValueActionDescriptor' and relationship.isToMany = 0) => arguments = (navigationAction,path,"relationship.destinationEntity.name",escapeHTML
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.form.descriptors.FormRadioButtonValueFieldDescriptor' and relationship != null) => arguments = (key,label,keyPath,"relationship.destinationEntity.name",valueClass,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorType = 'field' and not (attribute = null) and attribute.valueClassName = 'NSNumber' and attribute.valueType = 'c') => descriptorClass = com.houdah.web.view.form.descriptors.FormCheckBoxValueFieldDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor' and not (relationship = null) and relationship.isToMany = 0) => signature = (Action,String,Describe,boolean,Alignment,String
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.list.descriptors.ListPropertyValueTextDescriptor' and not (relationship = null) and relationship.isToMany = 0) => arguments = (path,"relationship.destinationEntity.name",escapeHTML
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.form.descriptors.FormPopUpValueFieldDescriptor' and relationship != null) => arguments = (key,label,keyPath,"relationship.destinationEntity.name",noSelectionString,valueClass,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : (task = 'edit' and descriptorType = 'field' and not (attribute = null) and attribute.valueClassName = 'NSNumber' and attribute.valueType = 'c') => descriptorClass = com.houdah.web.view.form.descriptors.FormBooleanValueDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : (task = 'edit' and descriptorType = 'field' and not (attribute = null) and attribute.valueClassName = 'NSString' and attribute.width = 0) => descriptorClass = com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorType = 'field' and not (relationship = null) and relationship.isToMany = 0 and relationship.destinationEntity.userInfo.largeSet = 1) => descriptorClass = com.houdah.web.control.descriptors.FormQuickSearchFieldDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorType = 'field' and not (attribute = null) and (attribute.valueClassName = 'NSDate' or attribute.valueClassName = 'NSCalendarDate')) => descriptorClass = com.houdah.web.view.form.descriptors.FormDatefieldValueFieldDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnRowTextDescriptor' and not (relationship = null) and relationship.isToMany = 0) => arguments = (path,"relationship.destinationEntity.name",escapeHTML,alignment,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorClass = 'com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor' and not (relationship = null) and relationship.isToMany = 0) => arguments = (action,path,"relationship.destinationEntity.name",escapeHTML,alignment,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    0 : (relationship != null and descriptorType = 'propertyValue' and ((relationship.isToMany = 1 and mayListRelationship = 1) or (relationship.isToMany = 0 and mayDetailRelationship = 1))) => descriptorClass = com.houdah.web.view.list.descriptors.ListPropertyValueActionDescriptor [com.webobjects.directtoweb.Assignment],
+    0 : (descriptorType = 'field' and not (attribute = null) and (attribute.valueClassName = 'NSString' or attribute.valueClassName = 'NSNumber' or attribute.valueClassName = 'NSDecimalNumber')) => descriptorClass = com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor [com.webobjects.directtoweb.Assignment],
+    5 : actionClass = 'com.houdah.web.view.actions.Action' => signature = (String,String,String,String
+) [com.webobjects.directtoweb.Assignment],
+    5 : actionClass = 'com.houdah.web.view.actions.Action' => arguments = (actionName,actionLabel,title,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    5 : actionClass = 'com.houdah.web.control.actions.NavigationAction' => signature = (String,String,String,String
+) [com.webobjects.directtoweb.Assignment],
+    5 : actionClass = 'com.houdah.web.control.actions.NavigationAction' => arguments = (actionName,actionLabel,title,cssClass
+) [com.webobjects.directtoweb.Assignment],
+    5 : (task = 'edit' and descriptorType = 'field' and not (attribute = null) and attribute.valueClassName = 'NSNumber' and attribute.valueType = 'c') => descriptorClass = com.houdah.web.view.form.descriptors.FormRadioButtonValueFieldDescriptor [com.webobjects.directtoweb.Assignment]
+)

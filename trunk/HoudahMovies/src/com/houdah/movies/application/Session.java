@@ -24,59 +24,47 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
-**/
+ **/
 
 package com.houdah.movies.application;
 
 import com.houdah.messages.MessageFactory;
 import com.houdah.movies.components.Layout;
-import com.houdah.ruleengine.RuleContext;
 import com.houdah.web.control.application.LaxSecurityManager;
 
 public class Session extends com.houdah.agile.application.Session
 {
-	
-	
 	// Private class constants
-	
+
 	private static final long	serialVersionUID	= -7824920018460299031L;
-	
-	
-	
+
 	// Private instance variables
-	
-//	private User				user				= null;
-	
-	
-	
-	
+
+	// private User user = null;
+
 	// Constructor
-	
-	public Session()
-	{
+
+	public Session() {
 		sessionController().setWrapperName(Layout.class.getName());
 		sessionController().setEditingContextFactory(new EditingContextFactory());
 		sessionController().setSecurityManager(new LaxSecurityManager());
-		
-		MessageFactory messageFactory = new MessageFactory();
-		RuleContext messageContext = messageFactory.messageContext();
-		
-//		messageContext.takeValueForKey("French", "language");
-		messageContext.takeValueForKey("English", "language");
-		
-		sessionController().setMessageFactory(messageFactory);
-		
-//		ruleContext().takeValueForKey("French", "language");
-		ruleContext().takeValueForKey("English", "language");
-		
+		sessionController().setMessageFactory(new MessageFactory());
+
+		setSessionLanguage("English");
+		// setSessionLanguage("French");
+
 		sessionController().securityManager().revokeAccess("Voting", Application.EDIT_TASK);
 		sessionController().securityManager().revokeAccess("Voting", Application.DETAIL_TASK);
 	}
-	
-	
-	
+
 	// Public instance methods
-	
+
+	public void setSessionLanguage(String language)
+	{
+		sessionController().messageFactory().messageContext().takeValueForKey(language, "language");
+		ruleContext().takeValueForKey(language, "language");
+	}
+
 	// public User user()
 	// {
 	// return this.user;
@@ -89,5 +77,5 @@ public class Session extends com.houdah.agile.application.Session
 	//		
 	// this.user = (User) ControlUtilities.localInstanceOfObject(
 	// editingContext, user);
-	//	}
+	// }
 }
