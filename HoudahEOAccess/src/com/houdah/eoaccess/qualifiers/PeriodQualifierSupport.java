@@ -29,7 +29,6 @@
 package com.houdah.eoaccess.qualifiers;
 
 import com.houdah.eocontrol.qualifiers.PeriodQualifier;
-
 import com.webobjects.eoaccess.EOAttribute;
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eoaccess.EOSQLExpression;

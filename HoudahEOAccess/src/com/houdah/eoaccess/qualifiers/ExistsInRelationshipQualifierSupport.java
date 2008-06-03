@@ -32,7 +32,7 @@ import java.util.Enumeration;
 
 import com.houdah.eocontrol.qualifiers.ExistsInRelationshipQualifier;
 import com.houdah.eocontrol.qualifiers.InSubqueryQualifier;
-import com.houdah.eocontrol.qualifiers.Qualifier;
+import com.houdah.foundation.KVCUtility;
 import com.webobjects.eoaccess.EOAttribute;
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eoaccess.EOJoin;
@@ -111,8 +111,8 @@ public class ExistsInRelationshipQualifierSupport extends QualifierGenerationSup
 				EOAttribute destinationAttribute = join.destinationAttribute();
 				
 				subBuffer.append(" AND ");
-				subBuffer.append(expression._aliasForRelatedAttributeRelationshipPath(sourceAttribute, Qualifier
-						.allButLastPathComponent(keyPath)));
+				subBuffer.append(expression._aliasForRelatedAttributeRelationshipPath(sourceAttribute, 
+						KVCUtility.sharedInstance().allButLastPathComponent(keyPath)));
 				subBuffer.append(" = ");
 				subBuffer.append(subExpression._aliasForRelatedAttributeRelationshipPath(destinationAttribute, ""));
 			}

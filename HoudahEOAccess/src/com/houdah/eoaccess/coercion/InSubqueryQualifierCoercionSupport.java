@@ -29,7 +29,6 @@
 package com.houdah.eoaccess.coercion;
 
 import com.houdah.eocontrol.qualifiers.InSubqueryQualifier;
-
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eocontrol.EOQualifier;
 import com.webobjects.foundation.NSDictionary;

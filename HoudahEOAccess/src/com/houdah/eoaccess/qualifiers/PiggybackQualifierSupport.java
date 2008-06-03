@@ -29,7 +29,6 @@
 package com.houdah.eoaccess.qualifiers;
 
 import com.houdah.eocontrol.qualifiers.PiggybackQualifier;
-
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eoaccess.EOSQLExpression;
 import com.webobjects.eoaccess.EOQualifierSQLGeneration.Support;

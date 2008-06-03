@@ -119,7 +119,7 @@ public class KVCUtility
 	{
 		int i = path.lastIndexOf(KEY_PATH_SEPARATOR_CHAR);
 		
-		return (i < 0) ? null : path.substring(0, i);
+		return (i < 0) ? "" : path.substring(0, i);
 	}
 	
 	

@@ -32,7 +32,6 @@ import java.util.Enumeration;
 
 import com.houdah.eocontrol.qualifiers.InSetQualifier;
 import com.houdah.eocontrol.qualifiers.Qualifier;
-
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eoaccess.EOJoin;
 import com.webobjects.eoaccess.EOQualifierSQLGeneration;

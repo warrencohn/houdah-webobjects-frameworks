@@ -29,7 +29,6 @@
 package com.houdah.eoaccess.coercion;
 
 import com.houdah.eocontrol.qualifiers.PiggybackQualifier;
-
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eocontrol.EOQualifier;
 

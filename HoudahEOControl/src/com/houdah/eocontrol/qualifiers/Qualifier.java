@@ -52,23 +52,7 @@ public abstract class Qualifier extends EOQualifier
 	// supposes single character separator
 	
 	// Public class methods
-	
-	public static String allButLastPathComponent(String path) 
-	{ 
-		int i = path.lastIndexOf(KEY_PATH_SEPARATOR_CHAR); 
-
-		return (i < 0) ? "" : path.substring(0, i); 
-	} 
-	
-	
-	public static String lastPathComponent(String path)
-	{
-		int i = path.lastIndexOf(KEY_PATH_SEPARATOR_CHAR);
 		
-		return (i < 0) ? path : path.substring(i + 1);
-	}
-	
-	
 	public static void validateKeyPathWithRootClassDescription(String keyPath,
 			EOClassDescription classDescription)
 	{
