@@ -33,7 +33,10 @@ The Houdah frameworks are layered in the same way as are Apple's WebObjects fram
   * [HoudahControlComponents] (does not depend on  EOAccess, Validation, QueryBlessing, …)
   * [HoudahAgileComponents]
 
+== Borrowing code ==
+
 You may safely use code from any layer provided you link against all layers it depends on. You however do not need to use or even link to higher up layers.
 
 While there is no compile time dependancy of HoudahEOControl on HoudahEOAccess, custom qualifiers can be used for database evaluation only if the support classes from HoudahEOAccess are present and registered at runtime.
-== Borrowing code ==
+
+Please keep the license terms in mind and give credit!
