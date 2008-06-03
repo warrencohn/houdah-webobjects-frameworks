@@ -31,7 +31,6 @@ package com.houdah.eoaccess.coercion;
 import java.util.Enumeration;
 
 import com.houdah.eocontrol.qualifiers.InSetQualifier;
-
 import com.webobjects.eoaccess.EOAttribute;
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eoaccess.EORelationship;

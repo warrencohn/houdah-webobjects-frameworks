@@ -30,8 +30,7 @@ package com.houdah.eoaccess.coercion;
 
 import com.houdah.eoaccess.qualifiers.QualifierUtilities;
 import com.houdah.eocontrol.qualifiers.BestRelationshipMatchesQualifier;
-import com.houdah.eocontrol.qualifiers.Qualifier;
-
+import com.houdah.foundation.KVCUtility;
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eoaccess.EORelationship;
 import com.webobjects.eocontrol.EOQualifier;
@@ -63,7 +62,7 @@ public class BestRelationshipMatchesQualifierCoercionSupport implements
 		BestRelationshipMatchesQualifier brmQualifier = (BestRelationshipMatchesQualifier) qualifier;
 		EOQualifier subQualifier = brmQualifier.subQualifier();
 		EOQualifier matchQualifier = brmQualifier.matchQualifier();
-		String path = Qualifier.allButLastPathComponent(brmQualifier.keyPath());
+		String path = KVCUtility.sharedInstance().allButLastPathComponent(brmQualifier.keyPath());
 		EOEntity destinationEntity = entity;
 		
 		if (path.length() > 0) {

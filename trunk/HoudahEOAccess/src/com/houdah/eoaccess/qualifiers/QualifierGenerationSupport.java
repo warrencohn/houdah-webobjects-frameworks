@@ -33,11 +33,11 @@ import java.lang.reflect.Constructor;
 import java.util.StringTokenizer;
 import java.util.WeakHashMap;
 
-import com.houdah.eocontrol.qualifiers.Qualifier;
-
 import org.apache.xerces.impl.xpath.regex.Match;
 import org.apache.xerces.impl.xpath.regex.RegularExpression;
 
+import com.houdah.eocontrol.qualifiers.Qualifier;
+import com.houdah.foundation.KVCUtility;
 import com.webobjects.eoaccess.EOAdaptor;
 import com.webobjects.eoaccess.EOAttribute;
 import com.webobjects.eoaccess.EOEntity;
@@ -173,8 +173,7 @@ public abstract class QualifierGenerationSupport extends
 					
 					if (join.destinationAttribute().name()
 							.equals(attributeName)) {
-						String newPath = Qualifier
-								.allButLastPathComponent(keyPath);
+						String newPath = KVCUtility.sharedInstance().allButLastPathComponent(keyPath);
 						String newAttributeName = join.sourceAttribute().name();
 						
 						return optimizeQualifierKeyPath(entity, newPath,
@@ -203,9 +202,9 @@ public abstract class QualifierGenerationSupport extends
 			EOEntity destinationEntity = relationshipForPath(entity,
 					flattenedRelationshipPath).destinationEntity();
 			
-			return optimizeQualifierKeyPath(destinationEntity, Qualifier
-					.allButLastPathComponent(translatedKeyPath), Qualifier
-					.lastPathComponent(translatedKeyPath));
+			return optimizeQualifierKeyPath(destinationEntity, 
+					KVCUtility.sharedInstance().allButLastPathComponent(translatedKeyPath), 
+					KVCUtility.sharedInstance().lastPathComponent(translatedKeyPath));
 		} else {
 			StringTokenizer tokenizer = new StringTokenizer(
 					flattenedRelationshipPath, Qualifier.KEY_PATH_SEPARATOR);
@@ -236,12 +235,11 @@ public abstract class QualifierGenerationSupport extends
 			if (flattenedKeyPath.indexOf(Qualifier.KEY_PATH_SEPARATOR_CHAR) >= 0) {
 				invertedRelationshipPath
 						.append(Qualifier.KEY_PATH_SEPARATOR_CHAR);
-				invertedRelationshipPath.append(Qualifier
-						.allButLastPathComponent(flattenedKeyPath));
+				invertedRelationshipPath.append(KVCUtility.sharedInstance().allButLastPathComponent(flattenedKeyPath));
 			}
 			
 			return optimizeQualifierKeyPath(tmpEntity, invertedRelationshipPath
-					.toString(), Qualifier.lastPathComponent(flattenedKeyPath));
+					.toString(), KVCUtility.sharedInstance().lastPathComponent(flattenedKeyPath));
 		}
 	}
 	

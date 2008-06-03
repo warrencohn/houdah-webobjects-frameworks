@@ -31,8 +31,7 @@ package com.houdah.eoaccess.qualifiers;
 import java.util.Enumeration;
 
 import com.houdah.eocontrol.qualifiers.BestRelationshipMatchesQualifier;
-import com.houdah.eocontrol.qualifiers.Qualifier;
-
+import com.houdah.foundation.KVCUtility;
 import com.webobjects.eoaccess.EOAttribute;
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eoaccess.EOJoin;
@@ -67,8 +66,8 @@ public class BestRelationshipMatchesQualifierSupport extends
 		String keyPath = brmQualifier.keyPath();
 		EOEntity entity = expression.entity();
 		EOAttribute attribute = attributeForPath(entity, keyPath);
-		String path = Qualifier.allButLastPathComponent(keyPath);
-		String key = Qualifier.lastPathComponent(keyPath);
+		String path = KVCUtility.sharedInstance().allButLastPathComponent(keyPath);
+		String key = KVCUtility.sharedInstance().lastPathComponent(keyPath);
 		EORelationship relationship = relationshipForPath(entity, path);
 		
 		if (relationship == null) {
@@ -221,7 +220,7 @@ public class BestRelationshipMatchesQualifierSupport extends
 		if (relationshipForPath(entity, keyPath) == null) {
 			NSMutableDictionary substitutions = new NSMutableDictionary(2);
 			String key = brmQualifier.keyPath();
-			String path = Qualifier.allButLastPathComponent(key);
+			String path = KVCUtility.sharedInstance().allButLastPathComponent(key);
 			EORelationship relationship = relationshipForPath(entity, path);
 			EOEntity subEntity = (relationship != null) ? relationship
 					.destinationEntity() : entity;

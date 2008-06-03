@@ -32,7 +32,7 @@ import java.util.Enumeration;
 
 import com.houdah.eocontrol.qualifiers.InSubqueryQualifier;
 import com.houdah.eocontrol.qualifiers.Qualifier;
-
+import com.houdah.foundation.KVCUtility;
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eoaccess.EOJoin;
 import com.webobjects.eoaccess.EOQualifierSQLGeneration;
@@ -111,7 +111,7 @@ public class InSubqueryQualifierSupport extends QualifierGenerationSupport
 			int joinCount = joins.count();
 			NSMutableArray srcAttributes = new NSMutableArray(joinCount);
 			NSMutableArray destAttrNames = new NSMutableArray(joinCount);
-			String path = Qualifier.allButLastPathComponent(keyPath);
+			String path = KVCUtility.sharedInstance().allButLastPathComponent(keyPath);
 			
 			for (int i = joinCount - 1; i >= 0; i--) {
 				EOJoin join = (EOJoin) joins.objectAtIndex(i);
@@ -145,13 +145,13 @@ public class InSubqueryQualifierSupport extends QualifierGenerationSupport
 							destEntity);
 			
 			return new ArrayInSubqueryQualifier(new NSArray(
-					optimizeQualifierKeyPath(entity, Qualifier
-							.allButLastPathComponent(keyPath), Qualifier
-							.lastPathComponent(keyPath))), isQualifier
-					.entityName(), new NSArray(optimizeQualifierKeyPath(
-					destEntity, Qualifier
-							.allButLastPathComponent(attributePath), Qualifier
-							.lastPathComponent(attributePath))),
+					optimizeQualifierKeyPath(entity, 
+							KVCUtility.sharedInstance().allButLastPathComponent(keyPath), 
+							KVCUtility.sharedInstance().lastPathComponent(keyPath))),
+							isQualifier.entityName(), new NSArray(optimizeQualifierKeyPath(
+									destEntity, 
+									KVCUtility.sharedInstance().allButLastPathComponent(attributePath), 
+									KVCUtility.sharedInstance().lastPathComponent(attributePath))),
 					schemaBasedSubQualifier);
 		}
 	}

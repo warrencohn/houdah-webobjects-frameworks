@@ -31,6 +31,7 @@ package com.houdah.eocontrol.qualifiers;
 import java.util.Enumeration;
 import java.util.HashMap;
 
+import com.houdah.foundation.KVCUtility;
 import com.webobjects.eocontrol.EOClassDescription;
 import com.webobjects.eocontrol.EOKeyValueArchiver;
 import com.webobjects.eocontrol.EOKeyValueArchiving;
@@ -411,7 +412,7 @@ public class BestMatchQualifier extends Qualifier implements Cloneable,
 				classDescription);
 		
 		if (subQualifier() != null) {
-			String path = Qualifier.allButLastPathComponent(keyPath());
+			String path = KVCUtility.sharedInstance().allButLastPathComponent(keyPath());
 			EOClassDescription subDescription = classDescription
 					.classDescriptionForKeyPath(path);
 			

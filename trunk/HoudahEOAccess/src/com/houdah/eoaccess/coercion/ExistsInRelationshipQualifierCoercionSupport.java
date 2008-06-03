@@ -30,8 +30,7 @@ package com.houdah.eoaccess.coercion;
 
 import com.houdah.eoaccess.qualifiers.QualifierUtilities;
 import com.houdah.eocontrol.qualifiers.ExistsInRelationshipQualifier;
-import com.houdah.eocontrol.qualifiers.Qualifier;
-
+import com.houdah.foundation.KVCUtility;
 import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eoaccess.EORelationship;
 import com.webobjects.eocontrol.EOQualifier;
@@ -62,7 +61,7 @@ public class ExistsInRelationshipQualifierCoercionSupport implements
 	{
 		ExistsInRelationshipQualifier eirQualifier = (ExistsInRelationshipQualifier) qualifier;
 		EOQualifier subQualifier = eirQualifier.qualifier();
-		String path = Qualifier.allButLastPathComponent(eirQualifier.keyPath());
+		String path = KVCUtility.sharedInstance().allButLastPathComponent(eirQualifier.keyPath());
 		EOEntity destinationEntity = entity;
 		
 		if (path.length() > 0) {
