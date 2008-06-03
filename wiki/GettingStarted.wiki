@@ -20,18 +20,18 @@ In the future HoudahMovies should demo the creation of custom controllers, views
 
 The Houdah frameworks are layered in the same way as are Apple's WebObjects frameworks. A lower level layer only depends on the matching Apple framework and on the layers below it. The order of dependancies is roughly as follows:
 
-  * HoudahFoundation
-  * HoudahEOControl
-  * HoudatRuleEngine
-  * HoudahEOAccess
-  * HoudahMessages
-  * HoudahEOValidation
-  * HoudahQueryBlessing
-  * HoudahAuditTrail
-  * HoudahAppServer (depends only on Foundation, Control and AppServer layers)
-  * HoudahViewComponents (does not depend on EOControl, EOAccess, Validation, QueryBlessing, …)
-  * HoudahControlComponents (does not depend on  EOAccess, Validation, QueryBlessing, …)
-  * HoudahAgileComponents
+  * [HoudahFoundation]
+  * [HoudahEOControl]
+  * [HoudahRuleEngine]
+  * [HoudahEOAccess]
+  * [HoudahMessages]
+  * [HoudahEOValidation]
+  * [HoudahQueryBlessing]
+  * [HoudahAuditTrail]
+  * [HoudahAppServer] (depends only on Foundation, Control and AppServer layers)
+  * [HoudahViewComponents] (does not depend on EOControl, EOAccess, Validation, QueryBlessing, …)
+  * [HoudahControlComponents] (does not depend on  EOAccess, Validation, QueryBlessing, …)
+  * [HoudahAgileComponents]
 
 You may safely use code from any layer provided you link against all layers it depends on. You however do not need to use or even link to higher up layers.
 
