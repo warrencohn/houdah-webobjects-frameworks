@@ -21,13 +21,13 @@ It is important to note that while HoudahViewComponents defines the notion of co
 
 Views are reusable WebObjects components. They generate pure HTML. All matters of design are left to an external CSS stylesheet.
   * HVCList: This list component displays a single object as a list of label + value pairs.
-  * HVCDisplayGroupList: A wrapper around BVCList to display an object embedded in a display group.
+  * HVCDisplayGroupList: A wrapper around HVCList to display an object embedded in a display group.
   * HVCSimpleList: A simplified list component. It has a single value column
   * HVCTable: A table component. Displays a series of objects in a table: one row per object.
-  * HVCDisplayGroupTable: A wrapper around BVCTable to display objects from a batched display group.
+  * HVCDisplayGroupTable: A wrapper around HVCTable to display objects from a batched display group.
   * HVCFieldset: A field set is a partial form. It is made of groups of form elements: text fields, checkbox groups, and action buttons...
   * HVCFieldTable: This component is a cross between the table and field set components. It allows for editing several objects at a time.
-  * HVCDisplayGroupFieldTable: A wrapper around BVCFieldTable to edit objects from a batched display group.
+  * HVCDisplayGroupFieldTable: A wrapper around HVCFieldTable to edit objects from a batched display group.
 
 
 == Cells ==
