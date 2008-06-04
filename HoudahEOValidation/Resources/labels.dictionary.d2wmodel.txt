@@ -1,0 +1,4 @@
+(
+    0 : key != null => label = key [com.webobjects.directtoweb.KeyValueAssignment],
+    0 : *true* => entityLabel = entityName [com.webobjects.directtoweb.KeyValueAssignment]
+)

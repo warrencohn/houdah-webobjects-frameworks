@@ -1,28 +1,30 @@
 {
-    rules = (
-        {
-            author = 0; 
-            class = com.webobjects.directtoweb.Rule; 
-            rhs = {
-                class = com.webobjects.directtoweb.KeyValueAssignment; 
-                keyPath = entityLabel; 
-                value = entityName; 
-            }; 
-        }, 
-        {
-            author = 0; 
-            class = com.webobjects.directtoweb.Rule; 
-            lhs = {
-                class = com.webobjects.eocontrol.EOKeyValueQualifier; 
-                key = key; 
-                selectorName = "isNotEqualTo"; 
-                value = {class = com.webobjects.foundation.NSKeyValueCoding$Null; }; 
-            }; 
-            rhs = {
-                class = com.webobjects.directtoweb.KeyValueAssignment; 
-                keyPath = label; 
-                value = key; 
-            }; 
-        }
-    ); 
+  "rules" = (
+    {
+      "author" = "0"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+        "key" = "key"; 
+        "selectorName" = "isNotEqualTo"; 
+        "value" = {
+          "class" = "com.webobjects.foundation.NSKeyValueCoding$Null"; 
+        }; 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.KeyValueAssignment"; 
+        "keyPath" = "label"; 
+        "value" = "key"; 
+      }; 
+    }, 
+    {
+      "author" = "0"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.KeyValueAssignment"; 
+        "keyPath" = "entityLabel"; 
+        "value" = "entityName"; 
+      }; 
+    }
+  ); 
 }
