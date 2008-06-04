@@ -1,0 +1,7 @@
+(
+    0 : (not (attribute = null) and attribute.allowsNull = 0) => ruleName = notNull [com.webobjects.directtoweb.Assignment],
+    0 : (not (relationship = null) and relationship.isToMany = 0 and relationship.isMandatory = 1) => ruleName = mandatoryToOne [com.webobjects.directtoweb.Assignment],
+    0 : (not (relationship = null) and relationship.isToMany = 1 and relationship.isMandatory = 1) => ruleName = mandatoryToMany [com.webobjects.directtoweb.Assignment],
+    5 : not (attribute = null) => ruleName = className [com.webobjects.directtoweb.Assignment],
+    10 : (not (attribute = null) and attribute.width > 0) => ruleName = width [com.webobjects.directtoweb.Assignment]
+)
