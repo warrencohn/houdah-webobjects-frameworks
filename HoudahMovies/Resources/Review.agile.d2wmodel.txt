@@ -1,0 +1,19 @@
+(
+    100 : entityName = 'Review' => columns = (reviewer,movie
+) [com.webobjects.directtoweb.Assignment],
+    100 : entityName = 'Review' => properties = (movie,reviewer,review
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Review' and task = 'quickSearch') => fields = (    (    reviewer)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Review' and task = 'list' and key = 'reviewer') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Review' and task = 'describe') => formatter = (    {    keyPath = reviewer;}
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Review' and task = 'identify') => formatter = (    {    keyPath = reviewer;}
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Review' and task = 'edit' and fieldset = 'fieldset') => fields = (    (    movie),    (    reviewer),    (    review)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Review' and task = 'search' and fieldset = 'fieldset') => fields = (    (    movie),    (    reviewer),    (    review)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Review' and descriptorType = 'field' and key = 'review') => descriptorClass = com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Review' and descriptorType = 'columnRow' and key = 'reviewer') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment]
+)
