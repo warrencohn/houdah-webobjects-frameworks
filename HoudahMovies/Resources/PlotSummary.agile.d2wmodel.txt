@@ -6,7 +6,7 @@
     100 : (entityName = 'PlotSummary' and task = 'list' and key = 'movie.title') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'PlotSummary' and task = 'describe') => formatter = (    {    keyPath = "movie.title";}
 ) [com.webobjects.directtoweb.Assignment],
-    100 : (abstractEntityName = 'PlotSummary' and task = 'identify') => formatter = (    {    keyPath = "movie.title";}
+    100 : (entityName = 'PlotSummary' and task = 'identify') => formatter = (    {    keyPath = "movie.title";}
 ) [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'PlotSummary' and task = 'edit' and fieldset = 'fieldset') => fields = (    (    movie),    (    summary)
 ) [com.webobjects.directtoweb.Assignment],

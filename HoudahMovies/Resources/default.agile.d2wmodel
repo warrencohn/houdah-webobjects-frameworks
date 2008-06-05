@@ -8,6 +8,58 @@
         "qualifiers" = (
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "descriptorType"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "field"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isLike"; 
+            "value" = "max%"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "formatterName"; 
+        "value" = "integerNumber"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "descriptorType"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "field"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isLike"; 
+            "value" = "min%"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "formatterName"; 
+        "value" = "integerNumber"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "task"; 
             "selectorName" = "isEqualTo"; 
             "value" = "edit"; 
@@ -190,6 +242,58 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "supportsSorting"; 
         "value" = "0"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "descriptorType"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "field"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isLike"; 
+            "value" = "max%"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "descriptorClass"; 
+        "value" = "com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "descriptorType"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "field"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isLike"; 
+            "value" = "min%"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "descriptorClass"; 
+        "value" = "com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor"; 
       }; 
     }, 
     {

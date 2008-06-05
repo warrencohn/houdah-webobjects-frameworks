@@ -5,7 +5,7 @@
 ) [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Talent' and task = 'list' and key = 'lastName') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Talent' and task = 'list' and key = 'firstName') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
-    100 : (abstractEntityName = 'Talent' and task = 'identify') => formatter = (    {    keyPath = lastName;}
+    100 : (entityName = 'Talent' and task = 'identify') => formatter = (    {    keyPath = lastName;}
 ) [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Talent' and task = 'search' and fieldset = 'fieldset') => fields = (    (    lastName),    (    firstName)
 ) [com.webobjects.directtoweb.Assignment],

@@ -189,7 +189,7 @@
         "qualifiers" = (
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "abstractEntityName"; 
+            "key" = "entityName"; 
             "selectorName" = "isEqualTo"; 
             "value" = "Movie"; 
           }, 
@@ -209,32 +209,6 @@
             "keyPath" = "title"; 
           }
         ); 
-      }; 
-    }, 
-    {
-      "author" = "100"; 
-      "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "descriptorType"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "field"; 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "key"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "summary"; 
-          }
-        ); 
-      }; 
-      "rhs" = {
-        "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "descriptorClass"; 
-        "value" = "com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor"; 
       }; 
     }, 
     {
@@ -267,6 +241,38 @@
           "reviews", 
           "voting"
         ); 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "entityName"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "Movie"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "descriptorType"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "field"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "summary"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "descriptorClass"; 
+        "value" = "com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor"; 
       }; 
     }, 
     {
