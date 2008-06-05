@@ -1,0 +1,14 @@
+(
+    100 : entityName = 'MovieRole' => columns = (movie,talent
+) [com.webobjects.directtoweb.Assignment],
+    100 : entityName = 'MovieRole' => properties = (movie,talent
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'MovieRole' and task = 'edit' and fieldset = 'fieldset') => fields = (    (    movie),    (    talent)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'MovieRole' and task = 'search' and fieldset = 'fieldset') => fields = (    (    movie),    (    talent)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'MovieRole' and task = 'describe') => formatter = (    {    keyPath = "movie.title";},    {    keyPath = "talent.firstName";}
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'MovieRole' and task = 'identify') => formatter = (    {    keyPath = "movie.title";},    {    keyPath = "talent.firstName";}
+) [com.webobjects.directtoweb.Assignment]
+)
