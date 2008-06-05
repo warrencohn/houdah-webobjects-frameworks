@@ -1,0 +1,30 @@
+{
+    search = {
+        class = EOFetchSpecification; 
+        entityName = Review; 
+        prefetchingRelationshipKeyPaths = (); 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = movie; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = movie; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = review; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = review; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = reviewer; 
+                    selectorName = "isCaseInsensitiveLike:"; 
+                    value = {"_key" = reviewer; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+    }; 
+}

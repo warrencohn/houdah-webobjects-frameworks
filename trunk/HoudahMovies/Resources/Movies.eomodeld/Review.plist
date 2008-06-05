@@ -35,7 +35,6 @@
     className = "com.houdah.movies.business.Review"; 
     classProperties = (reviewer, review, movie); 
     externalName = review; 
-    fetchSpecificationDictionary = {}; 
     internalInfo = {
         "_clientClassPropertyNames" = (reviewer, review, movie); 
         "_nameInObjectStore" = REVIEW; 
