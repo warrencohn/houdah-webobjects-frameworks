@@ -56,6 +56,19 @@
             ); 
         }; 
     }; 
+    quickSearch = {
+        class = EOFetchSpecification; 
+        entityName = Movie; 
+        fetchLimit = 0; 
+        prefetchingRelationshipKeyPaths = (); 
+        qualifier = {
+            class = EOKeyValueQualifier; 
+            key = title; 
+            selectorName = "isEqualTo:"; 
+            value = {"_key" = title; class = EOQualifierVariable; }; 
+        }; 
+        sortOrderings = ({class = EOSortOrdering; key = title; selectorName = "compareAscending:"; }); 
+    }; 
     search = {
         class = EOFetchSpecification; 
         entityName = Movie; 
