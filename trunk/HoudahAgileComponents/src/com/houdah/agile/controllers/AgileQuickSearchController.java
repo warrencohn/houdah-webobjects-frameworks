@@ -122,7 +122,7 @@ public class AgileQuickSearchController extends AbstractQuickSearchController
 	
 	
 	/**
-	 * Produces a possible values for a ChoiceValue matching a given descriptor.
+	 * Produces all possible values for a ChoiceValue matching a given descriptor.
 	 * 
 	 * Called only if the descriptor does not point to an entity. In that event,
 	 * valueFetchSpecification(FormValueFieldDescriptor, EOEntity) would be
@@ -283,5 +283,5 @@ public class AgileQuickSearchController extends AbstractQuickSearchController
 	
 	// Protected class methods
 	
-	// Private class emthods
+	// Private class methods
 }

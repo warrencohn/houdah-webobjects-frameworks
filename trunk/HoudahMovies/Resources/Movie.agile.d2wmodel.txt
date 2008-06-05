@@ -3,6 +3,8 @@
     90 : ((entityName = 'Movie' and (key = 'plotSummary.summary' or key = 'summary')) and language = 'English') => label = Summary [com.webobjects.directtoweb.Assignment],
     100 : entityName = 'Movie' => columns = (title,category
 ) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Movie' and task = 'quickSearch') => fields = (    (    title)
+) [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Movie' and task = 'list' and key = 'title') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Movie' and task = 'describe') => formatter = (    {    keyPath = title;}
 ) [com.webobjects.directtoweb.Assignment],

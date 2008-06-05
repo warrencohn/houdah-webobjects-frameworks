@@ -53,4 +53,5 @@
             name = talent; 
         }
     ); 
+    userInfo = {largeSet = 1; }; 
 }
