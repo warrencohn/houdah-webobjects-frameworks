@@ -21,13 +21,13 @@
                 {
                     class = EOKeyValueQualifier; 
                     key = "toMovie.title"; 
-                    selectorName = "isEqualTo:"; 
+                    selectorName = "isCaseInsensitiveLike:"; 
                     value = {"_key" = movie; class = EOQualifierVariable; }; 
                 }, 
                 {
                     class = EOKeyValueQualifier; 
                     key = "toTalent.name"; 
-                    selectorName = "isEqualTo:"; 
+                    selectorName = "isCaseInsensitiveLike:"; 
                     value = {"_key" = talent; class = EOQualifierVariable; }; 
                 }
             ); 

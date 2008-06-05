@@ -64,7 +64,7 @@
         qualifier = {
             class = EOKeyValueQualifier; 
             key = title; 
-            selectorName = "isEqualTo:"; 
+            selectorName = "isCaseInsensitiveLike:"; 
             value = {"_key" = title; class = EOQualifierVariable; }; 
         }; 
         sortOrderings = ({class = EOSortOrdering; key = title; selectorName = "compareAscending:"; }); 
