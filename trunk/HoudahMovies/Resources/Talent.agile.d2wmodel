@@ -110,7 +110,7 @@
         "qualifiers" = (
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "abstractEntityName"; 
+            "key" = "entityName"; 
             "selectorName" = "isEqualTo"; 
             "value" = "Talent"; 
           }, 

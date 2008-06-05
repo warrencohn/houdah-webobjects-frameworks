@@ -1,0 +1,42 @@
+{
+    search = {
+        class = EOFetchSpecification; 
+        entityName = Voting; 
+        prefetchingRelationshipKeyPaths = (); 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = movie; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = movie; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = runningAverage; 
+                    selectorName = "isGreaterThanOrEqualTo:"; 
+                    value = {"_key" = minAverage; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = runningAverage; 
+                    selectorName = "isLessThanOrEqualTo:"; 
+                    value = {"_key" = maxAverage; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = numberOfVotes; 
+                    selectorName = "isGreaterThanOrEqualTo:"; 
+                    value = {"_key" = minVotes; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = numberOfVotes; 
+                    selectorName = "isLessThanOrEqualTo:"; 
+                    value = {"_key" = maxVotes; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+    }; 
+}

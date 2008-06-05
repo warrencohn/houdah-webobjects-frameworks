@@ -30,7 +30,6 @@
     className = "com.houdah.movies.business.Voting"; 
     classProperties = (numberOfVotes, movie, runningAverage); 
     externalName = voting; 
-    fetchSpecificationDictionary = {}; 
     internalInfo = {
         "_clientClassPropertyNames" = (numberOfVotes, movie, runningAverage); 
         "_javaClientClassName" = "webobjectsexamples.businesslogic.movies.common.Voting"; 

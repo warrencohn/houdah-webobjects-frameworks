@@ -1412,6 +1412,84 @@
         "qualifiers" = (
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "numberOfVotes"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Nombre de votes"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "numberOfVotes"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Number of votes"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "runningAverage"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "English"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Running average"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "entityName"; 
             "selectorName" = "isEqualTo"; 
             "value" = "Director"; 
@@ -1454,6 +1532,32 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "entityLabel"; 
         "value" = "R\U00e9sum\U00e9"; 
+      }; 
+    }, 
+    {
+      "author" = "90"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "key"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "runningAverage"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "language"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "French"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "label"; 
+        "value" = "Evaluation moyenne"; 
       }; 
     }, 
     {

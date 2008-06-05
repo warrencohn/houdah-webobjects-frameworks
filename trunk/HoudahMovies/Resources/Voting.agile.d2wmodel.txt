@@ -1,0 +1,26 @@
+(
+    90 : ((entityName = 'Voting' and key = 'maxAverage') and language = 'English') => label = Rated lower than [com.webobjects.directtoweb.Assignment],
+    90 : ((entityName = 'Voting' and key = 'maxAverage') and language = 'French') => label = Evaluation maximum [com.webobjects.directtoweb.Assignment],
+    90 : ((entityName = 'Voting' and key = 'minAverage') and language = 'French') => label = Evaluation minumum [com.webobjects.directtoweb.Assignment],
+    90 : ((entityName = 'Voting' and key = 'minAverage') and language = 'English') => label = Rated greater than [com.webobjects.directtoweb.Assignment],
+    90 : ((entityName = 'Voting' and key = 'maxVotes') and language = 'English') => label = Vote count lower than [com.webobjects.directtoweb.Assignment],
+    90 : ((entityName = 'Voting' and key = 'maxVotes') and language = 'French') => label = Nombre de votes maximum [com.webobjects.directtoweb.Assignment],
+    90 : ((entityName = 'Voting' and key = 'minVotes') and language = 'French') => label = Nombre de votes minimum [com.webobjects.directtoweb.Assignment],
+    90 : ((entityName = 'Voting' and key = 'minVotes') and language = 'English') => label = Vote count greater than [com.webobjects.directtoweb.Assignment],
+    100 : entityName = 'Voting' => columns = (movie,numberOfVotes,runningAverage
+) [com.webobjects.directtoweb.Assignment],
+    100 : entityName = 'Voting' => properties = (movie,numberOfVotes,runningAverage
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Voting' and task = 'identify') => formatter = (    {    keyPath = movie;}
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Voting' and task = 'list' and key = 'numberOfVotes') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Voting' and task = 'list' and key = 'runningAverage') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Voting' and task = 'edit' and fieldset = 'fieldset') => fields = (    (    numberOfVotes),    (    runningAverage)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Voting' and task = 'describe') => formatter = (    {    formatterName = decimalNumber;    keyPath = runningAverage;}
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Voting' and task = 'search' and fieldset = 'fieldset') => fields = (    (    movie),    (    minAverage,    maxAverage),    (    minVotes,    maxVotes)
+) [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Voting' and descriptorType = 'columnRow' and key = 'numberOfVotes') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment],
+    100 : (entityName = 'Voting' and descriptorType = 'columnRow' and key = 'runningAverage') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment]
+)

@@ -7,18 +7,14 @@
 ) [com.webobjects.directtoweb.Assignment],
     100 : entityName = 'Studio' => properties = (name,budget,movies
 ) [com.webobjects.directtoweb.Assignment],
-    100 : (descriptorType = 'field' and key = 'maxBudget') => formatterName = integerNumber [com.webobjects.directtoweb.Assignment],
-    100 : (descriptorType = 'field' and key = 'minBudget') => formatterName = integerNumber [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Studio' and task = 'list' and key = 'name') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Studio' and task = 'describe') => formatter = (    {    keyPath = name;}
 ) [com.webobjects.directtoweb.Assignment],
-    100 : (abstractEntityName = 'Studio' and task = 'identify') => formatter = (    {    keyPath = name;}
+    100 : (entityName = 'Studio' and task = 'identify') => formatter = (    {    keyPath = name;}
 ) [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Studio' and task = 'edit' and fieldset = 'fieldset') => fields = (    (    name),    (    budget)
 ) [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Studio' and task = 'search' and fieldset = 'fieldset') => fields = (    (    name),    (    minBudget,    maxBudget)
 ) [com.webobjects.directtoweb.Assignment],
-    100 : (descriptorType = 'field' and key = 'maxBudget') => descriptorClass = com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor [com.webobjects.directtoweb.Assignment],
-    100 : (descriptorType = 'field' and key = 'minBudget') => descriptorClass = com.houdah.web.view.form.descriptors.FormTextfieldValueFieldDescriptor [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Studio' and descriptorType = 'columnRow' and key = 'name') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment]
 )

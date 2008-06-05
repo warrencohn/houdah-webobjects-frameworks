@@ -71,7 +71,7 @@ public class FormatterFactory implements NSKeyValueCoding
 	// Public instance methods
 	
 	/**
-	 * Look up a formatter by name. Must have been stored opreviously.
+	 * Look up a formatter by name. Must have been stored previously.
 	 * 
 	 * @param a
 	 *            name which uniquely identifies a formatter
@@ -117,7 +117,7 @@ public class FormatterFactory implements NSKeyValueCoding
 	
 	/**
 	 * Lookup the formatter for a given object class. Recursively climbs the
-	 * inhertitance hierachy to find the best fit.
+	 * inhertitance hierarchy to find the best fit.
 	 * 
 	 * @param objectClass
 	 *            the class of which objects need to be formatted

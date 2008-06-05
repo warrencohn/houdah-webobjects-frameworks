@@ -54,7 +54,7 @@ public class Session extends com.houdah.agile.application.Session
 		// setSessionLanguage("French");
 
 		sessionController().securityManager().revokeAccess("Voting", Application.EDIT_TASK);
-		sessionController().securityManager().revokeAccess("Voting", Application.DETAIL_TASK);
+		// sessionController().securityManager().revokeAccess("Voting", Application.DETAIL_TASK);
 	}
 
 	// Public instance methods
