@@ -31,3 +31,9 @@ insertTalent: WOHyperlink
 {
 	action = insert.Talent;
 }
+
+
+listVotings: WOHyperlink
+{
+	action = list.Voting;
+}
