@@ -16,7 +16,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isLike"; 
-            "value" = "max%"; 
+            "value" = "max*"; 
           }
         ); 
       }; 
@@ -42,7 +42,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isLike"; 
-            "value" = "min%"; 
+            "value" = "min*"; 
           }
         ); 
       }; 
@@ -260,7 +260,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isLike"; 
-            "value" = "max%"; 
+            "value" = "max*"; 
           }
         ); 
       }; 
@@ -286,7 +286,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "key"; 
             "selectorName" = "isLike"; 
-            "value" = "min%"; 
+            "value" = "min*"; 
           }
         ); 
       }; 

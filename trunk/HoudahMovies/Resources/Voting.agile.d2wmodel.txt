@@ -13,7 +13,6 @@
 ) [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Voting' and task = 'identify') => formatter = (    {    keyPath = movie;}
 ) [com.webobjects.directtoweb.Assignment],
-    100 : (entityName = 'Voting' and task = 'list' and key = 'numberOfVotes') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Voting' and task = 'list' and key = 'runningAverage') => actionName = detailAction [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Voting' and task = 'edit' and fieldset = 'fieldset') => fields = (    (    numberOfVotes),    (    runningAverage)
 ) [com.webobjects.directtoweb.Assignment],
@@ -21,6 +20,5 @@
 ) [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Voting' and task = 'search' and fieldset = 'fieldset') => fields = (    (    movie),    (    minAverage,    maxAverage),    (    minVotes,    maxVotes)
 ) [com.webobjects.directtoweb.Assignment],
-    100 : (entityName = 'Voting' and descriptorType = 'columnRow' and key = 'numberOfVotes') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment],
     100 : (entityName = 'Voting' and descriptorType = 'columnRow' and key = 'runningAverage') => descriptorClass = com.houdah.web.view.table.descriptors.TableColumnRowActionDescriptor [com.webobjects.directtoweb.Assignment]
 )
