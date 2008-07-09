@@ -4,7 +4,7 @@
 
 = Data freshness in Houdah Frameworks =
 
-HoudahControlComponents implements the concepts of "trails", which was originally described in this [mailing list post|http://wodeveloper.com/omniLists/webobjects-dev/2002/June/msg00569.html]. While the memory management advantages of the trails concept have mostly been obsoleted by improvements in WebObjects 5.2, the benefits of data freshness remain.
+HoudahControlComponents implements the concepts of "trails", which was originally described in this [http://wodeveloper.com/omniLists/webobjects-dev/2002/June/msg00569.html mailing list post]. While the memory management advantages of the trails concept have mostly been obsoleted by improvements in WebObjects 5.2, the benefits of data freshness remain.
 
 Trails are possible paths a user may take through an application. For a CRUD application, a trail usually starts with the submission of a search query. It then leads to a list page, from there to a detail page where the user possibly follows links to other entities.
 
